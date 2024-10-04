@@ -1,14 +1,16 @@
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
-using System.Linq;
-using System;
 using Mapbox.Examples;
-using UnityEditor;
-using UnityEngine.EventSystems;
+using MoreMountains.Tools;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Text;
+using System.Text.RegularExpressions;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
 public static class ComponentExtensions
 {
@@ -105,6 +107,7 @@ public class BasicFlowEngine : MonoBehaviour, ISubstitutionHandler
     [HideInInspector]
     [SerializeField] protected int version = 0; // Default to 0 to always trigger an update for older versions.
     [SerializeField] protected int sidesOfDie = 6;
+    [SerializeField] protected List<Postcard> postcards = new List<Postcard>();
 
     public virtual string Description { get { return description; } }
     public virtual List<Order> SelectedOrders { get { return selectedOrders; } }
@@ -147,6 +150,7 @@ public class BasicFlowEngine : MonoBehaviour, ISubstitutionHandler
     public virtual Vector2 CenterPosition { set; get; }
     public int Version { set { version = value; } }
     public int SidesOfDie { get { return sidesOfDie; } set { sidesOfDie = value; } }
+    public List<Postcard> Postcards { get { return postcards; } }
 
     protected static bool eventSystemPresent;
     protected StringSubstituter stringSubstituer;
@@ -165,6 +169,7 @@ public class BasicFlowEngine : MonoBehaviour, ISubstitutionHandler
     protected virtual void Start()
     {
         CheckEventSystem();
+        MMGameEvent.Trigger("Load");
     }
 
     // There must be an Event System in the scene for Say and Menu input to work.
@@ -469,7 +474,7 @@ public class BasicFlowEngine : MonoBehaviour, ISubstitutionHandler
         }
     }
 
-    // Returns a new node key that is guaranteed not to clash with any existing Block in the Flowchart.
+    // Returns a new node key that is guaranteed not to clash with any existing Node in the Engine.
     public virtual string GetUniqueNodeKey(string originalKey, Node ignoreNode = null)
     {
         int suffix = 0;
@@ -767,6 +772,73 @@ public class BasicFlowEngine : MonoBehaviour, ISubstitutionHandler
         {
             variable.Value = value;
         }
+    }
+
+    public virtual void SetNodeState(string nodeName, ExecutionState state, bool completed)
+    {
+        var node = FindNode(nodeName);
+        if (node != null)
+        {
+            node.State = state;
+            node.NodeComplete = completed;
+        }
+    }
+
+    public virtual Postcard SetPostcard(PostcardVar postcard)
+    {
+        // Try to find the one that is being referenced to be saved
+        Postcard selectedPostcard = postcards.FirstOrDefault(x => x.PostcardName == postcard.Name);
+        // If this cannot be found then create a new one
+        if (selectedPostcard == null)
+        {
+            selectedPostcard = this.AddComponent<Postcard>();
+            this.postcards.Add(selectedPostcard);
+        }
+        selectedPostcard.PostcardName = postcard.Name;
+        selectedPostcard.PostcardDesc = postcard.Desc;
+        selectedPostcard.PostcardCreator = postcard.Creator;
+        selectedPostcard.TotalStickers = postcard.Total;
+        selectedPostcard.StickerVars = new List<PostcardVar.StickerVar>(postcard.StickerVars);
+
+        return selectedPostcard;
+    }
+
+    public virtual Postcard SetPostcard(Postcard postcard)
+    {
+        // Try to find the one that is being referenced to be saved
+        Postcard selectedPostcard = postcards.FirstOrDefault(x => x.PostcardName == postcard.PostcardName);
+        // If this cannot be found then create a new one
+        if (selectedPostcard == null)
+        {
+            selectedPostcard = this.AddComponent<Postcard>();
+            this.postcards.Add(selectedPostcard);
+        }
+        selectedPostcard.PostcardName = postcard.PostcardName;
+        selectedPostcard.PostcardDesc = postcard.PostcardDesc;
+        selectedPostcard.PostcardCreator = postcard.PostcardCreator;
+        selectedPostcard.TotalStickers = postcard.TotalStickers;
+
+        var originalStickers = postcard.stickers;
+        selectedPostcard.StickerVars.Clear();
+
+        foreach (var original in originalStickers)
+        {
+            if (original != null)
+            {
+                var newStickerVar = new PostcardVar.StickerVar();
+                newStickerVar.Name = original.StickerName;
+                newStickerVar.Desc = original.StickerDescription;
+                newStickerVar.Type = original.StickerType;
+                newStickerVar.Image = original.StickerImage;
+                newStickerVar.Position = original.StickerPosition;
+                newStickerVar.StickerScale = original.StickerScale;
+                newStickerVar.StickerRot = original.StickerRotation;
+
+                selectedPostcard.StickerVars.Add(newStickerVar);
+            }
+        }
+
+        return selectedPostcard;
     }
 
     public virtual DiceVariable GetRandomDice()

@@ -1,10 +1,7 @@
-using UnityEngine;
-using UnityEngine.Serialization;
 using System;
 using System.Collections.Generic;
-using Unity.IO.LowLevel.Unsafe;
-using UnityEditor;
 using System.Reflection;
+using UnityEngine;
 /// <summary>
 /// Attribute class for orders.
 /// </summary>
@@ -65,11 +62,27 @@ public abstract class Order : MonoBehaviour
     public virtual LocationVariable GetOrderLocation()
     {
         //For copying and pasting orders between engines
+        FieldInfo fieldInfo = null;
         foreach (var field in this.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public))
         {
             if (field.FieldType == typeof(LocationVariable))
             {
+                fieldInfo = field;
                 return (LocationVariable)field.GetValue(this);
+            }
+        }
+        // Find relevant if statements as they are not referencing location variables explicitly
+        if (this.GetType() == typeof(If))
+        {
+            var ifNode = this as If;
+            List<ConditionExpression> conditions = new List<ConditionExpression>();
+            ifNode.GetConditions(ref conditions);
+            foreach (var condition in ifNode.conditions)
+            {
+                if (condition.AnyVariable.variable != null && condition.AnyVariable.variable.GetType() == typeof(LocationVariable))
+                {
+                    return (LocationVariable)condition.AnyVariable.variable;
+                }
             }
         }
         return null;
@@ -114,13 +127,13 @@ public abstract class Order : MonoBehaviour
 
     public virtual BasicFlowEngine GetEngine()
     {
-        var flowchart = GetComponent<BasicFlowEngine>();
-        if (flowchart == null &&
+        var engine = GetComponent<BasicFlowEngine>();
+        if (engine == null &&
             transform.parent != null)
         {
-            flowchart = transform.parent.GetComponent<BasicFlowEngine>();
+            engine = transform.parent.GetComponent<BasicFlowEngine>();
         }
-        return flowchart;
+        return engine;
     }
 
     public virtual void Execute()

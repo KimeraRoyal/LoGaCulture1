@@ -1,6 +1,6 @@
-using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 /// Supported modes for calling a node.
 public enum CallMode
@@ -78,7 +78,7 @@ public class NextNode : Order
                 {
                     StopParentNode();
                 }
-                // Execute block in another Flowchart
+                // Execute block in another Engine
                 targetEngine.ExecuteNode(targetNode, index, onComplete);
             }
         }
@@ -118,8 +118,8 @@ public class NextNode : Order
         return summary;
     }
 
-    // public override Color GetButtonColor() //to eventually be used when custom styles are implemented
-    // {
-    //     return new Color32(235, 191, 217, 255);
-    // }
+    public override Color GetButtonColour()
+    {
+        return new Color32(58, 185, 97, 255);
+    }
 }

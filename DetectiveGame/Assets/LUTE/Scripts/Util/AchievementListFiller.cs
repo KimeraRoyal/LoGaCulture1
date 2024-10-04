@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using LoGaCulture.LUTE;
 using MoreMountains.Tools;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class AchievementListFiller : MonoBehaviour
     [SerializeField] protected Transform scrollRect;
 
     public static AchievementListFiller ActiveList;
+    //public static List<MMAchievement> achievements = new List<MMAchievement>();
 
     protected static List<AchievementListFiller> activeLists = new List<AchievementListFiller>();
     protected Canvas canvas;
@@ -31,13 +33,38 @@ public class AchievementListFiller : MonoBehaviour
     //we update the achievement list in update as we can add achievements at runtime
     protected virtual void Update()
     {
-        foreach (MMAchievement achievement in achievementList.Achievements)
+        // Achievements are a combination of regular achievements and the postcard achievements
+        //foreach(MMAchievement achievement in achievementList.Achievements)
+        //{
+        //    if (!achievements.Exists(a => a.AchievementID == achievement.AchievementID))
+        //    {
+        //        achievements.Add(achievement);
+        //    }
+        //}
+        PostcardAchievementList postcardAchievementList = null;
+        if(achievementList is PostcardAchievementList)
+        {
+            postcardAchievementList = achievementList as PostcardAchievementList;
+        }
+        if (postcardAchievementList != null)
+        {
+            foreach (PostcardAchievement achievement in postcardAchievementList.PostcardAchievements)
+            {
+                if (!MMAchievementManager.AchievementsList.Exists(a => a.AchievementID == achievement.AchievementID))
+                {
+                    MMAchievementManager.AchievementsList.Add(achievement);
+                }
+            }
+        }
+
+        foreach (MMAchievement achievement in MMAchievementManager.AchievementsList)
         {
             // Check if the achievement item already exists
             if (!AchievementItemExists(achievement.AchievementID))
             {
                 AchievementItem newAchievementItem = Instantiate(achievementItem, scrollRect);
-                newAchievementItem.SetAchievement(achievement.Title, achievement.Description, achievement.UnlockedImage, achievement.AchievementID, achievementList);
+                Sprite achievementSprite = achievement.UnlockedStatus ? achievement.UnlockedImage : achievement.LockedImage;
+                newAchievementItem.SetAchievement(achievement.Title, achievement.Description, achievementSprite, achievement.AchievementID, MMAchievementManager.AchievementsList);
             }
         }
 
@@ -84,6 +111,7 @@ public class AchievementListFiller : MonoBehaviour
 
     public virtual void ShowList()
     {
+        canvas = GetComponent<Canvas>();
         canvas.enabled = !canvas.enabled;
     }
 }

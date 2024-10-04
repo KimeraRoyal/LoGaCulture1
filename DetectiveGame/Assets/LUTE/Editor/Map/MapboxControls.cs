@@ -1,14 +1,13 @@
-using UnityEditor;
 using Mapbox.Examples;
-using UnityEngine;
 using Mapbox.Unity.Map;
-using UnityEditorInternal;
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using Mapbox.Utils;
 using Mapbox.Unity.Utilities;
-using UnityEngine.Assertions.Must;
+using Mapbox.Utils;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEditorInternal;
+using UnityEngine;
 
 /// <summary>
 /// Represents a class that controls the map functionality which simply visualizes the camera which the map is being previewed on during edit time
@@ -31,7 +30,6 @@ public class MapboxControls : EventWindow
     //Returns true if any key was pressed.
     private float zMove = 0;
 
-    #region static vars
     protected static MapboxControls window;
     protected static QuadTreeCameraMovement map;
     protected static int forceRepaintCount = 0;
@@ -102,7 +100,21 @@ public class MapboxControls : EventWindow
         window = (MapboxControls)GetWindow(typeof(MapboxControls), false, "Map");
     }
 
-    #endregion
+    public static void RemoveLocation(LocationVariable location)
+    {
+        var index = _locations.ToList().IndexOf(Conversions.StringToLatLon(location.Value));
+        if (index != -1)
+        {
+            _locations = _locations.Where((val, idx) => idx != index).ToArray();
+            DestroyImmediate(_spawnedObjects[index].gameObject);
+            _spawnedObjects.RemoveAt(index);
+            _locationNames.RemoveAt(index);
+            _locationStrings.RemoveAt(index);
+            _locationSprites.RemoveAt(index);
+            _locationColors.RemoveAt(index);
+            _locationShowNames.RemoveAt(index);
+        }
+    }
 
     private void OnEnable()
     {
@@ -123,13 +135,13 @@ public class MapboxControls : EventWindow
         _locationShowNames.Clear();
 
         //get all location variables from the flow engine
-        if(engine != null)
-        {        
+        if (engine != null)
+        {
             var locations = engine.GetComponents<LocationVariable>();
             foreach (var loc in locations)
             {
                 //ensure we can access the location value
-                if (loc.Scope == VariableScope.Global)
+                if (loc.Scope == VariableScope.Global || loc.Scope == VariableScope.Public)
                 {
                     var locVal = Conversions.StringToLatLon(loc.Value);
                     if (locVal != null)
@@ -271,7 +283,7 @@ public class MapboxControls : EventWindow
         {
             map._dragStartedOnUI = false;
         }
-        
+
         if (map._dragStartedOnUI)
             forceRepaintCount = 1;
 
@@ -349,7 +361,7 @@ public class MapboxControls : EventWindow
                 zMove = .75f;
                 break;
             case KeyCode.S:
-                zMove = -.75f   ;
+                zMove = -.75f;
                 break;
         }
 

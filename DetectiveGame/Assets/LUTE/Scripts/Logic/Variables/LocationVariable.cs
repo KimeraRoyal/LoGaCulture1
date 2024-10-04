@@ -1,3 +1,4 @@
+using LoGaCulture.LUTE;
 using Mapbox.Unity.Location;
 using Mapbox.Unity.Utilities;
 using Mapbox.Utils;
@@ -8,10 +9,18 @@ using UnityEngine;
 [System.Serializable]
 public class LocationVariable : BaseVariable<string>
 {
-    [SerializeField]
-    public Sprite locationSprite;
+    [SerializeField] public Sprite locationSprite;
     public Color locationColor = Color.white;
     public bool showLocationName = true;
+    public bool locationDisabled = false;
+
+    protected float radiusIncrease = 0.0f;
+
+    public float RadiusIncrease
+    {
+        get { return radiusIncrease; }
+        set { radiusIncrease = value; }
+    }
 
     ILocationProvider _locationProvider;
     ILocationProvider LocationProvider
@@ -29,6 +38,13 @@ public class LocationVariable : BaseVariable<string>
 
     public override bool Evaluate(ComparisonOperator comparisonOperator, string value)
     {
+        // If location is disabled then we are likely in a scenario where the location is not available thus we should return true
+        // Any other logic should be handled by the class that has called this method
+        if (locationDisabled)
+        {
+            LocationServiceSignals.DoLocationComplete(this);
+            return true;
+        }
         bool condition = false;
         Vector2 location = Vector2.zero;
         switch (comparisonOperator)
@@ -44,6 +60,11 @@ public class LocationVariable : BaseVariable<string>
                 break;
         }
 
+        if (condition)
+        {
+            LocationServiceSignals.DoLocationComplete(this);
+        }
+
         return condition;
     }
 
@@ -53,34 +74,34 @@ public class LocationVariable : BaseVariable<string>
         var map = engine.GetMap();
         var tracker = map.TrackerPos();
         var trackerPos = tracker;
-        var radius = 0.00025f;
 
         Vector2d vecVal = Conversions.StringToLatLon(Value);
         var deviceLoc = LocationProvider.CurrentLocation.LatitudeLongitude;
+        if (engine.DemoMapMode)
+        {
+            deviceLoc = trackerPos;
+        }
+        if (deviceLoc == null)
+        {
+            return false;
+        }
 
-        //If engine is not in demo mode then use the real device location
-        if (!engine.DemoMapMode)
-        {
-            if (deviceLoc != null)
-            {
-                var distance = Vector2d.Distance(vecVal, deviceLoc);
-                return distance <= radius;
-            }
-            else
-                return false;
-        }
-        //Otherwise we use the tracker position in the hierarchy if it exists
-        else
-        {
-            radius = 0.00035f;
-            if (trackerPos != null)
-            {
-                var distance = Vector2d.Distance(vecVal, trackerPos);
-                return distance <= radius;
-            }
-            else
-                return false;
-        }
+        var radiusInMeters = LogaConstants.DefaultRadius + radiusIncrease;
+        float r = 6371000.0f; // Earth radius in meters
+
+        // Determine distance between target and tracker in radians
+        float dLat = (float)(Mathf.Deg2Rad * (vecVal.x - deviceLoc.x));
+        float dLon = (float)(Mathf.Deg2Rad * (vecVal.y - deviceLoc.y));
+
+        // Haversine formula
+        float a = Mathf.Sin(dLat / 2) * Mathf.Sin(dLat / 2) +
+            Mathf.Cos((float)(Mathf.Deg2Rad * deviceLoc.x)) * Mathf.Cos((float)(Mathf.Deg2Rad * vecVal.x)) *
+            Mathf.Sin(dLon / 2) * Mathf.Sin(dLon / 2);
+
+        float c = 2 * Mathf.Atan2(Mathf.Sqrt(a), Mathf.Sqrt(1 - a));
+        float distance = r * c;
+
+        return distance <= radiusInMeters;
     }
 
     public override bool SupportsArithmetic(SetOperator setOperator)

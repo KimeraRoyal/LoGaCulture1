@@ -172,6 +172,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &390924253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +253,9 @@ MonoBehaviour:
   hoverStartTime: 0
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
-  showDesc: 0
+  showDesc: 1
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &390924256
 MonoBehaviour:
   m_ObjectHideFlags: 0
