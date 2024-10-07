@@ -3,7 +3,22 @@ guid: 07d55353e1eb6594b8020c0b68e2229a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brass
+    second: {fileID: 2100000, guid: 0877d867b14bf29448dff0f8c160f85d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leather
+    second: {fileID: 2100000, guid: 8860e76e910de60428f8a3974d57a39c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Velvet
+    second: {fileID: 2100000, guid: f2c48ff443bfafb4594921dcb0d987d4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
