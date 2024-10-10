@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Mapbox.Examples;
 using Mapbox.Utils;
 using UnityEngine;
+using Weather;
 using static BooleanVariable;
 using static FloatVariable;
 
@@ -26,7 +27,8 @@ public static class AllVariableTypes
         typeof(BooleanVariable),
         typeof(FloatVariable),
         typeof(StringVariable),
-
+        
+        typeof(WeatherVariable)
     };
 }
 
@@ -50,6 +52,7 @@ public partial struct AnyVariableData
     public BooleanData booleanData;
     public FloatData floatData;
     public StringData stringData;
+    public WeatherData weatherData;
 
     public bool HasReference(Variable variable)
     {
@@ -57,7 +60,8 @@ public partial struct AnyVariableData
                 locationData.locationRef == variable ||
                 booleanData.booleanRef == variable ||
                    floatData.floatRef == variable ||
-                   stringData.stringRef == variable;
+                   stringData.stringRef == variable ||
+                   weatherData.weatherRef == variable;
     }
 }
 
@@ -159,6 +163,14 @@ public class AnyVariableAndDataPair
                         var subbedRHS = anyVar.variable.GetEngine().SubstituteVariables(anyVar.data.stringData.Value);
                         anyVar.variable.Apply(setOperator, subbedRHS);
                     })},
+            { typeof(WeatherVariable),
+                new TypeActions( "weatherData",
+                    (anyVar, compareOperator) =>
+                    {
+                        return anyVar.variable.Evaluate(compareOperator, anyVar.data.weatherData.Value);
+                    },
+                    (anyVar) => anyVar.data.weatherData.GetDescription(),
+                    (anyVar, setOperator) => anyVar.variable.Apply(setOperator, anyVar.data.weatherData.Value)) },
     };
 
     public bool HasReference(Variable variable)
