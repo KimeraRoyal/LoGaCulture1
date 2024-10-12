@@ -8064,7 +8064,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   storyText: Hello World!
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -8133,7 +8134,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   storyText: 'Hello World Rising: Revengeance'
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -8164,7 +8166,8 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   storyText: Hello World 2
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1

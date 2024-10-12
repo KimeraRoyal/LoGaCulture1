@@ -3,23 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using UnityEngine.PlayerLoop;
+using System.Linq;
+using DialogueExtension;
 
 public class TextWriter : MonoBehaviour
 {
-    //need to hook this up properly
-    public virtual bool IsWaitingForInput { get { return isWaitingForInput; } }
-
-    protected bool isWaitingForInput;
     protected List<IWriterListener> writerListeners = new List<IWriterListener>();
 
+    [SerializeField] protected char[] punctuation = new char[] {' ', ',', '.', '!', '?'};
+    private bool followingPunctuation;
+
+    public Action onComplete;
 
     private Coroutine displayRoutine;
     private bool allowSkippingLine = false;
     private bool clicked = false;
     private bool isTyping;
-    private bool waitForClick;
-    private Action onComplete;
 
     protected virtual void Awake()
     {
@@ -45,90 +44,70 @@ public class TextWriter : MonoBehaviour
         }
     }
 
-    public void WriteText(
-        string text,
-        TextMeshProUGUI textUI,
-        Action onComplete,
-        float typingSpeed,
-        float waitTime,
-        bool skipLine,
-        bool waitForClick
-    )
+    public void WriteText(string text, DialogueState _state)
     {
-        this.onComplete = onComplete;
-        this.allowSkippingLine = skipLine;
-        this.waitForClick = waitForClick;
-        if (displayRoutine != null)
-            StopCoroutine(displayRoutine);
-        displayRoutine = StartCoroutine(DisplayText(text, textUI, onComplete, waitTime, typingSpeed));
+        allowSkippingLine = _state.AllowLineSkip;
+        
+        if (displayRoutine != null) { StopCoroutine(displayRoutine); }
+        displayRoutine = StartCoroutine(DisplayText(text, _state.Display, _state.LetterDuration, _state.PunctuationDuration));
     }
 
-    public IEnumerator DisplayText(string text, TextMeshProUGUI textUI, Action onComplete, float waitTime, float typingSpeed = 0.04f)
+    private IEnumerator DisplayText(string text, TMP_Text textUI, float letterDuration, float punctuationDuration)
     {
         isTyping = true;
+        clicked = false;
 
-        textUI.text = "";
-
-        //can hide your continue icon here if need be
-
-        bool addingRichText = false;
-
-        foreach (char c in text)
+        var finalText = textUI.text + text;
+        foreach (var c in text)
         {
-            if (clicked)
-            {
-                textUI.text = text;
-                clicked = false;
-                break;
-            }
-            NotifyGlyph();
-            if (c == '<' || addingRichText)
-            {
-                addingRichText = true;
-                textUI.text += c;
-                if (c == '>')
-                {
-                    addingRichText = false;
-                }
-            }
-            else
-            {
-                textUI.text += c;
-                yield return new WaitForSeconds(typingSpeed);
-            }
+            yield return ShowCharacter(c, textUI, letterDuration, punctuationDuration);
         }
-
-        //can show your continue icon here if need be
+        textUI.text = finalText;
 
         isTyping = false;
+        onComplete?.Invoke();
+    }
 
-        if (!waitForClick)
+    private IEnumerator ShowCharacter(char character, TMP_Text textUI, float letterDuration, float punctuationDuration)
+    {
+        var addingRichText = false;
+        
+        if (clicked)
         {
-            yield return new WaitForSeconds(waitTime);
-            if (onComplete != null)
+            clicked = false;
+            yield break;
+        }
+        NotifyGlyph();
+            
+        if (character == '<') { addingRichText = true; }
+        else if (character == '>') { addingRichText = false; }
+
+        // TODO: Make skipping multiple punctuation an option maybe?
+        var isPunctuation = punctuation.Contains(character);
+        if (followingPunctuation && !isPunctuation)
+        {
+            yield return new WaitForSeconds(punctuationDuration);
+            followingPunctuation = false;
+        }
+            
+        textUI.text += character;
+
+        if (followingPunctuation) { yield break; }
+        if (isPunctuation) { followingPunctuation = true; }
+        else
+        {
+            if (letterDuration > 0.001f && !addingRichText)
             {
-                onComplete();
+                yield return new WaitForSeconds(letterDuration);
             }
         }
     }
 
     private void Update()
     {
-        //when a click is detected 
-        //if the text is still typing, skip to the end of the text if allowed
-        //if the text is not typing, continue to the next text if allowed
         if (Input.GetMouseButtonDown(0))
         {
-            if (isTyping)
-            {
-                if (allowSkippingLine)
-                    clicked = true;
-            }
-            else
-            {
-                if (waitForClick)
-                    onComplete?.Invoke();
-            }
+            clicked = true;
         }
     }
 
@@ -136,7 +115,7 @@ public class TextWriter : MonoBehaviour
 
     public void Stop()
     {
-        if (isTyping || isWaitingForInput)
+        if (isTyping)
         {
             StopCoroutine(displayRoutine);
             isTyping = false;

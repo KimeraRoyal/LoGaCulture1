@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DialogueExtension;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] protected bool fitTextWithImage = true;
     public virtual Image CharacterImage { get { return characterImage; } }
     protected TextWriter writer;
+    protected DialogueParser m_parser;
     protected CanvasGroup canvasGroup;
     protected bool fadeWhenDone = true;
     protected float targetAlpha = 0f;
@@ -39,6 +41,15 @@ public class DialogueBox : MonoBehaviour
     protected float startStoryTextInset;
     protected static Character speakingCharacter;
 
+    protected DialogueParser Parser
+    {
+        get
+        {
+            if (!m_parser) { m_parser = GetComponent<DialogueParser>(); }
+            return m_parser;
+        }
+    }
+
     public virtual RectTransform StoryTextRectTrans
     {
         get
@@ -46,6 +57,8 @@ public class DialogueBox : MonoBehaviour
             return storyText != null ? textDisplay.rectTransform : textDisplay.GetComponent<RectTransform>();
         }
     }
+
+    public bool IsWaitingForInput { get; set; }
 
     protected virtual void Awake()
     {
@@ -60,7 +73,7 @@ public class DialogueBox : MonoBehaviour
         activeDialogueBoxes.Remove(this);
     }
 
-    protected virtual TextWriter GetWriter()
+    public virtual TextWriter GetWriter()
     {
         if (writer != null)
         {
@@ -76,7 +89,7 @@ public class DialogueBox : MonoBehaviour
         return writer;
     }
 
-    protected virtual TextMeshProUGUI GetTextDisplay()
+    public virtual TMP_Text GetTextDisplay()
     {
         if (textDisplay != null)
         {
@@ -150,7 +163,7 @@ public class DialogueBox : MonoBehaviour
 
         if (continueButton != null)
         {
-            continueButton.gameObject.SetActive(GetWriter().IsWaitingForInput);
+            continueButton.gameObject.SetActive(IsWaitingForInput);
         }
     }
 
@@ -322,22 +335,19 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    public virtual void StartDialogue(float typingSpeed, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone, Action onComplete)
+    public virtual void StartDialogue(float letterDuration, float punctuationDuration, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone, Action onComplete)
     {
-        StartCoroutine(DoDialogue(onComplete, typingSpeed, waitTime, skipLine, waitForClick, fadeWhenDone));
+        StartCoroutine(DoDialogue(onComplete, letterDuration, punctuationDuration, waitTime, skipLine, waitForClick, fadeWhenDone));
     }
 
-    public virtual IEnumerator DoDialogue(Action onComplete, float typingSpeed, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone)
+    public virtual IEnumerator DoDialogue(Action onComplete, float letterDuration, float punctuationDuration, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone)
     {
         var tw = GetWriter();
 
-        if (writer.IsTyping() || writer.IsWaitingForInput)
+        if (writer.IsTyping())
         {
             tw.Stop();
-            while (writer.IsTyping() || writer.IsWaitingForInput)
-            {
-                yield return null;
-            }
+            yield return new WaitUntil(() => !writer.IsTyping());
         }
 
         if (closeOtherDialogues)
@@ -355,16 +365,17 @@ public class DialogueBox : MonoBehaviour
 
         this.fadeWhenDone = fadeWhenDone;
 
-        // AudioClip SFX = null;
-        // if (VOClip != null)
-        // {
-        //     //play voiceover clip
-        // }
-
-        //get the ui text component
-        var displayText = GetTextDisplay();
-
-        tw.WriteText(storyText, displayText, onComplete, typingSpeed, waitTime, skipLine, waitForClick);
+        var state = new DialogueState(this, letterDuration, punctuationDuration, skipLine);
+        
+        Parser.Parse(storyText, waitForClick, waitTime);
+        while (Parser.HasCommands && state.Enabled)
+        {
+            var command = Parser.GetNextCommand();
+            yield return command.Execute(state);
+        }
+        Parser.Flush();
+        
+        onComplete?.Invoke();
     }
 
     public virtual bool FadeWhenDone { get { return fadeWhenDone; } set { fadeWhenDone = value; } }

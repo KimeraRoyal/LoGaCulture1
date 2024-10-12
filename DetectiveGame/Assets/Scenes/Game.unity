@@ -401,6 +401,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1583186943762903969, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_margin.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583186943762903969, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_margin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583186943762903969, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_margin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583186943762903969, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_margin.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1776485204307864770, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -575,15 +591,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: zoom
-      value: 0.97000015
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.x
-      value: -38.111816
+      value: -75.785736
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.y
-      value: 291.84808
+      value: 313.84183
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeViewHeight
@@ -628,7 +644,7 @@ PrefabInstance:
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: 'selectedNodes.Array.data[0]'
       value: 
-      objectReference: {fileID: 8642065375544709432}
+      objectReference: {fileID: 8642065375544709405}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: 'selectedNodes.Array.data[1]'
       value: 
@@ -656,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: 'selectedOrders.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8642065375544709461}
     - target: {fileID: 3745035048845017632, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1284,36 +1300,6 @@ PrefabInstance:
       addedObject: {fileID: 8642065375544709435}
     - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8642065375544709445}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709446}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709447}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709448}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709449}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709450}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709451}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709452}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709453}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8642065375544709454}
-    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8642065375544709455}
     - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       insertIndex: -1
@@ -1321,6 +1307,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8642065375544709456}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709458}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709461}
   m_SourcePrefab: {fileID: 100100000, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
 --- !u!1 &1090460631108315131 stripped
 GameObject:
@@ -1446,7 +1438,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 776.43243
-    y: 52.47628
+    y: 45.25978
     width: 140.09
     height: 40
   nodeName: Gameplay Begin
@@ -1505,6 +1497,7 @@ MonoBehaviour:
   groupDescription: A series of nodes that can be executed as a group
   itemId: 1
   orderList:
+  - {fileID: 8642065375544709461}
   - {fileID: 8642065375544709411}
   - {fileID: 8642065375544709415}
   - {fileID: 8642065375544709414}
@@ -1562,8 +1555,6 @@ MonoBehaviour:
   itemId: 6
   orderList:
   - {fileID: 8642065375544709438}
-  - {fileID: 8642065375544709451}
-  - {fileID: 8642065375544709452}
   - {fileID: 8642065375544709437}
   eventHandler: {fileID: 0}
   isGrouped: 1
@@ -1602,8 +1593,6 @@ MonoBehaviour:
   itemId: 5
   orderList:
   - {fileID: 8642065375544709440}
-  - {fileID: 8642065375544709449}
-  - {fileID: 8642065375544709450}
   - {fileID: 8642065375544709439}
   eventHandler: {fileID: 0}
   isGrouped: 1
@@ -1642,8 +1631,6 @@ MonoBehaviour:
   itemId: 4
   orderList:
   - {fileID: 8642065375544709442}
-  - {fileID: 8642065375544709447}
-  - {fileID: 8642065375544709448}
   - {fileID: 8642065375544709441}
   eventHandler: {fileID: 0}
   isGrouped: 1
@@ -1682,8 +1669,6 @@ MonoBehaviour:
   itemId: 3
   orderList:
   - {fileID: 8642065375544709436}
-  - {fileID: 8642065375544709453}
-  - {fileID: 8642065375544709454}
   - {fileID: 8642065375544709435}
   eventHandler: {fileID: 0}
   isGrouped: 1
@@ -1722,8 +1707,6 @@ MonoBehaviour:
   itemId: 2
   orderList:
   - {fileID: 8642065375544709443}
-  - {fileID: 8642065375544709445}
-  - {fileID: 8642065375544709446}
   - {fileID: 8642065375544709444}
   eventHandler: {fileID: 0}
   isGrouped: 1
@@ -2667,6 +2650,7 @@ MonoBehaviour:
   groupDescription: A series of nodes that can be executed as a group
   itemId: 7
   orderList:
+  - {fileID: 8642065375544709458}
   - {fileID: 8642065375544709433}
   eventHandler: {fileID: 0}
   isGrouped: 1
@@ -2731,8 +2715,11 @@ MonoBehaviour:
   characterNameColour:
     serializedVersion: 2
     rgba: 0
-  storyText: Avebury, a site you could just about think was frozen in time...
-  typingSpeed: 0.04
+  storyText: Avebury, a site you could just about think was frozen in time...{wc}I
+    know better, though. Some new cases can chill even stone down to its core.{wc}That's
+    how I ended up snoopin' it out, warming the place up with all of my intuition.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2778,8 +2765,11 @@ MonoBehaviour:
   characterNameColour:
     serializedVersion: 2
     rgba: 0
-  storyText: Avebury, crackle, crackle...
-  typingSpeed: 0.04
+  storyText: Avebury, crackle, crackle...{wc}You hear that? Those thunderin' rumbles
+    all around the site.{wc}No doubt about it, a new case had come in like a storm,
+    and I had to check it out.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2825,8 +2815,12 @@ MonoBehaviour:
   characterNameColour:
     serializedVersion: 2
     rgba: 0
-  storyText: Avebury, a sleepy site lulled in by that gentle pitter-patter...
-  typingSpeed: 0.04
+  storyText: Avebury, a sleepy site lulled in by that gentle pitter-patter...{wc}Rain
+    falls in from the sky, sure, but not me. I was in town 'cause I sniffed something
+    out - and it weren't just petrichor.{wc}A new case had fallen right onto my brolly,
+    so I'd come to check it out.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2872,8 +2866,11 @@ MonoBehaviour:
   characterNameColour:
     serializedVersion: 2
     rgba: 0
-  storyText: Avebury, an ancient site well fittin' the gloominess that day.
-  typingSpeed: 0.04
+  storyText: Avebury, an ancient site well fittin' the gloominess that day.{wc}A
+    case blew on in on a strong wind.{wc}Good thing I caught onto it, what with my
+    arms and all.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2903,8 +2900,11 @@ MonoBehaviour:
   characterNameColour:
     serializedVersion: 2
     rgba: 0
-  storyText: Avebury, a beautiful site on a crisp, clear day.
-  typingSpeed: 0.04
+  storyText: Avebury, a beautiful site on a crisp, clear day.{wc}Weren't the only
+    thing that was clear, though.{wc}It was also clear that there was mystery in
+    the air, a fresh case brought in on a fresh breeze.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2932,322 +2932,6 @@ MonoBehaviour:
   targetNode: {fileID: 8642065375544709432}
   startIndex: 0
   callMode: 0
---- !u!114 &8642065375544709445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: Weren't the only thing that was clear, though.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: It was also clear that there was mystery in the air, a fresh case brought
-    in on a fresh breeze.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: A case blew on in on a strong wind.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: Good thing I caught onto it, what with my arms and all.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: Rain falls in from the sky, sure, but not me. I was in town 'cause I
-    sniffed something out - and it weren't just petrichor.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: A new case had fallen right onto my brolly, so I'd come to check it
-    out.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: You hear that? Those thunderin' rumbles all around the site.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: No doubt about it, a new case had come in like a storm, and I had to
-    check it out.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: I know better, though. Some new cases can chill even stone down to its
-    core.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &8642065375544709454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090460631108315131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: That's how I ended up snoopin' it out, warming the place up with all
-    of my intuition.
-  typingSpeed: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
 --- !u!114 &8642065375544709455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3312,7 +2996,7 @@ MonoBehaviour:
   hoverStartTime: 0
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
-  showDesc: 0
+  showDesc: 1
   saveable: 0
   NodeComplete: 0
   groupedNodes:
@@ -3327,6 +3011,76 @@ MonoBehaviour:
   nodesToComplete: []
   totalNodesToComplete: 1
   updatedGroupNodes: 0
+--- !u!114 &8642065375544709458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090460631108315131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: 'See, there''d been talks of activity: crime-inal activity. A slew of
+    disappearances of innocent stones caught up in the big city living of this teeny
+    tiny village.{wc}So, naturally, I said I''d go to check it out. What else am
+    I to do?{wc}After all, ain''t nobody got as keen an eye with their <b>Magnifying
+    Glass</b> as me.'
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090460631108315131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1090460631108315132}
+  characterPortrait: {fileID: -2975849920183638346, guid: 66b5eec957cdb8c439cb07b4aa4684fe, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Oh man. Ohhhh oh man. Okay, okay... This is fine.{wc}It's fine.{wc}It's
+    fine{c}It's fine{w=.1}{c}It's fine{w=.1}{c}It's fine{w=.1}{c}It's fine{w=.1}{c}It's
+    fine.
+  letterDuration: 0.04
+  punctuationDuration: 0
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

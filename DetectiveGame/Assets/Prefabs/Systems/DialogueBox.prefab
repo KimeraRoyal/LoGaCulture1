@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 8226593906910258976}
   - component: {fileID: 712174969429148566}
   - component: {fileID: 2408879313144742802}
+  - component: {fileID: 1402046926144853358}
   - component: {fileID: 7964478300562939876}
   m_Layer: 0
   m_Name: DialogueBox
@@ -233,7 +234,7 @@ MonoBehaviour:
   storyText: 
   closeOtherDialogues: 0
   characterImage: {fileID: 6892389491127233520}
-  fitTextWithImage: 1
+  fitTextWithImage: 0
 --- !u!114 &2408879313144742802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +253,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba3c9cdb459d3e146b842c73adaf6548, type: 3}
   targetAudioSource: {fileID: 7964478300562939876}
   volume: 0.944
+--- !u!114 &1402046926144853358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127921731218024932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d59ba5d33908a84e803a51f0e8c471b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &7964478300562939876
 AudioSource:
   m_ObjectHideFlags: 0
@@ -459,11 +472,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6865385795370424178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 0.8}
-  m_AnchoredPosition: {x: 2.999878, y: -255.82666}
-  m_SizeDelta: {x: -2458.02, y: 374.53}
-  m_Pivot: {x: 0.5, y: 0.21311986}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: -200, y: -350}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &8721616700425172265
 CanvasRenderer:
   m_ObjectHideFlags: 0

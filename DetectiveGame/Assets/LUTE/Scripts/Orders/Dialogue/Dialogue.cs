@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [OrderInfo("Narrative",
              "Dialogue",
@@ -16,8 +17,11 @@ public class Dialogue : Order
     [SerializeField] protected Color32 characterNameColour;
     [TextArea(5, 10)]
     [SerializeField] protected string storyText = "";
-    [Tooltip("Type the text at this speed")]
-    [SerializeField] protected float typingSpeed = 0.04f;
+    [FormerlySerializedAs("typingSpeed")]
+    [Tooltip("Type each letter for this number of seconds")]
+    [SerializeField] protected float letterDuration = 0.04f;
+    [Tooltip("Type each punctuation mark for this number of seconds")]
+    [SerializeField] protected float punctuationDuration = 0.04f;
     [Tooltip("Type this text in the previous Dialogue box")]
     [SerializeField] protected bool extendPrevious = false;
     [Tooltip("Voiceover audio to play when writing the text")]
@@ -83,10 +87,7 @@ public class Dialogue : Order
         //using the text above, we can use active custom tags to change the text (e.g. <color=red>red text</color>) -- TO DO
 
         //lastly, we display the text in the box and when the action is complete, we continue
-        dialogueBox.StartDialogue(typingSpeed, timeToWait, allowLineSkip, waitForClick, fadeWhenDone, delegate
-        {
-            Continue();
-        });
+        dialogueBox.StartDialogue(letterDuration, punctuationDuration, timeToWait, allowLineSkip, waitForClick, fadeWhenDone, Continue);
     }
 
     public override string GetSummary()

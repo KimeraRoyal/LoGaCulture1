@@ -84,7 +84,8 @@ public class DialogueEditor : OrderEditor
     public Texture2D blackTex;
 
     protected SerializedProperty characterProp;
-    protected SerializedProperty typingSpeedProp;
+    protected SerializedProperty letterDurationProp;
+    protected SerializedProperty punctuationDurationProp;
     protected SerializedProperty portraitProp;
     protected SerializedProperty storyTextProp;
     protected SerializedProperty voiceOverClipProp;
@@ -111,7 +112,8 @@ public class DialogueEditor : OrderEditor
         waitForClickProp = serializedObject.FindProperty("waitForClick");
         stopVoiceoverProp = serializedObject.FindProperty("stopVoiceover");
         waitForVOProp = serializedObject.FindProperty("waitForVO");
-        typingSpeedProp = serializedObject.FindProperty("typingSpeed");
+        letterDurationProp = serializedObject.FindProperty("letterDuration");
+        punctuationDurationProp = serializedObject.FindProperty("punctuationDuration");
 
         // if (blackTex == null)
         // {
@@ -173,7 +175,8 @@ public class DialogueEditor : OrderEditor
         }
         EditorGUILayout.EndHorizontal();
 
-        EditorGUILayout.PropertyField(typingSpeedProp);
+        EditorGUILayout.PropertyField(letterDurationProp);
+        EditorGUILayout.PropertyField(punctuationDurationProp);
 
         EditorGUILayout.BeginHorizontal();
 
