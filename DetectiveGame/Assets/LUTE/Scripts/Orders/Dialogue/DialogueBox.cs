@@ -25,6 +25,8 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] protected bool closeOtherDialogues;
     [Tooltip("The character UI object")]
     [SerializeField] protected Image characterImage;
+    [Tooltip("The character's talking speed")]
+    [SerializeField] protected float talkSpeed = 1.0f;
     [Tooltip("Adjust width of story text when Character Image is displayed (to avoid overlapping)")]
     [SerializeField] protected bool fitTextWithImage = true;
     public virtual Image CharacterImage { get { return characterImage; } }
@@ -264,6 +266,8 @@ public class DialogueBox : MonoBehaviour
                 nameText.text = "";
             }
             speakingCharacter = null;
+
+            talkSpeed = 1.0f;
         }
         else
         {
@@ -277,6 +281,8 @@ public class DialogueBox : MonoBehaviour
             }
 
             SetCharacterName(characterName, character.NameColour);
+
+            talkSpeed = character.TalkSpeed;
         }
     }
 
@@ -365,7 +371,8 @@ public class DialogueBox : MonoBehaviour
 
         this.fadeWhenDone = fadeWhenDone;
 
-        var state = new DialogueState(this, letterDuration, punctuationDuration, skipLine);
+        talkSpeed = Mathf.Max(talkSpeed, 0.001f);
+        var state = new DialogueState(this, letterDuration / talkSpeed, punctuationDuration / talkSpeed, skipLine);
         
         Parser.Parse(storyText, waitForClick, waitTime);
         while (Parser.HasCommands && state.Enabled)

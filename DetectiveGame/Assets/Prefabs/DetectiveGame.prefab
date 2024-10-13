@@ -5781,6 +5781,7 @@ MonoBehaviour:
   characterPortraits:
   - {fileID: -2975849920183638346, guid: 66b5eec957cdb8c439cb07b4aa4684fe, type: 3}
   facingDirection: 0
+  talkSpeed: 1
 --- !u!1 &2896689654988932581
 GameObject:
   m_ObjectHideFlags: 0
@@ -7828,6 +7829,7 @@ MonoBehaviour:
   characterPortraits:
   - {fileID: 21300000, guid: abb6929402cbd364593c06873554fc82, type: 3}
   facingDirection: 0
+  talkSpeed: 1
 --- !u!1 &3866006019385578522
 GameObject:
   m_ObjectHideFlags: 0
@@ -10721,6 +10723,7 @@ MonoBehaviour:
   characterPortraits:
   - {fileID: 21300000, guid: dc359a51ef5d87843ad6fa5857b030e5, type: 3}
   facingDirection: 0
+  talkSpeed: 1
 --- !u!1 &5676929565224470867
 GameObject:
   m_ObjectHideFlags: 0
@@ -12991,6 +12994,7 @@ MonoBehaviour:
   characterPortraits:
   - {fileID: 21300000, guid: 2d75fad76854be747a42dc54cd0b9ef2, type: 3}
   facingDirection: 0
+  talkSpeed: 1
 --- !u!1 &7238343344499660335
 GameObject:
   m_ObjectHideFlags: 0

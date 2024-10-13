@@ -12,6 +12,8 @@ public class Character : MonoBehaviour, IComparer<Character>
     [SerializeField] protected List<Sprite> characterPortraits;
     [SerializeField] protected FacingDirection facingDirection;
 
+    [SerializeField] protected float talkSpeed = 1.0f;
+
     protected PortraitState portraitState = new PortraitState();
     protected static List<Character> activeCharacters = new List<Character>();
 
@@ -36,6 +38,7 @@ public class Character : MonoBehaviour, IComparer<Character>
     public virtual AudioClip SoundEffect { get { return characterSound; } }
     public virtual List<Sprite> Portraits { get { return characterPortraits; } }
     public virtual FacingDirection FacingDirection { get { return facingDirection; } }
+    public virtual float TalkSpeed => talkSpeed;
     public virtual Sprite ProfileSprite { get; set; }
     public virtual PortraitState State { get { return portraitState; } }
     public string GetObjectName() { return gameObject.name; }

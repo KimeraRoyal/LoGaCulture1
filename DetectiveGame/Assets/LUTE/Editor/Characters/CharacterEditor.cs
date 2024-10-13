@@ -9,6 +9,7 @@ public class CharacterEditor : Editor
     protected SerializedProperty soundEffectProp;
     protected SerializedProperty portraitsProp;
     protected SerializedProperty portraitsFaceProp;
+    protected SerializedProperty talkSpeedProp;
 
     protected virtual void OnEnable()
     {
@@ -17,6 +18,7 @@ public class CharacterEditor : Editor
         soundEffectProp = serializedObject.FindProperty("characterSound");
         portraitsProp = serializedObject.FindProperty("characterPortraits");
         portraitsFaceProp = serializedObject.FindProperty("facingDirection");
+        talkSpeedProp = serializedObject.FindProperty("talkSpeed");
     }
 
     public override void OnInspectorGUI()
@@ -61,6 +63,8 @@ public class CharacterEditor : Editor
                 "-->",
         };
         portraitsFaceProp.enumValueIndex = EditorGUILayout.Popup("Portraits Face", (int)portraitsFaceProp.enumValueIndex, facingArrows);
+
+        EditorGUILayout.PropertyField(talkSpeedProp, new GUIContent("Talk Speed", "A multiplier for how quickly the character talks."));
 
         EditorGUILayout.Separator();
 

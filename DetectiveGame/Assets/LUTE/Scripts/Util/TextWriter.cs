@@ -18,7 +18,9 @@ public class TextWriter : MonoBehaviour
     private Coroutine displayRoutine;
     private bool allowSkippingLine = false;
     private bool clicked = false;
+    private bool canClick;
     private bool isTyping;
+    private bool addingRichText;
 
     protected virtual void Awake()
     {
@@ -54,58 +56,71 @@ public class TextWriter : MonoBehaviour
 
     private IEnumerator DisplayText(string text, TMP_Text textUI, float letterDuration, float punctuationDuration)
     {
-        isTyping = true;
         clicked = false;
+        canClick = true;
+        
+        isTyping = true;
+        addingRichText = false;
 
         var finalText = textUI.text + text;
         foreach (var c in text)
         {
-            yield return ShowCharacter(c, textUI, letterDuration, punctuationDuration);
+            if (clicked)
+            {
+                clicked = false;
+                break;
+            }
+            NotifyGlyph();
+            
+            if (c == '<') { addingRichText = true; }
+
+            var isPunctuation = false;
+            if (!addingRichText)
+            {
+                isPunctuation = punctuation.Contains(c);
+                if (followingPunctuation && !isPunctuation)
+                {
+                    yield return WaitForSecondsOrUntil(punctuationDuration, () => !clicked);
+                    followingPunctuation = false;
+                }
+            }
+            
+            if (c == '>') { addingRichText = false; }
+        
+            textUI.text += c;
+
+            if (!addingRichText)
+            {
+                if (followingPunctuation) { continue; }
+                if (isPunctuation) { followingPunctuation = true; }
+                else
+                {
+                    yield return WaitForSecondsOrUntil(letterDuration, () => !clicked);
+                }
+            }
         }
         textUI.text = finalText;
 
         isTyping = false;
+        canClick = false;
+        
         onComplete?.Invoke();
     }
 
-    private IEnumerator ShowCharacter(char character, TMP_Text textUI, float letterDuration, float punctuationDuration)
+    private IEnumerator WaitForSecondsOrUntil(float _duration, Func<bool> _condition)
     {
-        var addingRichText = false;
-        
-        if (clicked)
+        var timer = _duration;
+        while (_condition.Invoke())
         {
-            clicked = false;
-            yield break;
-        }
-        NotifyGlyph();
-            
-        if (character == '<') { addingRichText = true; }
-        else if (character == '>') { addingRichText = false; }
-
-        // TODO: Make skipping multiple punctuation an option maybe?
-        var isPunctuation = punctuation.Contains(character);
-        if (followingPunctuation && !isPunctuation)
-        {
-            yield return new WaitForSeconds(punctuationDuration);
-            followingPunctuation = false;
-        }
-            
-        textUI.text += character;
-
-        if (followingPunctuation) { yield break; }
-        if (isPunctuation) { followingPunctuation = true; }
-        else
-        {
-            if (letterDuration > 0.001f && !addingRichText)
-            {
-                yield return new WaitForSeconds(letterDuration);
-            }
+            yield return null;
+            timer -= Time.deltaTime;
+            if (timer <= 0.0f) { break; }
         }
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (canClick && Input.GetMouseButtonDown(0))
         {
             clicked = true;
         }
