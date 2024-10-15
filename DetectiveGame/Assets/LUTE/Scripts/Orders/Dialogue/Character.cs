@@ -7,6 +7,7 @@ using System.Globalization;
 public class Character : MonoBehaviour, IComparer<Character>
 {
     [SerializeField] protected string characterName;
+    [SerializeField] protected string characterOccupation = "None";
     [SerializeField] protected Color nameColour = Color.white;
     [SerializeField] protected AudioClip characterSound;
     [SerializeField] protected List<Sprite> characterPortraits;
@@ -34,6 +35,7 @@ public class Character : MonoBehaviour, IComparer<Character>
     public static List<Character> ActiveCharacters { get { return activeCharacters; } }
 
     public virtual string CharacterName { get { return characterName; } }
+    public virtual string CharacterOccupation => characterOccupation;
     public virtual Color NameColour { get { return nameColour; } }
     public virtual AudioClip SoundEffect { get { return characterSound; } }
     public virtual List<Sprite> Portraits { get { return characterPortraits; } }
@@ -90,6 +92,13 @@ public class Character : MonoBehaviour, IComparer<Character>
             }
         }
         return null;
+    }
+
+    public virtual Sprite GetPortrait(int index)
+    {
+        if (index < 0 || index >= characterPortraits.Count) { return null; }
+
+        return characterPortraits[index];
     }
 
     #region ILocalizable implementation

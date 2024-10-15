@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a235a5ecc9a891d4d96afb0e96b2906f
+guid: 9f713b0f072328a4c93abf3ce5dbf406
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8318273787469476959
-    second: knoll_0
+      213: 4554388186123340865
+    second: pin_shadow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 1
+  alphaUsage: 2
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -126,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knoll_0
+      name: pin_shadow_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 96
+        y: 0
+        width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ab4079ff0e8f8c80800000000000000
-      internalID: -8318273787469476959
+      spriteID: 14c0e13dcef643f30800000000000000
+      internalID: 4554388186123340865
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ae1c45344c9ff4b4d8d8822639a2a4ce
+    spriteID: 35eff3b38a7e4a44499e291a3ebd4678
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      knoll_0: -8318273787469476959
+      pin_shadow_0: 4554388186123340865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!84 &896609351
+--- !u!84 &810780786
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,7 +264,7 @@ PrefabInstance:
     - target: {fileID: 19678124043742630, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 896609351}
+      objectReference: {fileID: 810780786}
     - target: {fileID: 332120557096673399, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: '_latitudeLongitude.Array.data[1]'
       value: 48.859489, 2.32060
@@ -595,11 +595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.x
-      value: -14.198195
+      value: -112.932365
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.y
-      value: 347.35947
+      value: 299.25824
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeViewHeight
@@ -634,6 +634,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8642065375544709462}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: 'variables.Array.data[3]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedNodes.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -644,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: 'selectedNodes.Array.data[0]'
       value: 
-      objectReference: {fileID: 8642065375544709405}
+      objectReference: {fileID: 8642065375544709463}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: 'selectedNodes.Array.data[1]'
       value: 
@@ -955,7 +959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8089186057204533530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.x
-      value: 95.46713
+      value: 96.732956
       objectReference: {fileID: 0}
     - target: {fileID: 8089186057204533530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.y
@@ -1321,7 +1325,10 @@ PrefabInstance:
       addedObject: {fileID: 8642065375544709464}
     - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8642065375544709465}
+      addedObject: {fileID: 8642065375544709470}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709480}
   m_SourcePrefab: {fileID: 100100000, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
 --- !u!1 &1090460631108315131 stripped
 GameObject:
@@ -1456,6 +1463,7 @@ MonoBehaviour:
   itemId: 0
   orderList:
   - {fileID: 8642065375544709404}
+  - {fileID: 8642065375544709470}
   eventHandler: {fileID: 0}
   isGrouped: 0
   groupIndex: -1
@@ -3088,20 +3096,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 819.2617
-    y: 299.47586
-    width: 78.32
+    x: 806.6036
+    y: 284.28604
+    width: 84.21
     height: 40
-  nodeName: Node
+  nodeName: Manor
   nodeDescription: Basic building block of a narrative engine
   groupDescription: A series of nodes that can be executed as a group
   itemId: 0
   orderList:
-  - {fileID: 8642065375544709465}
+  - {fileID: 8642065375544709480}
   eventHandler: {fileID: 8642065375544709464}
   isGrouped: 0
   groupIndex: -1
-  repeatable: 0
+  repeatable: 1
   nodeLocation: {fileID: 8642065375544709462}
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3125,7 +3133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentNode: {fileID: 8642065375544709463}
   FireOn: 1
---- !u!114 &8642065375544709465
+--- !u!114 &8642065375544709470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3143,20 +3151,33 @@ MonoBehaviour:
   characterNameColour:
     serializedVersion: 2
     rgba: 0
-  storyText: We're at the manor, baby!
+  storyText: 
   letterDuration: 0.04
   punctuationDuration: 0.04
-  extendPrevious: 0
+  extendPrevious: 1
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
-  fadeWhenDone: 0
+  fadeWhenDone: 1
   allowLineSkip: 1
-  waitForClick: 1
+  waitForClick: 0
   timeToWait: 1
   stopVoiceover: 1
   waitForVO: 0
   setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090460631108315131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db63114241e94d54dbe2fdc1aedcef7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Manor
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
