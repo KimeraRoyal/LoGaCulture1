@@ -197,12 +197,6 @@ public class DialogueBox : MonoBehaviour
             float delta = (1f / fadeDuration) * Time.deltaTime;
             float alpha = Mathf.MoveTowards(canvasGroup.alpha, targetAlpha, delta);
             canvasGroup.alpha = alpha;
-
-            if (alpha <= 0f)
-            {
-                // Deactivate object once invisible
-                gameObject.SetActive(false);
-            }
         }
     }
 
