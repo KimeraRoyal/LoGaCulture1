@@ -520,7 +520,7 @@ namespace LoGaCulture.LUTE
 
             dialogueBox.SetStoryText(message);
             dialogueBox.SetActive(true);
-            dialogueBox.StartDialogue(0.04f, 0.04f, 1f, true, true, false, null);
+            dialogueBox.StartDialogue(0.04f, 0.04f, false, 1f, true, true, false, null);
             return message;
         }
     }

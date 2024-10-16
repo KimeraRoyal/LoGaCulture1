@@ -7,6 +7,20 @@ public class Profile : MonoBehaviour
 
     private int m_characterIndex = -1;
 
+    private bool m_open;
+
+    public bool Open
+    {
+        get => m_open;
+        set
+        {
+            if(m_open == value) { return; }
+
+            m_open = value;
+            (m_open ? OnOpened : OnClosed)?.Invoke();
+        }
+    }
+
     public Character SelectedCharacter
     {
         get
@@ -18,6 +32,9 @@ public class Profile : MonoBehaviour
     }
     
     public Action<Character> OnCharacterSelected;
+
+    public Action OnOpened;
+    public Action OnClosed;
     
     private void Awake()
     {
@@ -49,4 +66,7 @@ public class Profile : MonoBehaviour
         m_characterIndex = _index;
         OnCharacterSelected?.Invoke(SelectedCharacter);
     }
+
+    public void Toggle()
+        => Open = !Open;
 }

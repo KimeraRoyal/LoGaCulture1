@@ -24,9 +24,9 @@ public class DialogueParser : MonoBehaviour
         m_separators = new[] { '{', '}' };
     }
 
-    public void Parse(string _dialogue, bool _waitForClick, float _waitTime)
+    public void Parse(string _dialogue, bool _extend, bool _waitForClick, float _waitTime)
     {
-        m_commands.Enqueue(new ClearCommand());
+        if(!_extend) { m_commands.Enqueue(new ClearCommand()); }
         
         var splitDialogue = _dialogue.Split(m_separators);
         for (var i = 0; i < splitDialogue.Length; i++)
@@ -42,7 +42,7 @@ public class DialogueParser : MonoBehaviour
         }
         
         if(_waitForClick) { m_commands.Enqueue(new WaitForInputCommand()); }
-        else { m_commands.Enqueue(new WaitCommand(_waitTime)); }
+        else if(_waitTime > 0.001f) { m_commands.Enqueue(new WaitCommand(_waitTime)); }
     }
 
     public void Flush()

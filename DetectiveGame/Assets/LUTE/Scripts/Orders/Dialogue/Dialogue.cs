@@ -87,7 +87,7 @@ public class Dialogue : Order
         //using the text above, we can use active custom tags to change the text (e.g. <color=red>red text</color>) -- TO DO
 
         //lastly, we display the text in the box and when the action is complete, we continue
-        dialogueBox.StartDialogue(letterDuration, punctuationDuration, timeToWait, allowLineSkip, waitForClick, fadeWhenDone, Continue);
+        dialogueBox.StartDialogue(letterDuration, punctuationDuration, extendPrevious, timeToWait, allowLineSkip, waitForClick, fadeWhenDone, Continue);
     }
 
     public override string GetSummary()

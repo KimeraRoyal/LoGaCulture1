@@ -335,12 +335,12 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    public virtual void StartDialogue(float letterDuration, float punctuationDuration, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone, Action onComplete)
+    public virtual void StartDialogue(float letterDuration, float punctuationDuration, bool extend, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone, Action onComplete)
     {
-        StartCoroutine(DoDialogue(onComplete, letterDuration, punctuationDuration, waitTime, skipLine, waitForClick, fadeWhenDone));
+        StartCoroutine(DoDialogue(onComplete, letterDuration, punctuationDuration, extend, waitTime, skipLine, waitForClick, fadeWhenDone));
     }
 
-    public virtual IEnumerator DoDialogue(Action onComplete, float letterDuration, float punctuationDuration, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone)
+    public virtual IEnumerator DoDialogue(Action onComplete, float letterDuration, float punctuationDuration, bool extend, float waitTime, bool skipLine, bool waitForClick, bool fadeWhenDone)
     {
         var tw = GetWriter();
 
@@ -368,7 +368,7 @@ public class DialogueBox : MonoBehaviour
         talkSpeed = Mathf.Max(talkSpeed, 0.001f);
         var state = new DialogueState(this, letterDuration / talkSpeed, punctuationDuration / talkSpeed, skipLine);
         
-        Parser.Parse(storyText, waitForClick, waitTime);
+        Parser.Parse(storyText, extend, waitForClick, waitTime);
         while (Parser.HasCommands && state.Enabled)
         {
             var command = Parser.GetNextCommand();

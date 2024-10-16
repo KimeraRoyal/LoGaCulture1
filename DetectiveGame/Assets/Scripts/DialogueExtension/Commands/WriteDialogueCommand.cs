@@ -18,7 +18,7 @@ namespace DialogueExtension.Commands
         {
             _state.Writer.onComplete += OnWritten;
             _state.Writer.WriteText(m_dialogue, _state);
-
+            
             yield return new WaitUntil(() => m_written);
             _state.Writer.onComplete -= OnWritten;
         }
