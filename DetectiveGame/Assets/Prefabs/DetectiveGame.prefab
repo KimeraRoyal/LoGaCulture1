@@ -4167,6 +4167,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _measurements: 5
+--- !u!1 &2159228056522856965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5162470430728031051}
+  - component: {fileID: 2207122943191395708}
+  m_Layer: 0
+  m_Name: Linked_Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5162470430728031051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159228056522856965}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4791330162092773129}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2207122943191395708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159228056522856965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43699f528a486d145b6b5e945d20648e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collection:
+  - {fileID: 7528373283106153513}
+  - {fileID: 8467617819101912420}
+  - {fileID: 3506568102044949260}
+  - {fileID: 6546033984032138363}
+  - {fileID: 2243298845012440634}
+  - {fileID: 7293842536367596228}
+  - {fileID: 8899025496247126132}
 --- !u!1 &2220771142581918627
 GameObject:
   m_ObjectHideFlags: 0
@@ -5742,7 +5794,7 @@ GameObject:
   - component: {fileID: 1690393233429868931}
   - component: {fileID: 8494976984118027392}
   m_Layer: 0
-  m_Name: Dr. Hippo
+  m_Name: Joshua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5776,11 +5828,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Joshua
+  characterOccupation: None
   nameColour: {r: 0.8490566, g: 0.24676682, b: 0.18823424, a: 1}
   characterSound: {fileID: 0}
   characterPortraits:
   - {fileID: -2975849920183638346, guid: 66b5eec957cdb8c439cb07b4aa4684fe, type: 3}
-  facingDirection: 0
+  facingDirection: 1
   talkSpeed: 1
 --- !u!1 &2896689654988932581
 GameObject:
@@ -7779,57 +7832,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!1 &3849793610849602147
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 951985225538804166}
-  - component: {fileID: 1418577538438237573}
-  m_Layer: 0
-  m_Name: Princess Parrot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &951985225538804166
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3849793610849602147}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5750301688382176425}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1418577538438237573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3849793610849602147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52287538592bb04b8a2d1345e48bd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Princess Parrot
-  nameColour: {r: 1, g: 0.516737, b: 0.48627448, a: 1}
-  characterSound: {fileID: 0}
-  characterPortraits:
-  - {fileID: 21300000, guid: abb6929402cbd364593c06873554fc82, type: 3}
-  facingDirection: 0
-  talkSpeed: 1
 --- !u!1 &3866006019385578522
 GameObject:
   m_ObjectHideFlags: 0
@@ -7921,13 +7923,58 @@ GameObject:
   - component: {fileID: 3470297105590137808}
   - component: {fileID: 8089186057204533530}
   - component: {fileID: 2495474822953912342}
-  - component: {fileID: 2648419660388904701}
-  - component: {fileID: 2162745234814939003}
-  - component: {fileID: 4044323057662382171}
-  - component: {fileID: 3064867942424822010}
   - component: {fileID: 414073994743709566}
-  - component: {fileID: 6431994682120319959}
-  - component: {fileID: 3245230649762577860}
+  - component: {fileID: 6569931661067523550}
+  - component: {fileID: 5067661787727724448}
+  - component: {fileID: 7528373283106153513}
+  - component: {fileID: 8467617819101912420}
+  - component: {fileID: 3506568102044949260}
+  - component: {fileID: 6546033984032138363}
+  - component: {fileID: 2243298845012440634}
+  - component: {fileID: 7293842536367596228}
+  - component: {fileID: 7097930657251734367}
+  - component: {fileID: 3115273300676472366}
+  - component: {fileID: 2640189299301632813}
+  - component: {fileID: 1873741414027208083}
+  - component: {fileID: 4805065926191467867}
+  - component: {fileID: 8649985391243620941}
+  - component: {fileID: 522818771907836481}
+  - component: {fileID: 144768259746315616}
+  - component: {fileID: 1460376628936050421}
+  - component: {fileID: 7969521047193344165}
+  - component: {fileID: 3558202876273413598}
+  - component: {fileID: 5357336467100425407}
+  - component: {fileID: 6641431628449074822}
+  - component: {fileID: 6319316647850424047}
+  - component: {fileID: 1634457429163711090}
+  - component: {fileID: 249318524902145583}
+  - component: {fileID: 4678092519611592889}
+  - component: {fileID: 4939259821331746331}
+  - component: {fileID: 4629701180544772536}
+  - component: {fileID: 5780247625965664988}
+  - component: {fileID: 8899025496247126132}
+  - component: {fileID: 4768140019043919894}
+  - component: {fileID: 3175853788064496687}
+  - component: {fileID: 4372517231558667674}
+  - component: {fileID: 5966264480695941981}
+  - component: {fileID: 8206681827773196031}
+  - component: {fileID: 576908425272108777}
+  - component: {fileID: 1344018930605363821}
+  - component: {fileID: 3899575913781791461}
+  - component: {fileID: 6805442215937186170}
+  - component: {fileID: 4190474436722904783}
+  - component: {fileID: 96169447786596611}
+  - component: {fileID: 7729161106967960450}
+  - component: {fileID: 6638997938403108645}
+  - component: {fileID: 5141489214115374417}
+  - component: {fileID: 4656440765143809869}
+  - component: {fileID: 7687194153630397875}
+  - component: {fileID: 1603104397417097833}
+  - component: {fileID: 2912868779463367403}
+  - component: {fileID: 2421095219771423230}
+  - component: {fileID: 1282045589131315067}
+  - component: {fileID: 6655800972556297476}
+  - component: {fileID: 4326033272010808370}
   m_Layer: 0
   m_Name: Flow Engine
   m_TagString: Untagged
@@ -7951,6 +7998,7 @@ Transform:
   - {fileID: 6306146123311061397}
   - {fileID: 718883819393456869}
   - {fileID: 548814319957807831}
+  - {fileID: 5162470430728031051}
   m_Father: {fileID: 8566412879259129777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3470297105590137808
@@ -7966,17 +8014,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyText: {fileID: 0}
-  groups: []
+  groups:
+  - {fileID: 6638997938403108645}
   description: A game about Avebury!
   hideComponents: 0
   localizationId: 
-  selectedOrders:
-  - {fileID: 3245230649762577860}
-  selectedNodes:
-  - {fileID: 8089186057204533530}
-  nodeViewHeight: 406
+  selectedOrders: []
+  selectedNodes: []
+  nodeViewHeight: 638
   hideOrders: []
-  variables: []
+  variables:
+  - {fileID: 3115273300676472366}
+  - {fileID: 5141489214115374417}
+  - {fileID: 7687194153630397875}
   variablesExpanded: 1
   variablesScrollPos: {x: 0, y: 0}
   mapLocations: []
@@ -7987,12 +8037,13 @@ MonoBehaviour:
   showHandlerInfoOnGraph: 0
   showAnnotations: 1
   labelTint: {r: 0.9966797, g: 0.7216981, b: 1, a: 1}
-  zoom: 1
-  scrollPos: {x: 82.93152, y: 310.15924}
+  zoom: 0.79000014
+  scrollPos: {x: 90.8651, y: 296.72665}
   version: 1
   sidesOfDie: 6
   postcards: []
-  groupnames: []
+  groupnames:
+  - 
 --- !u!114 &8089186057204533530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8007,18 +8058,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 393.46713
-    y: -4.6592407
-    width: 78.32
+    x: 96.732956
+    y: 35.34076
+    width: 77.5
     height: 40
-  nodeName: Node
-  nodeDescription: Basic building block of a narrative engine
+  nodeName: Start
+  nodeDescription: Introduction dialogue.
   groupDescription: A series of nodes that can be executed as a group
   itemId: 0
   orderList:
-  - {fileID: 3245230649762577860}
-  - {fileID: 2648419660388904701}
-  - {fileID: 3064867942424822010}
   - {fileID: 414073994743709566}
   eventHandler: {fileID: 2495474822953912342}
   isGrouped: 0
@@ -8047,140 +8095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentNode: {fileID: 8089186057204533530}
   waitForFrames: 1
---- !u!114 &2648419660388904701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3887621031724931651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: Hello World!
-  letterDuration: 0.04
-  punctuationDuration: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &2162745234814939003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3887621031724931651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 548.8799
-    y: -6.0132446
-    width: 89.18
-    height: 40
-  nodeName: Node 1
-  nodeDescription: Basic building block of a narrative engine
-  groupDescription: A series of nodes that can be executed as a group
-  itemId: 0
-  orderList:
-  - {fileID: 4044323057662382171}
-  - {fileID: 6431994682120319959}
-  eventHandler: {fileID: 0}
-  isGrouped: 0
-  groupIndex: -1
-  repeatable: 0
-  nodeLocation: {fileID: 0}
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  hoverStartTime: 0
-  targetUnlockNode: {fileID: 0}
-  targetKeyNode: {fileID: 0}
-  showDesc: 0
-  saveable: 0
-  NodeComplete: 0
---- !u!114 &4044323057662382171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3887621031724931651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: 'Hello World Rising: Revengeance'
-  letterDuration: 0.04
-  punctuationDuration: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
---- !u!114 &3064867942424822010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3887621031724931651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  characterPortrait: {fileID: 0}
-  characterName: 
-  characterNameColour:
-    serializedVersion: 2
-    rgba: 0
-  storyText: Hello World 2
-  letterDuration: 0.04
-  punctuationDuration: 0.04
-  extendPrevious: 0
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  fadeWhenDone: 0
-  allowLineSkip: 1
-  waitForClick: 1
-  timeToWait: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setDialogueBox: {fileID: 0}
 --- !u!114 &414073994743709566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8194,10 +8108,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetEngine: {fileID: 0}
-  targetNode: {fileID: 2162745234814939003}
+  targetNode: {fileID: 7528373283106153513}
   startIndex: 0
   callMode: 0
---- !u!114 &6431994682120319959
+--- !u!114 &6569931661067523550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8206,11 +8120,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 3887621031724931651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0c68b7e8b3b6e643b75c61419337f66, type: 3}
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 7473669090237364935}
---- !u!114 &3245230649762577860
+  nodeRect:
+    serializedVersion: 2
+    x: 751.158
+    y: 46.35868
+    width: 117.19
+    height: 40
+  nodeName: Begin Game
+  nodeDescription: Beginning of gameplay.
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 0
+  orderList:
+  - {fileID: 5067661787727724448}
+  - {fileID: 4326033272010808370}
+  - {fileID: 6655800972556297476}
+  - {fileID: 2421095219771423230}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &5067661787727724448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8224,6 +8165,1723 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setSize: 0
   _size: {x: 0, y: 0}
+--- !u!114 &7528373283106153513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 208.55661
+    y: 42.717094
+    width: 156.65
+    height: 40
+  nodeName: Weather Exposition
+  nodeDescription: Pick a node to go to based on the weather.
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 1
+  orderList:
+  - {fileID: 7097930657251734367}
+  - {fileID: 2640189299301632813}
+  - {fileID: 1873741414027208083}
+  - {fileID: 4805065926191467867}
+  - {fileID: 8649985391243620941}
+  - {fileID: 522818771907836481}
+  - {fileID: 144768259746315616}
+  - {fileID: 5780247625965664988}
+  - {fileID: 7969521047193344165}
+  - {fileID: 3558202876273413598}
+  - {fileID: 1460376628936050421}
+  - {fileID: 4678092519611592889}
+  - {fileID: 4939259821331746331}
+  - {fileID: 5357336467100425407}
+  - {fileID: 4629701180544772536}
+  - {fileID: 6641431628449074822}
+  - {fileID: 6319316647850424047}
+  - {fileID: 1634457429163711090}
+  - {fileID: 249318524902145583}
+  - {fileID: 7729161106967960450}
+  eventHandler: {fileID: 0}
+  isGrouped: 1
+  groupIndex: 0
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8467617819101912420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 421.3775
+    y: -56.879944
+    width: 78.56
+    height: 40
+  nodeName: Clear
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 2
+  orderList:
+  - {fileID: 4372517231558667674}
+  - {fileID: 3175853788064496687}
+  eventHandler: {fileID: 0}
+  isGrouped: 1
+  groupIndex: 0
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &3506568102044949260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 427.5567
+    y: 152.71707
+    width: 74.24
+    height: 40
+  nodeName: Cold
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 3
+  orderList:
+  - {fileID: 4190474436722904783}
+  - {fileID: 96169447786596611}
+  eventHandler: {fileID: 0}
+  isGrouped: 1
+  groupIndex: 0
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &6546033984032138363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 433.3775
+    y: 4.120058
+    width: 98.729996
+    height: 40
+  nodeName: Overcast
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 4
+  orderList:
+  - {fileID: 5966264480695941981}
+  - {fileID: 8206681827773196031}
+  eventHandler: {fileID: 0}
+  isGrouped: 1
+  groupIndex: 0
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &2243298845012440634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 433.3775
+    y: 61.120056
+    width: 71.229996
+    height: 40
+  nodeName: Wet
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 5
+  orderList:
+  - {fileID: 576908425272108777}
+  - {fileID: 1344018930605363821}
+  eventHandler: {fileID: 0}
+  isGrouped: 1
+  groupIndex: 0
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &7293842536367596228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 430.3775
+    y: 111.120056
+    width: 95.770004
+    height: 40
+  nodeName: Thunder
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 6
+  orderList:
+  - {fileID: 3899575913781791461}
+  - {fileID: 6805442215937186170}
+  eventHandler: {fileID: 0}
+  isGrouped: 1
+  groupIndex: 0
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &7097930657251734367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b38f47b6de1de4baa9eb142b211426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - compareOperator: 0
+    anyVariable:
+      variable: {fileID: 3115273300676472366}
+      data:
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        locationData:
+          locationRef: {fileID: 0}
+          locationVal: 
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        nodeCollectionData:
+          nodeCollectionRef: {fileID: 0}
+          nodeCollectionVal: {fileID: 0}
+          total: 0
+        nodeData:
+          nodeRef: {fileID: 0}
+          nodeVal: {fileID: 0}
+        inventoryData:
+          inventoryRef: {fileID: 0}
+          inventoryVal: {fileID: 0}
+          item: {fileID: 0}
+        diceData:
+          diceRef: {fileID: 0}
+          diceVal: 0
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 0
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 0
+  compareOperator: 0
+  anyVariable:
+    variable: {fileID: 0}
+    data:
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      locationData:
+        locationRef: {fileID: 0}
+        locationVal: 
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      nodeCollectionData:
+        nodeCollectionRef: {fileID: 0}
+        nodeCollectionVal: {fileID: 0}
+        total: 0
+      nodeData:
+        nodeRef: {fileID: 0}
+        nodeVal: {fileID: 0}
+      inventoryData:
+        inventoryRef: {fileID: 0}
+        inventoryVal: {fileID: 0}
+        item: {fileID: 0}
+      diceData:
+        diceRef: {fileID: 0}
+        diceVal: 0
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
+  variable: {fileID: 0}
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  locationData:
+    locationRef: {fileID: 0}
+    locationVal: 
+  collectionData:
+    collectionRef: {fileID: 0}
+    collectionVal: {fileID: 0}
+  nodeCollectionData:
+    nodeCollectionRef: {fileID: 0}
+    nodeCollectionVal: {fileID: 0}
+    total: 0
+  nodeData:
+    nodeRef: {fileID: 0}
+    nodeVal: {fileID: 0}
+  inventoryData:
+    inventoryRef: {fileID: 0}
+    inventoryVal: {fileID: 0}
+    item: {fileID: 0}
+  diceData:
+    diceRef: {fileID: 0}
+    diceVal: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &3115273300676472366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad517630e0a64c44b4baa93116b12d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: Weather
+  value: 0
+--- !u!114 &2640189299301632813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8467617819101912420}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1873741414027208083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc9dad2db248d64ea3568bb855de5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4805065926191467867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b38f47b6de1de4baa9eb142b211426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - compareOperator: 0
+    anyVariable:
+      variable: {fileID: 3115273300676472366}
+      data:
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        locationData:
+          locationRef: {fileID: 0}
+          locationVal: 
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        nodeCollectionData:
+          nodeCollectionRef: {fileID: 0}
+          nodeCollectionVal: {fileID: 0}
+          total: 0
+        nodeData:
+          nodeRef: {fileID: 0}
+          nodeVal: {fileID: 0}
+        inventoryData:
+          inventoryRef: {fileID: 0}
+          inventoryVal: {fileID: 0}
+          item: {fileID: 0}
+        diceData:
+          diceRef: {fileID: 0}
+          diceVal: 0
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 1
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 1
+  - compareOperator: 0
+    anyVariable:
+      variable: {fileID: 3115273300676472366}
+      data:
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        locationData:
+          locationRef: {fileID: 0}
+          locationVal: 
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        nodeCollectionData:
+          nodeCollectionRef: {fileID: 0}
+          nodeCollectionVal: {fileID: 0}
+          total: 0
+        nodeData:
+          nodeRef: {fileID: 0}
+          nodeVal: {fileID: 0}
+        inventoryData:
+          inventoryRef: {fileID: 0}
+          inventoryVal: {fileID: 0}
+          item: {fileID: 0}
+        diceData:
+          diceRef: {fileID: 0}
+          diceVal: 0
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 2
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 2
+  compareOperator: 0
+  anyVariable:
+    variable: {fileID: 0}
+    data:
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      locationData:
+        locationRef: {fileID: 0}
+        locationVal: 
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      nodeCollectionData:
+        nodeCollectionRef: {fileID: 0}
+        nodeCollectionVal: {fileID: 0}
+        total: 0
+      nodeData:
+        nodeRef: {fileID: 0}
+        nodeVal: {fileID: 0}
+      inventoryData:
+        inventoryRef: {fileID: 0}
+        inventoryVal: {fileID: 0}
+        item: {fileID: 0}
+      diceData:
+        diceRef: {fileID: 0}
+        diceVal: 0
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
+  variable: {fileID: 0}
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  locationData:
+    locationRef: {fileID: 0}
+    locationVal: 
+  collectionData:
+    collectionRef: {fileID: 0}
+    collectionVal: {fileID: 0}
+  nodeCollectionData:
+    nodeCollectionRef: {fileID: 0}
+    nodeCollectionVal: {fileID: 0}
+    total: 0
+  nodeData:
+    nodeRef: {fileID: 0}
+    nodeVal: {fileID: 0}
+  inventoryData:
+    inventoryRef: {fileID: 0}
+    inventoryVal: {fileID: 0}
+    item: {fileID: 0}
+  diceData:
+    diceRef: {fileID: 0}
+    diceVal: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &8649985391243620941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 6546033984032138363}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &522818771907836481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc9dad2db248d64ea3568bb855de5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &144768259746315616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b38f47b6de1de4baa9eb142b211426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - compareOperator: 0
+    anyVariable:
+      variable: {fileID: 3115273300676472366}
+      data:
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        locationData:
+          locationRef: {fileID: 0}
+          locationVal: 
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        nodeCollectionData:
+          nodeCollectionRef: {fileID: 0}
+          nodeCollectionVal: {fileID: 0}
+          total: 0
+        nodeData:
+          nodeRef: {fileID: 0}
+          nodeVal: {fileID: 0}
+        inventoryData:
+          inventoryRef: {fileID: 0}
+          inventoryVal: {fileID: 0}
+          item: {fileID: 0}
+        diceData:
+          diceRef: {fileID: 0}
+          diceVal: 0
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 3
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 3
+  - compareOperator: 0
+    anyVariable:
+      variable: {fileID: 3115273300676472366}
+      data:
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        locationData:
+          locationRef: {fileID: 0}
+          locationVal: 
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        nodeCollectionData:
+          nodeCollectionRef: {fileID: 0}
+          nodeCollectionVal: {fileID: 0}
+          total: 0
+        nodeData:
+          nodeRef: {fileID: 0}
+          nodeVal: {fileID: 0}
+        inventoryData:
+          inventoryRef: {fileID: 0}
+          inventoryVal: {fileID: 0}
+          item: {fileID: 0}
+        diceData:
+          diceRef: {fileID: 0}
+          diceVal: 0
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 4
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 4
+  compareOperator: 0
+  anyVariable:
+    variable: {fileID: 0}
+    data:
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      locationData:
+        locationRef: {fileID: 0}
+        locationVal: 
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      nodeCollectionData:
+        nodeCollectionRef: {fileID: 0}
+        nodeCollectionVal: {fileID: 0}
+        total: 0
+      nodeData:
+        nodeRef: {fileID: 0}
+        nodeVal: {fileID: 0}
+      inventoryData:
+        inventoryRef: {fileID: 0}
+        inventoryVal: {fileID: 0}
+        item: {fileID: 0}
+      diceData:
+        diceRef: {fileID: 0}
+        diceVal: 0
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
+  variable: {fileID: 0}
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  locationData:
+    locationRef: {fileID: 0}
+    locationVal: 
+  collectionData:
+    collectionRef: {fileID: 0}
+    collectionVal: {fileID: 0}
+  nodeCollectionData:
+    nodeCollectionRef: {fileID: 0}
+    nodeCollectionVal: {fileID: 0}
+    total: 0
+  nodeData:
+    nodeRef: {fileID: 0}
+    nodeVal: {fileID: 0}
+  inventoryData:
+    inventoryRef: {fileID: 0}
+    inventoryVal: {fileID: 0}
+    item: {fileID: 0}
+  diceData:
+    diceRef: {fileID: 0}
+    diceVal: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &1460376628936050421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 7293842536367596228}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &7969521047193344165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc9dad2db248d64ea3568bb855de5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3558202876273413598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b38f47b6de1de4baa9eb142b211426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - compareOperator: 0
+    anyVariable:
+      variable: {fileID: 3115273300676472366}
+      data:
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        locationData:
+          locationRef: {fileID: 0}
+          locationVal: 
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        nodeCollectionData:
+          nodeCollectionRef: {fileID: 0}
+          nodeCollectionVal: {fileID: 0}
+          total: 0
+        nodeData:
+          nodeRef: {fileID: 0}
+          nodeVal: {fileID: 0}
+        inventoryData:
+          inventoryRef: {fileID: 0}
+          inventoryVal: {fileID: 0}
+          item: {fileID: 0}
+        diceData:
+          diceRef: {fileID: 0}
+          diceVal: 0
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 5
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 5
+  compareOperator: 0
+  anyVariable:
+    variable: {fileID: 0}
+    data:
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      locationData:
+        locationRef: {fileID: 0}
+        locationVal: 
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      nodeCollectionData:
+        nodeCollectionRef: {fileID: 0}
+        nodeCollectionVal: {fileID: 0}
+        total: 0
+      nodeData:
+        nodeRef: {fileID: 0}
+        nodeVal: {fileID: 0}
+      inventoryData:
+        inventoryRef: {fileID: 0}
+        inventoryVal: {fileID: 0}
+        item: {fileID: 0}
+      diceData:
+        diceRef: {fileID: 0}
+        diceVal: 0
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
+  variable: {fileID: 0}
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  locationData:
+    locationRef: {fileID: 0}
+    locationVal: 
+  collectionData:
+    collectionRef: {fileID: 0}
+    collectionVal: {fileID: 0}
+  nodeCollectionData:
+    nodeCollectionRef: {fileID: 0}
+    nodeCollectionVal: {fileID: 0}
+    total: 0
+  nodeData:
+    nodeRef: {fileID: 0}
+    nodeVal: {fileID: 0}
+  inventoryData:
+    inventoryRef: {fileID: 0}
+    inventoryVal: {fileID: 0}
+    item: {fileID: 0}
+  diceData:
+    diceRef: {fileID: 0}
+    diceVal: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &5357336467100425407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 3506568102044949260}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &6641431628449074822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6319316647850424047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1634457429163711090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &249318524902145583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4678092519611592889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc9dad2db248d64ea3568bb855de5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4939259821331746331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b38f47b6de1de4baa9eb142b211426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - compareOperator: 0
+    anyVariable:
+      variable: {fileID: 3115273300676472366}
+      data:
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        locationData:
+          locationRef: {fileID: 0}
+          locationVal: 
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        nodeCollectionData:
+          nodeCollectionRef: {fileID: 0}
+          nodeCollectionVal: {fileID: 0}
+          total: 0
+        nodeData:
+          nodeRef: {fileID: 0}
+          nodeVal: {fileID: 0}
+        inventoryData:
+          inventoryRef: {fileID: 0}
+          inventoryVal: {fileID: 0}
+          item: {fileID: 0}
+        diceData:
+          diceRef: {fileID: 0}
+          diceVal: 0
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 6
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 6
+  compareOperator: 0
+  anyVariable:
+    variable: {fileID: 0}
+    data:
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      locationData:
+        locationRef: {fileID: 0}
+        locationVal: 
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      nodeCollectionData:
+        nodeCollectionRef: {fileID: 0}
+        nodeCollectionVal: {fileID: 0}
+        total: 0
+      nodeData:
+        nodeRef: {fileID: 0}
+        nodeVal: {fileID: 0}
+      inventoryData:
+        inventoryRef: {fileID: 0}
+        inventoryVal: {fileID: 0}
+        item: {fileID: 0}
+      diceData:
+        diceRef: {fileID: 0}
+        diceVal: 0
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
+  variable: {fileID: 0}
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  locationData:
+    locationRef: {fileID: 0}
+    locationVal: 
+  collectionData:
+    collectionRef: {fileID: 0}
+    collectionVal: {fileID: 0}
+  nodeCollectionData:
+    nodeCollectionRef: {fileID: 0}
+    nodeCollectionVal: {fileID: 0}
+    total: 0
+  nodeData:
+    nodeRef: {fileID: 0}
+    nodeVal: {fileID: 0}
+  inventoryData:
+    inventoryRef: {fileID: 0}
+    inventoryVal: {fileID: 0}
+    item: {fileID: 0}
+  diceData:
+    diceRef: {fileID: 0}
+    diceVal: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &4629701180544772536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5780247625965664988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 2243298845012440634}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8899025496247126132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 569.3775
+    y: 46.120056
+    width: 120.68
+    height: 40
+  nodeName: Weather End
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 7
+  orderList:
+  - {fileID: 4656440765143809869}
+  - {fileID: 4768140019043919894}
+  eventHandler: {fileID: 0}
+  isGrouped: 1
+  groupIndex: 0
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &4768140019043919894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 6569931661067523550}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &3175853788064496687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8899025496247126132}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &4372517231558667674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: <b>Avebury, a beautiful site on a crisp, clear day.</b>{wc}Weren't the
+    only thing that was clear, though.{wc}It was also clear that there was mystery
+    in the air, a fresh case brought in on a fresh breeze.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &5966264480695941981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Avebury, an ancient site well fittin' the gloominess that day.{wc}A
+    case blew on in on a strong wind.{wc}Good thing I caught onto it, what with my
+    arms and all.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8206681827773196031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8899025496247126132}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &576908425272108777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Avebury, a sleepy site lulled in by that gentle pitter-patter...{wc}Rain
+    falls in from the sky, sure, but not me. I was in town 'cause I sniffed something
+    out - and it weren't just petrichor.{wc}A new case had fallen right onto my brolly,
+    so I'd come to check it out.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &1344018930605363821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8899025496247126132}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &3899575913781791461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Avebury, crackle, crackle...{wc}You hear that? Those thunderin' rumbles
+    all around the site.{wc}No doubt about it, a new case had come in like a storm,
+    and I had to check it out.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &6805442215937186170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8899025496247126132}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &4190474436722904783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Avebury, a site you could just about think was frozen in time...{wc}I
+    know better, though. Some new cases can chill even stone down to its core.{wc}That's
+    how I ended up snoopin' it out, warming the place up with all of my intuition.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &96169447786596611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8899025496247126132}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &7729161106967960450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8899025496247126132}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &6638997938403108645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987ded0257f8a5840adbda6a07728704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 158.55661
+    y: -106.879944
+    width: 581.50085
+    height: 349.59702
+  nodeName: Linked_Group
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: Introductory dialogue based on the weather conditions
+  itemId: 0
+  orderList: []
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+  groupedNodes:
+  - {fileID: 7528373283106153513}
+  - {fileID: 8467617819101912420}
+  - {fileID: 3506568102044949260}
+  - {fileID: 6546033984032138363}
+  - {fileID: 2243298845012440634}
+  - {fileID: 7293842536367596228}
+  - {fileID: 8899025496247126132}
+  setNodesToComplete: 0
+  nodesToComplete: []
+  totalNodesToComplete: 1
+  updatedGroupNodes: 0
+--- !u!114 &5141489214115374417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c346d0bc9648d934895f307a59c3e739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 2
+  key: Linked_Group
+  value: {fileID: 2207122943191395708}
+--- !u!114 &4656440765143809869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: 'See, there''d been talks of activity: crime-inal activity. A slew of
+    disappearances of innocent stones caught up in the big city living of this teeny
+    tiny village.{wc}So, naturally, I said I''d go to check it out. What else am
+    I to do?{wc}After all, ain''t nobody got as keen an eye with their <b>Magnifying
+    Glass</b> as me.'
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &7687194153630397875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6b6fee47fe44e48b3fa567bf2412cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Manor
+  value: 51.4291838724828, -1.85904195132014
+  locationSprite: {fileID: 21300000, guid: 3d69bf4b1f575644db3fcca0cb5c60f8, type: 3}
+  locationColor: {r: 0.97623444, g: 0.4198113, b: 1, a: 1}
+  showLocationName: 1
+  locationDisabled: 0
+--- !u!114 &1603104397417097833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 806.6036
+    y: 284.28604
+    width: 84.21
+    height: 40
+  nodeName: Manor
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 0
+  orderList:
+  - {fileID: 1282045589131315067}
+  eventHandler: {fileID: 2912868779463367403}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 7687194153630397875}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &2912868779463367403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d2916b1cf4a5b4391d968526553eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNode: {fileID: 1603104397417097833}
+  FireOn: 1
+--- !u!114 &2421095219771423230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: 
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 1
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 1
+  allowLineSkip: 1
+  waitForClick: 0
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &1282045589131315067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db63114241e94d54dbe2fdc1aedcef7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Manor
+--- !u!114 &6655800972556297476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d6d642a2d472948bf08e43404979b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customButtonIcon: {fileID: 1557956184, guid: 075289b53d2214247aaee342cc134414, type: 3}
+  setIconButton: {fileID: 0}
+  showIcon: 1
+--- !u!114 &4326033272010808370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887621031724931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d693a4e188be047ba200132030fa79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customButtonIcon: {fileID: 21300000, guid: 0958bf3dd415e974e90f978b50a845ee, type: 3}
+  setIconButton: {fileID: 0}
+  showIcon: 1
 --- !u!1 &3891532398562823699
 GameObject:
   m_ObjectHideFlags: 0
@@ -8922,8 +10580,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4360690436884144533}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34608158, y: 0.43063557, z: -0.006135093}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8972,12 +10630,12 @@ MonoBehaviour:
   _initializeOnStart: 0
   _imagery:
     _layerProperty:
-      sourceType: 5
+      sourceType: 1
       sourceOptions:
         isActive: 1
         layerSource:
-          Name: Satellite Streets
-          Id: mapbox://styles/mapbox/satellite-streets-v10
+          Name: Streets
+          Id: mapbox://styles/mapbox/outdoors-v10
           Modified: 
           UserName: 
       rasterOptions:
@@ -9124,7 +10782,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: LowTrafficCongestion
           geometryType: 3
           layerName: traffic
@@ -9196,7 +10854,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: ModerateTrafficCongestion
           geometryType: 3
           layerName: traffic
@@ -9268,7 +10926,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: HeavyTrafficCongestion
           geometryType: 3
           layerName: traffic
@@ -9340,7 +10998,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: SevereTrafficCongestion
           geometryType: 3
           layerName: traffic
@@ -10594,6 +12252,58 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!1 &5560976839559103164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530934250375575163}
+  - component: {fileID: 4751155556835056109}
+  m_Layer: 0
+  m_Name: Sheep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530934250375575163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560976839559103164}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5750301688382176425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4751155556835056109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560976839559103164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52287538592bb04b8a2d1345e48bd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Sheep
+  characterOccupation: Sheep
+  nameColour: {r: 1, g: 1, b: 1, a: 1}
+  characterSound: {fileID: 0}
+  characterPortraits:
+  - {fileID: -8636221404721523813, guid: 95bbdde39ebd42547834cc14247db51a, type: 3}
+  facingDirection: 1
+  talkSpeed: 1
 --- !u!1 &5634395091999524239
 GameObject:
   m_ObjectHideFlags: 0
@@ -10673,57 +12383,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!1 &5645846776250592316
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2422854371193921361}
-  - component: {fileID: 2836436641272710723}
-  m_Layer: 0
-  m_Name: BossBear
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2422854371193921361
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645846776250592316}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5750301688382176425}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2836436641272710723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645846776250592316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52287538592bb04b8a2d1345e48bd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Boss Bear
-  nameColour: {r: 0, g: 0, b: 0, a: 1}
-  characterSound: {fileID: 0}
-  characterPortraits:
-  - {fileID: 21300000, guid: dc359a51ef5d87843ad6fa5857b030e5, type: 3}
-  facingDirection: 0
-  talkSpeed: 1
 --- !u!1 &5676929565224470867
 GameObject:
   m_ObjectHideFlags: 0
@@ -12231,10 +13890,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1530934250375575163}
   - {fileID: 1690393233429868931}
-  - {fileID: 951985225538804166}
-  - {fileID: 1024549162577482734}
-  - {fileID: 2422854371193921361}
   m_Father: {fileID: 8566412879259129777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6624607059757079660
@@ -12944,57 +14601,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!1 &7238336964331827071
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1024549162577482734}
-  - component: {fileID: 267993823834863081}
-  m_Layer: 0
-  m_Name: Pleasent Panda
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1024549162577482734
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7238336964331827071}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5750301688382176425}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &267993823834863081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7238336964331827071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52287538592bb04b8a2d1345e48bd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Pleasent Panda
-  nameColour: {r: 0.48584908, g: 0.76196724, b: 1, a: 1}
-  characterSound: {fileID: 0}
-  characterPortraits:
-  - {fileID: 21300000, guid: 2d75fad76854be747a42dc54cd0b9ef2, type: 3}
-  facingDirection: 0
-  talkSpeed: 1
 --- !u!1 &7238343344499660335
 GameObject:
   m_ObjectHideFlags: 0
@@ -15502,6 +17108,7 @@ Transform:
   - {fileID: 4082399400624378048}
   - {fileID: 5510323520707134073}
   - {fileID: 6418626474106660706}
+  - {fileID: 2466685907460177460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8779651353349254258
@@ -16627,6 +18234,68 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1001 &4298530448128975765
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8566412879259129777}
+    m_Modifications:
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490212987084922749, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_Name
+      value: Story Flags
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+--- !u!4 &2466685907460177460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1845384481105354145, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+  m_PrefabInstance: {fileID: 4298530448128975765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4889061015299504340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16718,6 +18387,22 @@ PrefabInstance:
     - target: {fileID: 4127921731218024932, guid: d2cb32202da93ca41a48e06643f4a1be, type: 3}
       propertyPath: m_Name
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206509166864173941, guid: d2cb32202da93ca41a48e06643f4a1be, type: 3}
+      propertyPath: m_margin.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206509166864173941, guid: d2cb32202da93ca41a48e06643f4a1be, type: 3}
+      propertyPath: m_margin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206509166864173941, guid: d2cb32202da93ca41a48e06643f4a1be, type: 3}
+      propertyPath: m_margin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206509166864173941, guid: d2cb32202da93ca41a48e06643f4a1be, type: 3}
+      propertyPath: m_margin.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
