@@ -55,6 +55,14 @@ public class SetNamedFlag : Order
         return $"{m_operation}s Named Flag \"{m_flagName}\"";
     }
 
+    public override void OnValidate()
+    {
+        m_flagName = m_flagName?.ToLower();
+        ValidateFlagName();
+        
+        base.OnValidate();
+    }
+
     private void ValidateFlagName()
     {
         var flagNames = NamedFlags.FlagNames;
@@ -71,13 +79,5 @@ public class SetNamedFlag : Order
 
         var validIndex = m_lastIndex >= 0 && m_lastNamedFlagCount == flagNames.Count;
         m_flagName = validIndex ? flagNames[m_lastIndex] : "";
-    }
-
-    public override void OnValidate()
-    {
-        m_flagName = m_flagName?.ToLower();
-        ValidateFlagName();
-        
-        base.OnValidate();
     }
 }

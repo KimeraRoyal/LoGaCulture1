@@ -76,6 +76,9 @@ namespace KW.Flags
             m_flagBits[indexInArray] ^= (uint) 1 << (_index % c_sizeInBits);
         }
 
+        public bool IsFlag(int _index, bool _set)
+            => IsFlagSet(_index) | !_set;
+
         public bool IsFlagSet(int _index)
         {
             var indexInArray = _index / c_sizeInBits;

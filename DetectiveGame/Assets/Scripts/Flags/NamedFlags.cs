@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace KW.Flags
 {
@@ -56,6 +55,12 @@ namespace KW.Flags
             var index = GetFlagIndex(_flag);
             if (index < 0) { return; }
             m_flags.ToggleFlag(index);
+        }
+
+        public bool IsFlag(string _flag, bool _set)
+        {
+            var index = GetFlagIndex(_flag);
+            return index >= 0 && m_flags.IsFlag(index, _set);
         }
 
         public bool IsFlagSet(string _flag)
