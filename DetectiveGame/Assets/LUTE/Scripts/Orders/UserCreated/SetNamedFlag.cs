@@ -25,6 +25,11 @@ public class SetNamedFlag : Order
         }
     }
 
+    private void Awake()
+    {
+        ValidateFlagName();
+    }
+
     public override void OnEnter()
     {
         switch (m_operation)
