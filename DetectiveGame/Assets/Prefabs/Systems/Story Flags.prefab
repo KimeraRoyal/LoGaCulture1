@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1845384481105354145}
   - component: {fileID: 1372378817839453116}
+  - component: {fileID: 6406915204334724108}
   m_Layer: 0
   m_Name: Story Flags
   m_TagString: Untagged
@@ -44,3 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d494c34a18cb341a832a2525c44798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_flagBits: 
+--- !u!114 &6406915204334724108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490212987084922749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85bca475a5dff142b8f754a721b9ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flagNames:
+  - cutscene
+  - game_start
+  m_invalidFlagBehaviour: 0

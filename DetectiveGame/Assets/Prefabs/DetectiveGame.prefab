@@ -18286,6 +18286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Story Flags
       objectReference: {fileID: 0}
+    - target: {fileID: 6406915204334724108, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
+      propertyPath: m_invalidFlagBehaviour
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
