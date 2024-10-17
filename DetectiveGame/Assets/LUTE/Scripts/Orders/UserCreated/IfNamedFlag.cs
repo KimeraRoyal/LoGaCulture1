@@ -114,7 +114,7 @@ public class IfNamedFlag : Condition
     public override bool EvaluateConditions()
     {
         if (conditions == null || conditions.Count == 0) { return false; }
-
+        
         bool resultAny = false, resultAll = true;
         foreach (var condition in conditions)
         {
@@ -133,7 +133,7 @@ public class IfNamedFlag : Condition
     protected override bool HasRequiredProperties()
     {
         if (conditions == null || conditions.Count == 0) { return false; }
-        return conditions.All(condition => string.IsNullOrEmpty(condition.FlagName));
+        return conditions.All(condition => !string.IsNullOrEmpty(condition.FlagName));
     }
 
     public override string GetSummary()
