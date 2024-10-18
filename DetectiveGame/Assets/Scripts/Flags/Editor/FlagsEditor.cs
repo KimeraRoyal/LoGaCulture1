@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -57,6 +58,28 @@ namespace KW.Flags.Editor
             var maxIndexDigits = _maxIndex.ToString("D" + _indexDigits);
         
             EditorGUILayout.LabelField($"{minIndexDigits} - {flagBits} - {maxIndexDigits}");
+        }
+        
+        public static void FlagNamesField(SerializedProperty _property, GUIContent label, GUIContent nullLabel, List<string> objectList)
+        {
+            var objectNames = new List<GUIContent> { nullLabel };
+
+            var selectedObject = _property.stringValue;
+            var selectedIndex = selectedObject != null ? -1 : 0;
+
+            for (var i = 0; i < objectList.Count; ++i)
+            {
+                if (objectList[i] == null) { continue; }
+                
+                objectNames.Add(new GUIContent(objectList[i]));
+
+                if (selectedObject == objectList[i]) { selectedIndex = i + 1; }
+            }
+            if (selectedIndex < 0) { selectedIndex = 0; }
+
+            selectedIndex = EditorGUILayout.Popup(label, selectedIndex, objectNames.ToArray());
+
+            _property.stringValue = selectedIndex > 0 ? objectList[selectedIndex - 1] : null;
         }
     }
 }

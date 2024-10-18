@@ -62,6 +62,7 @@ public class NamedFlagCondition
 
         var validIndex = m_lastIndex >= 0 && m_lastNamedFlagCount == flagNames.Count;
         m_flagName = validIndex ? flagNames[m_lastIndex] : "";
+        if (!validIndex) m_lastIndex = -1;
     }
 }
 

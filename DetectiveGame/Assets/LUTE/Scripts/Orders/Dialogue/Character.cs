@@ -1,13 +1,16 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Globalization;
 
 //Character class is used to identify characters in the scene that can be used in dialogues
 [ExecuteInEditMode]
+[RequireComponent(typeof(CharacterInfo))]
 public class Character : MonoBehaviour, IComparer<Character>
 {
+    private CharacterInfo m_info;
+    
     [SerializeField] protected string characterName;
-    [SerializeField] protected string characterOccupation = "None";
     [SerializeField] protected Color nameColour = Color.white;
     [SerializeField] protected AudioClip characterSound;
     [SerializeField] protected List<Sprite> characterPortraits;
@@ -34,8 +37,8 @@ public class Character : MonoBehaviour, IComparer<Character>
 
     public static List<Character> ActiveCharacters { get { return activeCharacters; } }
 
+    public virtual CharacterInfo Info => m_info;
     public virtual string CharacterName { get { return characterName; } }
-    public virtual string CharacterOccupation => characterOccupation;
     public virtual Color NameColour { get { return nameColour; } }
     public virtual AudioClip SoundEffect { get { return characterSound; } }
     public virtual List<Sprite> Portraits { get { return characterPortraits; } }
@@ -55,6 +58,11 @@ public class Character : MonoBehaviour, IComparer<Character>
         return name.StartsWith(matchString, true, System.Globalization.CultureInfo.CurrentCulture)
             || characterName.StartsWith(matchString, true, System.Globalization.CultureInfo.CurrentCulture);
 #endif
+    }
+
+    private void Awake()
+    {
+        m_info = GetComponent<CharacterInfo>();
     }
 
     /// Returns true if the character name is a complete match to the specified string. Case insensitive.

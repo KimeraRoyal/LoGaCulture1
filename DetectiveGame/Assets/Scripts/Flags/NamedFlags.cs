@@ -66,6 +66,7 @@ namespace KW.Flags
         public bool IsFlagSet(string _flag)
         {
             var index = GetFlagIndex(_flag);
+            Debug.Log($"Flag: {_flag}, Index: {index}");
             return index >= 0 && m_flags.IsFlagSet(index);
         }
 

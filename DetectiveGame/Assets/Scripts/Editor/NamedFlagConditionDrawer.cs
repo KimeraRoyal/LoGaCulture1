@@ -1,5 +1,6 @@
 using System.Collections;
 using KW.Flags;
+using KW.Flags.Editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -20,7 +21,7 @@ public class NamedFlagConditionDrawer : PropertyDrawer
         var namedFlags = namedFlagsProperty.objectReferenceValue as NamedFlags;
         if (namedFlags)
         {
-            FlagEditor.FlagNamesField(flagNameProperty, new GUIContent("Flag", $"Named flag to check"),
+            FlagsEditor.FlagNamesField(flagNameProperty, new GUIContent("Flag", $"Named flag to check"),
                 new GUIContent("<None>"),
                 namedFlags.FlagNames);
         }

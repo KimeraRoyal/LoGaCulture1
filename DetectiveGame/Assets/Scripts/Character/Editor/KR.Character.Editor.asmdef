@@ -1,0 +1,18 @@
+{
+    "name": "KR.Character.Editor",
+    "rootNamespace": "KR",
+    "references": [
+        "GUID:5d0099a18d9693e468e3869a477e73c6",
+        "GUID:87daa2191793bc046b38e4477305baa4",
+        "GUID:23fddcdb29e48a644ad29f7d9e1c33b6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

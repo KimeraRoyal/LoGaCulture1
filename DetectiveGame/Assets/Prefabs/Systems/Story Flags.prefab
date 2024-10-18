@@ -61,4 +61,7 @@ MonoBehaviour:
   m_flagNames:
   - cutscene
   - game_start
+  - sheep_trait1
+  - sheep_trait2
+  - sheep_trait3
   m_invalidFlagBehaviour: 0

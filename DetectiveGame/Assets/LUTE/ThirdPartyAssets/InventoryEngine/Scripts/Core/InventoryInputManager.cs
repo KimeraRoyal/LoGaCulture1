@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 using MoreMountains.Tools;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
@@ -26,6 +28,9 @@ namespace MoreMountains.InventoryEngine
 		/// The Fader that will be used under it when opening/closing the inventory
 		[Tooltip("The Fader that will be used under it when opening/closing the inventory")]
 		public CanvasGroup Overlay;
+		/// The 3D graphics that will be rendered from a Render Texture
+		[Tooltip("The 3D graphics that will be rendered from a Render Texture")]
+		public CanvasGroup CameraGraphic;
 
 		[Header("Overlay")] 
 		/// the opacity of the overlay when active
@@ -34,6 +39,26 @@ namespace MoreMountains.InventoryEngine
 		/// the opacity of the overlay when inactive
 		[Tooltip("the opacity of the overlay when inactive")]
 		public float OverlayInactiveOpacity = 0f;
+		
+		[Header("Fades")]
+		/// the duration for the inventory ui to fade in when activated
+		[Tooltip("the duration for the inventory ui to fade in when activated")]
+		public float InventoryFadeInDuration = 0.2f;
+		/// the duration for the inventory ui to fade out when deactivated
+		[Tooltip("the duration for the inventory ui to fade out when deactivated")]
+		public float InventoryFadeOutDuration = 0.2f;
+		/// the duration for the overlay to fade in when activated
+		[Tooltip("the duration for the overlay to fade in when activated")]
+		public float OverlayFadeInDuration = 0.2f;
+		/// the duration for the overlay to fade out when deactivated
+		[Tooltip("the duration for the overlay to fade out when deactivated")]
+		public float OverlayFadeOutDuration = 0.2f;
+		/// the duration for the camera graphics to fade in when activated
+		[Tooltip("the duration for the camera graphics to fade in when activated")]
+		public float CameraFadeInDuration = 0.2f;
+		/// the duration for the camera graphics to fade out when deactivated
+		[Tooltip("the duration for the camera graphics to fade out when deactivated")]
+		public float CameraFadeOutDuration = 0.2f;
 
 		[Header("Start Behaviour")]
 		[MMInformation("If you set HideContainerOnStart to true, the TargetInventoryContainer defined right above this field will be automatically hidden on Start, even if you've left it visible in Scene view. Useful for setup.", MMInformationAttribute.InformationType.Info, false)]
@@ -46,6 +71,8 @@ namespace MoreMountains.InventoryEngine
 		/// if this is true, the inventory container will be hidden automatically on start
 		[Tooltip("if this is true, the inventory container will be hidden automatically on start")]
 		public bool InputOnlyWhenOpen = true;
+
+		private bool enableTransition = true;
 
 		#if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
 		
@@ -245,6 +272,9 @@ namespace MoreMountains.InventoryEngine
 		protected bool _dropKeyPressed;
 		protected bool _hotbarInputPressed = false;
 
+		public Action OnOpen;
+		public Action OnClose;
+
 		/// <summary>
 		/// On start, we grab references and prepare our hotbar list
 		/// </summary>
@@ -266,13 +296,11 @@ namespace MoreMountains.InventoryEngine
 			}
 			if (HideContainerOnStart)
 			{
-				if (TargetInventoryContainer != null) { TargetInventoryContainer.alpha = 0; }
-				if (Overlay != null) { Overlay.alpha = OverlayInactiveOpacity; }
+				if (CameraGraphic) { CameraGraphic.alpha = 0.0f; }
+				if (TargetInventoryContainer) { TargetInventoryContainer.alpha = 0; }
+				if (Overlay) { Overlay.alpha = OverlayInactiveOpacity; }
 				EventSystem.current.sendNavigationEvents = false;
-				if (_canvasGroup != null)
-				{
-					_canvasGroup.blocksRaycasts = false;
-				}
+				if (_canvasGroup) { _canvasGroup.blocksRaycasts = false; }
 			}
 		}
 
@@ -380,6 +408,8 @@ namespace MoreMountains.InventoryEngine
 		/// </summary>
 		public virtual void ToggleInventory()
 		{
+			if(!enableTransition) { return; }
+			
 			if (InventoryIsOpen)
 			{
 				CloseInventory();
@@ -413,8 +443,14 @@ namespace MoreMountains.InventoryEngine
 			MMGameEvent.Trigger("inventoryOpens");
 			InventoryIsOpen = true;
 
-			StartCoroutine(MMFade.FadeCanvasGroup(TargetInventoryContainer, 0.2f, 1f));
-			StartCoroutine(MMFade.FadeCanvasGroup(Overlay, 0.2f, OverlayActiveOpacity));
+			StartCoroutine(MMFade.FadeCanvasGroup(TargetInventoryContainer, InventoryFadeInDuration, 1f));
+			StartCoroutine(MMFade.FadeCanvasGroup(CameraGraphic, CameraFadeInDuration, 1f));
+			StartCoroutine(MMFade.FadeCanvasGroup(Overlay, OverlayFadeInDuration, OverlayActiveOpacity));
+			
+			// I don't want to deal with the repercussions of letting the user spam the button
+			StartCoroutine(DisableTransition(Mathf.Max(InventoryFadeInDuration, CameraFadeInDuration, OverlayFadeInDuration)));
+			
+			OnOpen?.Invoke();
 		}
 
 		/// <summary>
@@ -431,10 +467,23 @@ namespace MoreMountains.InventoryEngine
 			MMGameEvent.Trigger("inventoryCloses");
 			InventoryIsOpen = false;
 
-			StartCoroutine(MMFade.FadeCanvasGroup(TargetInventoryContainer, 0.2f, 0f));
-			StartCoroutine(MMFade.FadeCanvasGroup(Overlay, 0.2f, OverlayInactiveOpacity));
+			StartCoroutine(MMFade.FadeCanvasGroup(TargetInventoryContainer, InventoryFadeOutDuration, 0f));
+			StartCoroutine(MMFade.FadeCanvasGroup(CameraGraphic, CameraFadeOutDuration, 0f));
+			StartCoroutine(MMFade.FadeCanvasGroup(Overlay, OverlayFadeOutDuration, OverlayInactiveOpacity));
+			
+			// I don't want to deal with the repercussions of letting the user spam the button
+			StartCoroutine(DisableTransition(Mathf.Max(InventoryFadeOutDuration, CameraFadeOutDuration, OverlayFadeOutDuration)));
+			
+			OnClose?.Invoke();
 		}
 
+		private IEnumerator DisableTransition(float _duration)
+		{
+			enableTransition = false;
+			yield return new WaitForSeconds(_duration);
+			enableTransition = true;
+		}
+		
 		/// <summary>
 		/// Handles the inventory related inputs and acts on them.
 		/// </summary>

@@ -240,6 +240,7 @@ namespace MoreMountains.InventoryEngine
 			_contentLastUpdate = new List<ItemQuantity>();
 			SlotContainer = new List<InventorySlot>();
 			_comparison = new List<int>();
+			Debug.Log(gameObject.name);
 			if (!TargetInventory.Persistent)
 			{
 				RedrawInventoryDisplay();

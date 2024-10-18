@@ -5,7 +5,6 @@ using UnityEditor;
 public class CharacterEditor : Editor
 {
     protected SerializedProperty nameTextProp;
-    protected SerializedProperty occupationTextProp;
     protected SerializedProperty nameColourProp;
     protected SerializedProperty soundEffectProp;
     protected SerializedProperty portraitsProp;
@@ -15,7 +14,6 @@ public class CharacterEditor : Editor
     protected virtual void OnEnable()
     {
         nameTextProp = serializedObject.FindProperty("characterName");
-        occupationTextProp = serializedObject.FindProperty("characterOccupation");
         nameColourProp = serializedObject.FindProperty("nameColour");
         soundEffectProp = serializedObject.FindProperty("characterSound");
         portraitsProp = serializedObject.FindProperty("characterPortraits");
@@ -31,7 +29,6 @@ public class CharacterEditor : Editor
         EditorGUI.BeginChangeCheck();
 
         EditorGUILayout.PropertyField(nameTextProp, new GUIContent("Character Name", "Name of the character"));
-        EditorGUILayout.PropertyField(occupationTextProp, new GUIContent("Character Occupation", "The character's job"));
         EditorGUILayout.PropertyField(nameColourProp, new GUIContent("Name Colour", "Colour of name text display"));
         EditorGUILayout.PropertyField(soundEffectProp, new GUIContent("Character Sound", "Sound to play when the character is talking. Overrides the setting in the dialogue box."));
 
