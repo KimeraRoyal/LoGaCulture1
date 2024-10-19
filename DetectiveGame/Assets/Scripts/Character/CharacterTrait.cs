@@ -1,7 +1,6 @@
 ﻿using System;
 using KW.Flags;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [Serializable]
 public class CharacterTrait

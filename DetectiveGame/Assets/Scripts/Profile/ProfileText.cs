@@ -7,8 +7,7 @@ public class ProfileText : MonoBehaviour
     private enum Category
     {
         Name,
-        Job,
-        Trait
+        Job
     }
     
     private Profile m_profile;
@@ -22,7 +21,6 @@ public class ProfileText : MonoBehaviour
     {
         m_profile = GetComponentInParent<Profile>();
         m_profile.OnCharacterSelected += OnCharacterSelected;
-        m_profile.OnOpened += OnOpened;
 
         m_text = GetComponent<TMP_Text>();
     }
@@ -36,19 +34,10 @@ public class ProfileText : MonoBehaviour
             {
                 Category.Name => _character.CharacterName,
                 Category.Job => _character.Info.Job,
-                Category.Trait => _character.Info.GetValidTraits()[0],
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
         SetText(value);
-    }
-
-    private void OnOpened()
-    {
-        if (m_category == Category.Trait)
-        {
-            SetText(m_profile.SelectedCharacter.Info.GetValidTraits()[0]);
-        }
     }
     
     private void SetText(string _text)

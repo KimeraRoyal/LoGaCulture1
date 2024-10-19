@@ -34,6 +34,8 @@ public class CharacterInfo : MonoBehaviour
     private void OnValidate()
     {
         m_traits ??= new List<CharacterTrait>();
+        
+        if(!NamedFlags) { return; }
         foreach (var trait in m_traits)
         {
             trait.OnValidate(NamedFlags);
