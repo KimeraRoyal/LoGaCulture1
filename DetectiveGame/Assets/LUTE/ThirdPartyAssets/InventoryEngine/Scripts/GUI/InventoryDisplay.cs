@@ -301,10 +301,10 @@ namespace MoreMountains.InventoryEngine
 			GameObject inventoryTitle = new GameObject();
 			InventoryTitle = inventoryTitle.AddComponent<InventoryDisplayTitle>();
 			inventoryTitle.name = "InventoryTitle";
-			inventoryTitle.GetComponent<RectTransform>().SetParent(this.transform);
+			/*inventoryTitle.GetComponent<RectTransform>().SetParent(this.transform);
 			inventoryTitle.GetComponent<RectTransform>().sizeDelta = GetComponent<RectTransform>().sizeDelta;
 			inventoryTitle.GetComponent<RectTransform>().localPosition = TitleOffset;
-			inventoryTitle.GetComponent<RectTransform>().localScale = Vector3.one;
+			inventoryTitle.GetComponent<RectTransform>().localScale = Vector3.one;*/
 			InventoryTitle.text = Title;
 			InventoryTitle.color = TitleColor;
 			InventoryTitle.font = TitleFont;
