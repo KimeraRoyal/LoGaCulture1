@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [OrderInfo("Menu",
              "Popup Menu",
@@ -8,8 +9,9 @@ public class PopupMenu : Order
 {
     [Tooltip("Custom icon to display for this menu")]
     [SerializeField] protected Sprite customPopupIcon;
+    [FormerlySerializedAs("setPopupMenuIcon")]
     [Tooltip("A custom popup class to use to display this menu - if one is in the scene it will be used instead")]
-    [SerializeField] protected PopupIcon setPopupMenuIcon;
+    [SerializeField] protected PopupIcons m_setPopupMenuIcons;
     [Tooltip("A custom Menu display to use to display this popup menu")]
     [SerializeField] protected Popup popupWindow;
     [Tooltip("If true, the popup icon will be displayed, otherwise it will be hidden")]
@@ -19,9 +21,9 @@ public class PopupMenu : Order
 
     public override void OnEnter()
     {
-        if (setPopupMenuIcon != null)
+        if (m_setPopupMenuIcons != null)
         {
-            PopupIcon.ActivePopupIcon = setPopupMenuIcon;
+            PopupIcons.activePopupIcons = m_setPopupMenuIcons;
         }
 
         if (SetPopupWindow != null)
@@ -29,7 +31,7 @@ public class PopupMenu : Order
             Popup.ActivePopupWindow = SetPopupWindow;
         }
 
-        var popupIcon = PopupIcon.GetPopupIcon();
+        var popupIcon = PopupIcons.GetPopupIcons();
         if (popupIcon != null && showIcon)
         {
             if (customPopupIcon != null)

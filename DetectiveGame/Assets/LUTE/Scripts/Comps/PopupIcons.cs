@@ -1,14 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PopupIcon : MonoBehaviour
+public class PopupIcons : MonoBehaviour
 {
-    public static PopupIcon ActivePopupIcon { get; set; }
+    public static PopupIcons activePopupIcons { get; set; }
 
     private Popup popupWindow;
     private Button[] cachedButtons;
@@ -18,6 +15,7 @@ public class PopupIcon : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("Initialized");
         Button[] optionButtons = GetComponentsInChildren<Button>();
         cachedButtons = optionButtons;
 
@@ -50,29 +48,10 @@ public class PopupIcon : MonoBehaviour
         }
     }
 
-    public static PopupIcon GetPopupIcon()
+    public static PopupIcons GetPopupIcons()
     {
-        if (ActivePopupIcon == null)
-        {
-            var pi = GameObject.FindObjectOfType<PopupIcon>();
-            if (pi != null)
-            {
-                ActivePopupIcon = pi;
-            }
-
-            if (ActivePopupIcon == null)
-            {
-                GameObject prefab = Resources.Load<GameObject>("Prefabs/HamburgerMenuButton");
-                if (prefab != null)
-                {
-                    GameObject go = Instantiate(prefab) as GameObject;
-                    go.SetActive(false);
-                    go.name = "PopupIcon";
-                    ActivePopupIcon = go.GetComponent<PopupIcon>();
-                }
-            }
-        }
-        return ActivePopupIcon;
+        if (!activePopupIcons) { activePopupIcons = FindAnyObjectByType<PopupIcons>(); } 
+        return activePopupIcons;
     }
 
     public bool SetIcon(Sprite icon)
@@ -82,7 +61,7 @@ public class PopupIcon : MonoBehaviour
             Debug.LogWarning("Unable to add popup option, not enough buttons!");
             return false;
         }
-        ActivePopupIcon.CachedButtons[nextOptionIndex].image.sprite = icon;
+        activePopupIcons.CachedButtons[nextOptionIndex].image.sprite = icon;
         return true;
     }
 
@@ -106,8 +85,8 @@ public class PopupIcon : MonoBehaviour
             Debug.LogWarning("Unable to add popup option, not enough buttons!");
             return false;
         }
-        ActivePopupIcon.CachedButtons[nextOptionIndex].onClick.AddListener(() => { onClick.Invoke(); });
-        ActivePopupIcon.CachedButtons[nextOptionIndex].gameObject.SetActive(true);
+        activePopupIcons.CachedButtons[nextOptionIndex].onClick.AddListener(() => { onClick.Invoke(); });
+        activePopupIcons.CachedButtons[nextOptionIndex].gameObject.SetActive(true);
         return true;
     }
 

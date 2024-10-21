@@ -272,8 +272,8 @@ namespace MoreMountains.InventoryEngine
 		protected bool _dropKeyPressed;
 		protected bool _hotbarInputPressed = false;
 
-		public Action OnOpen;
-		public Action OnClose;
+		public Action OnOpened;
+		public Action OnClosed;
 
 		/// <summary>
 		/// On start, we grab references and prepare our hotbar list
@@ -450,7 +450,7 @@ namespace MoreMountains.InventoryEngine
 			// I don't want to deal with the repercussions of letting the user spam the button
 			StartCoroutine(DisableTransition(Mathf.Max(InventoryFadeInDuration, CameraFadeInDuration, OverlayFadeInDuration)));
 			
-			OnOpen?.Invoke();
+			OnOpened?.Invoke();
 		}
 
 		/// <summary>
@@ -474,7 +474,7 @@ namespace MoreMountains.InventoryEngine
 			// I don't want to deal with the repercussions of letting the user spam the button
 			StartCoroutine(DisableTransition(Mathf.Max(InventoryFadeOutDuration, CameraFadeOutDuration, OverlayFadeOutDuration)));
 			
-			OnClose?.Invoke();
+			OnClosed?.Invoke();
 		}
 
 		private IEnumerator DisableTransition(float _duration)

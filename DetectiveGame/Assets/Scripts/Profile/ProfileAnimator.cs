@@ -1,32 +1,20 @@
+using KR;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Openable))]
 public class ProfileAnimator : MonoBehaviour
 {
     private Profile m_profile;
 
-    private Animator m_animator;
-
-    [SerializeField] private string m_openParameterName = "Open";
-    private int m_openHash;
+    private Openable m_openable;
 
     private void Awake()
     {
         m_profile = GetComponentInParent<Profile>();
         
-        m_profile.OnOpened += OnOpened;
-        m_profile.OnClosed += OnClosed;
-
-        m_animator = GetComponent<Animator>();
-        m_openHash = Animator.StringToHash(m_openParameterName);
+        m_openable = GetComponent<Openable>();
+        
+        m_profile.OnOpened += m_openable.Open;
+        m_profile.OnClosed += m_openable.Close;
     }
-
-    private void OnOpened()
-        => OnOpenChanged(true);
-
-    private void OnClosed()
-        => OnOpenChanged(false);
-
-    private void OnOpenChanged(bool _open)
-        => m_animator.SetBool(m_openHash, _open);
 }

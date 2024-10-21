@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [OrderInfo("Character",
               "ProfileMenu",
@@ -10,8 +11,9 @@ public class ProfileMenu : Order
     [Tooltip("Custom icon to display for this menu")]
     [SerializeField] protected Sprite customButtonIcon;
     
+    [FormerlySerializedAs("setIconButton")]
     [Tooltip("A custom popup class to use to display this menu - if one is in the scene it will be used instead")]
-    [SerializeField] protected PopupIcon setIconButton;
+    [SerializeField] protected PopupIcons m_setIconsButton;
     
     [Tooltip("If true, the popup icon will be displayed, otherwise it will be hidden")]
     [SerializeField] protected bool showIcon = true;
@@ -30,12 +32,12 @@ public class ProfileMenu : Order
         var profile = FindAnyObjectByType<Profile>();
         if (profile == null) { return; }
 
-        if (setIconButton)
+        if (m_setIconsButton)
         {
-            PopupIcon.ActivePopupIcon = setIconButton;
+            PopupIcons.activePopupIcons = m_setIconsButton;
         }
 
-        var popupIcon = PopupIcon.GetPopupIcon();
+        var popupIcon = PopupIcons.GetPopupIcons();
         if (popupIcon && customButtonIcon)
         {
             popupIcon.SetIcon(customButtonIcon);

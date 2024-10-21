@@ -1,5 +1,6 @@
 using MoreMountains.InventoryEngine;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [OrderInfo("Inventory",
               "InventoryMenu",
@@ -9,8 +10,9 @@ public class InventoryMenu : Order
 {
     [Tooltip("Custom icon to display for this menu")]
     [SerializeField] protected Sprite customButtonIcon;
+    [FormerlySerializedAs("setIconButton")]
     [Tooltip("A custom popup class to use to display this menu - if one is in the scene it will be used instead")]
-    [SerializeField] protected PopupIcon setIconButton;
+    [SerializeField] protected PopupIcons m_setIconsButton;
     [Tooltip("The inventory to toggle")]
     [SerializeField] protected Inventory inventory;
     [Tooltip("If true, the popup icon will be displayed, otherwise it will be hidden")]
@@ -28,12 +30,12 @@ public class InventoryMenu : Order
             }
         }
 
-        if (setIconButton != null)
+        if (m_setIconsButton != null)
         {
-            PopupIcon.ActivePopupIcon = setIconButton;
+            PopupIcons.activePopupIcons = m_setIconsButton;
         }
 
-        var popupIcon = PopupIcon.GetPopupIcon();
+        var popupIcon = PopupIcons.GetPopupIcons();
         if (popupIcon != null)
         {
             if (customButtonIcon != null)

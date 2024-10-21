@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [OrderInfo("Menu",
               "GenericButton",
@@ -8,20 +9,21 @@ public class GenericButton : Order
 {
   [Tooltip("Custom icon to display for this menu")]
   [SerializeField] protected Sprite customButtonIcon;
+  [FormerlySerializedAs("setIconButton")]
   [Tooltip("A custom popup class to use to display this menu - if one is in the scene it will be used instead")]
-  [SerializeField] protected PopupIcon setIconButton;
+  [SerializeField] protected PopupIcons m_setIconsButton;
   [Tooltip("If true, the popup icon will be displayed, otherwise it will be hidden")]
   [SerializeField] protected bool showIcon = true;
   [Tooltip("The event to call when the button is clicked")]
   [SerializeField] protected UnityEngine.Events.UnityEvent buttonEvent;
   public override void OnEnter()
   {
-    if (setIconButton != null)
+    if (m_setIconsButton != null)
     {
-      PopupIcon.ActivePopupIcon = setIconButton;
+      PopupIcons.activePopupIcons = m_setIconsButton;
     }
 
-    var popupIcon = PopupIcon.GetPopupIcon();
+    var popupIcon = PopupIcons.GetPopupIcons();
     if (popupIcon != null)
     {
       if (customButtonIcon != null)
