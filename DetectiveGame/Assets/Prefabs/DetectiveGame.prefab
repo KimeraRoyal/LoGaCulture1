@@ -5299,7 +5299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customButtonIcon: {fileID: 1557956184, guid: 075289b53d2214247aaee342cc134414, type: 3}
-  setIconButton: {fileID: 0}
+  m_setIconsButton: {fileID: 0}
   showIcon: 1
 --- !u!114 &4326033272010808370
 MonoBehaviour:
@@ -5314,7 +5314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customButtonIcon: {fileID: 21300000, guid: 0958bf3dd415e974e90f978b50a845ee, type: 3}
-  setIconButton: {fileID: 0}
+  m_setIconsButton: {fileID: 0}
   showIcon: 1
 --- !u!1 &4128312334865704844
 GameObject:
@@ -5958,7 +5958,7 @@ MonoBehaviour:
   _locations: []
   _spawnScale: 4
   engine: {fileID: 0}
-  _markerPrefab: {fileID: 114584515627220354, guid: 9b5b1b761a8994c07affd0a05396633b, type: 3}
+  _markerPrefab: {fileID: 5665988764270972498, guid: 1ad04f6bab057954a86d2f7c1f001b19, type: 3}
   _directionPrefab: {fileID: 0}
   _isWithinRadius: 0
 --- !u!114 &2937779082396982802
@@ -6086,7 +6086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22805dac1b8933d49b89c409a8903cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMesh: {fileID: 0}
+  label: {fileID: 0}
   spriteRenderer: {fileID: 0}
 --- !u!1 &5423189703169266827
 GameObject:

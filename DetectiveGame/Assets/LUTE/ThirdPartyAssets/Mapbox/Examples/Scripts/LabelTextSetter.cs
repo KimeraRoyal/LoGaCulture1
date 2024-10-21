@@ -1,4 +1,6 @@
-﻿namespace Mapbox.Examples
+﻿using TMPro;
+
+namespace Mapbox.Examples
 {
 	using Mapbox.Unity.MeshGeneration.Interfaces;
 	using System.Collections.Generic;
@@ -6,25 +8,26 @@
 
 	public class LabelTextSetter : MonoBehaviour, IFeaturePropertySettable
 	{
-		[SerializeField]
-		TextMesh _textMesh; 
+		[SerializeField] TMP_Text m_label; 
 
 		public void Set(Dictionary<string, object> props)
 		{
-			_textMesh.text = "";
+			var text = "";
 
-			if (props.ContainsKey("name"))
+			if (props.TryGetValue("name", out var value))
 			{
-				_textMesh.text = props["name"].ToString();
+				text = value.ToString();
 			}
-			else if (props.ContainsKey("house_num"))
+			else if (props.TryGetValue("house_num", out value))
 			{
-				_textMesh.text = props["house_num"].ToString();
+				text = value.ToString();
 			}
-			else if (props.ContainsKey("type"))
+			else if (props.TryGetValue("type", out value))
 			{
-				_textMesh.text = props["type"].ToString();
+				text = value.ToString();
 			}
+
+			m_label.text = text;
 		}
 	}
 }

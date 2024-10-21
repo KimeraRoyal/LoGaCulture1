@@ -1,4 +1,6 @@
-﻿namespace Mapbox.Examples
+﻿using TMPro;
+
+namespace Mapbox.Examples
 {
     using UnityEngine;
     using UnityEngine.UI;
@@ -8,11 +10,21 @@
         Camera _camera;
         Canvas canvas;
         Image image;
-        public TextMesh textMesh;
+        [SerializeField] private TMP_Text label;
         MeshRenderer meshRenderer;
         public SpriteRenderer spriteRenderer;
 
         private bool showName = true;
+
+        public TMP_Text Label
+        {
+            get
+            {
+                if (!label) { label = GetComponent<TMP_Text>(); }
+                return label;
+            }
+        }
+        
         void Awake()
         {
             canvas = GetComponentInChildren<Canvas>();
@@ -55,27 +67,22 @@
 
         public void SetText(string text)
         {
-            if (textMesh == null)
-                textMesh = GetComponentInChildren<TextMesh>();
-            if (textMesh != null)
-                textMesh.text = text;
+            if(!Label) { return; }
+            Label.text = text;
         }
 
         public void SetColor(Color color)
         {
-            if (textMesh == null)
-                textMesh = GetComponentInChildren<TextMesh>();
-            if (textMesh != null)
-                textMesh.color = color;
+            if(!Label) { return; }
+            Label.color = color;
         }
 
         public void SetName(bool show)
         {
+            if(!Label) { return; }
+            
             showName = show;
-            if (textMesh == null)
-                textMesh = GetComponentInChildren<TextMesh>();
-            if (textMesh != null)
-                textMesh.text = showName ? textMesh.text : "";
+            Label.text = showName ? Label.text : "";
         }
 
         public void SetIcon(Sprite icon)

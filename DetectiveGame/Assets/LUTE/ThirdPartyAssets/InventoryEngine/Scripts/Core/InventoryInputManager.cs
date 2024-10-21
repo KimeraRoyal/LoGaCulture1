@@ -425,6 +425,8 @@ namespace MoreMountains.InventoryEngine
 		/// </summary>
 		public virtual void OpenInventory()
 		{
+			if(InventoryIsOpen) { return; }
+			
 			if (CloseList.Count > 0)
 			{
 				foreach (string playerID in CloseList)
@@ -458,6 +460,8 @@ namespace MoreMountains.InventoryEngine
 		/// </summary>
 		public virtual void CloseInventory()
 		{
+			if(!InventoryIsOpen) { return; }
+			
 			if (_canvasGroup != null)
 			{
 				_canvasGroup.blocksRaycasts = false;

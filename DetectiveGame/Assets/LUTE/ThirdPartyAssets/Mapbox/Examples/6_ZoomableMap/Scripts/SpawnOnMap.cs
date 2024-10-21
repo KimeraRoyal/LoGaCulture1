@@ -205,8 +205,8 @@
 
             CameraBillboard locationMarker = _spawnedObjects.Find(marker =>
                 marker != null &&
-                marker.textMesh != null &&
-                marker.textMesh.text == location.Key
+                marker.Label &&
+                marker.Label.text == location.Key
             );
 
             if (locationMarker != null)
@@ -227,8 +227,8 @@
 
             CameraBillboard locationMarker = _spawnedObjects.Find(marker =>
                 marker != null &&
-                marker.textMesh != null &&
-                marker.textMesh.text == location.Key
+                marker.Label &&
+                marker.Label.text == location.Key
             );
 
             if (locationMarker == null)
