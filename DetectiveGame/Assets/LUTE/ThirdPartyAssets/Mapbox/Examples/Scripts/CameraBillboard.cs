@@ -1,96 +1,24 @@
-﻿using TMPro;
+﻿using KR.Elements.Camera;
+using UnityEngine;
 
 namespace Mapbox.Examples
 {
-    using UnityEngine;
-    using UnityEngine.UI;
-
-    public class CameraBillboard : MonoBehaviour
+    public class CameraBillboard : MonoBehaviour, ICameraElement
     {
-        Camera _camera;
-        Canvas canvas;
-        Image image;
-        [SerializeField] private TMP_Text label;
-        MeshRenderer meshRenderer;
-        public SpriteRenderer spriteRenderer;
+        private Camera m_camera;
 
         private bool showName = true;
 
-        public TMP_Text Label
+        private void Update()
         {
-            get
-            {
-                if (!label) { label = GetComponent<TMP_Text>(); }
-                return label;
-            }
-        }
-        
-        void Awake()
-        {
-            canvas = GetComponentInChildren<Canvas>();
-            image = GetComponentInChildren<Image>();
+            if (!m_camera) { return; }
+            transform.LookAt(transform.position + m_camera.transform.rotation * Vector3.forward, m_camera.transform.rotation * Vector3.up);
         }
 
-        void Update()
-        {
-            if (_camera != null)
-            {
-                transform.LookAt(transform.position + _camera.transform.rotation * Vector3.forward, _camera.transform.rotation * Vector3.up);
-            }
-        }
+        public Camera GetCamera()
+            => m_camera;
 
-        public void SetCanvasCam(Camera cam)
-        {
-            _camera = cam;
-            if (canvas == null)
-                canvas = GetComponentInChildren<Canvas>();
-            if (canvas != null)
-                canvas.worldCamera = cam;
-        }
-
-        public Camera GetCurrentCam()
-        {
-            if (canvas == null)
-                canvas = GetComponentInChildren<Canvas>();
-            if (canvas != null)
-                return canvas.worldCamera;
-
-            return null;
-        }
-
-        public RectTransform GetImageTrans()
-        {
-            if (image == null)
-                image = GetComponentInChildren<Image>();
-            return image.GetComponent<RectTransform>();
-        }
-
-        public void SetText(string text)
-        {
-            if(!Label) { return; }
-            Label.text = text;
-        }
-
-        public void SetColor(Color color)
-        {
-            if(!Label) { return; }
-            Label.color = color;
-        }
-
-        public void SetName(bool show)
-        {
-            if(!Label) { return; }
-            
-            showName = show;
-            Label.text = showName ? Label.text : "";
-        }
-
-        public void SetIcon(Sprite icon)
-        {
-            if (spriteRenderer == null)
-                spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            if (spriteRenderer != null)
-                spriteRenderer.sprite = icon;
-        }
+        public void SetCamera(Camera _camera)
+            => m_camera = _camera;
     }
 }

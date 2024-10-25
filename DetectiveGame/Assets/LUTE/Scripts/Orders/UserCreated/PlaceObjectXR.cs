@@ -111,6 +111,8 @@ public class PlaceObjectXR : Order
 
         Debug.Log(planeManager.gameObject);
 
+        Debug.Log(arObjectInstance);
+        Debug.Log(arObjectInstance.GetComponentInChildren<ObjectSpawner>());
       
         //get the objectsopawner script in the children of the XR game object and subscribe to the event
         ObjectSpawner objectSpawner = arObjectInstance.GetComponentInChildren<ObjectSpawner>();

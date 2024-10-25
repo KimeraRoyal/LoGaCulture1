@@ -7,8 +7,6 @@ using UnityEngine.XR.Management;
 
 public class XRHelper : MonoBehaviour
 {
-
-    private static GameObject xrObjectPrefab;
     private static GameObject spawnedXRObject;
 
     private static bool isInitialised = false;
@@ -58,26 +56,11 @@ public class XRHelper : MonoBehaviour
             XRGeneralSettings.Instance?.Manager?.StartSubsystems();
         }
 
-        if (xrObjectPrefab == null)
-        {
-            xrObjectPrefab = Resources.Load<GameObject>("Prefabs/XR");
-        }
-
-        //if the xrObject is not in the scene, then add it
-        if (GameObject.Find("XR") == null)
-        {
-            spawnedXRObject = GameObject.Instantiate(xrObjectPrefab);
-            spawnedXRObject.name = "XR";
-            isInitialised = true;
-            return true;
-        }
-        else
-        {
-            spawnedXRObject = GameObject.Find("XR");
-            isInitialised = true;
-            return true;
-        }
-        return false;
+        spawnedXRObject = FindAnyObjectByType<XRHelper>().gameObject;
+        isInitialised = spawnedXRObject;
+        
+        if(!isInitialised) { Debug.LogError("No XR Object present in scene!");}
+        return isInitialised;
     }
 
     //IEnumerator disableafter(float seconds)

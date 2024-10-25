@@ -5,6 +5,7 @@ using Mapbox.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using KR.Map.Marker;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -40,7 +41,7 @@ public class MapboxControls : EventWindow
     private static string currentLocationName = "New Location";
     private static Sprite currentLocationSprite = null;
     private static Sprite defautSprite;
-    private static List<CameraBillboard> _spawnedObjects = new List<CameraBillboard>();
+    private static List<Marker> _markers = new List<Marker>();
     protected static List<string> _locationStrings = new List<string>();
     private static Vector2d[] _locations = new Vector2d[1];
     private static string currentLocationString;
@@ -64,34 +65,28 @@ public class MapboxControls : EventWindow
     {
         //ensure that all spawned objects are positioned correctly on the map
         //ensuring that the objects will move accordingly when the map is panned or zoomed
-        int count = _spawnedObjects.Count;
+        int count = _markers.Count;
         for (int i = 0; i < count; i++)
         {
-            var spawnedObject = _spawnedObjects[i];
+            var marker = _markers[i];
             var location = _locations[i];
-            spawnedObject.transform.localPosition = abstractMap.GeoToWorldPosition(location, true);
-            spawnedObject.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
-            // var billboard = spawnedObject.GetComponent<CameraBillboard>(); //make this a function on the camera billboard (get the text on enable rather than update in that class)
-            spawnedObject.SetCanvasCam(mapCam);
+            marker.transform.localPosition = abstractMap.GeoToWorldPosition(location, true);
+            marker.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
             if (_locationNames.Count > i)
             {
                 if (_locationNames[i].Contains("_"))
                 {
                     _locationNames[i] = ReplaceUnderscoresWithSpace(_locationNames[i]);
                 }
-                spawnedObject.SetText(_locationNames[i]);
+                marker.Name = _locationNames[i];
             }
             if (_locationSprites.Count > i)
             {
-                spawnedObject.SetIcon(_locationSprites[i]);
+                marker.Icon = _locationSprites[i];
             }
             if (_locationColors.Count > i)
             {
-                spawnedObject.SetColor(_locationColors[i]);
-            }
-            if (_locationShowNames.Count > i)
-            {
-                spawnedObject.SetName(_locationShowNames[i]);
+                marker.Color = _locationColors[i];
             }
         }
     }
@@ -106,8 +101,8 @@ public class MapboxControls : EventWindow
         if (index != -1)
         {
             _locations = _locations.Where((val, idx) => idx != index).ToArray();
-            DestroyImmediate(_spawnedObjects[index].gameObject);
-            _spawnedObjects.RemoveAt(index);
+            DestroyImmediate(_markers[index].gameObject);
+            _markers.RemoveAt(index);
             _locationNames.RemoveAt(index);
             _locationStrings.RemoveAt(index);
             _locationSprites.RemoveAt(index);
@@ -123,11 +118,11 @@ public class MapboxControls : EventWindow
         cameraBillboard = spawnOnMap.tracker.GetComponent<CameraBillboard>(); //ensure that tracker is set elsewhere
         abstractMap = map.GetComponent<AbstractMap>();
         //destroy any leftover spawned objects
-        foreach (var obj in _spawnedObjects)
+        foreach (var obj in _markers)
         {
             DestroyImmediate(obj);
         }
-        _spawnedObjects.Clear();
+        _markers.Clear();
         _locationNames.Clear();
         _locationStrings.Clear();
         _locationSprites.Clear();
@@ -157,22 +152,25 @@ public class MapboxControls : EventWindow
             }
         }
 
-        //using the location strings, create a list of locations and spawn markers on the map
-        var _markerPrefab = spawnOnMap._markerPrefab;
-
-        defautSprite = _markerPrefab.spriteRenderer.sprite;
+        defautSprite = null;
 
         spawnScale = spawnOnMap._spawnScale;
         _locations = new Vector2d[_locationStrings.Count];
-        _spawnedObjects = new List<CameraBillboard>();
+        _markers = new List<Marker>();
+        
+        if(!spawnOnMap || !spawnOnMap.Markers) { return; }
+        
         for (int i = 0; i < _locationStrings.Count; i++)
         {
             var locationString = _locationStrings[i];
             _locations[i] = Conversions.StringToLatLon(locationString);
-            var instance = Instantiate(_markerPrefab);
-            instance.transform.localPosition = abstractMap.GeoToWorldPosition(_locations[i], true);
-            instance.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
-            _spawnedObjects.Add(instance);
+            
+            if(_locationNames.Count <= i) { continue; }
+            
+            var marker = spawnOnMap.Markers.AddMarker(_locationNames[i]);
+            marker.transform.localPosition = abstractMap.GeoToWorldPosition(_locations[i], true);
+            marker.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
+            _markers.Add(marker);
         }
 
         //create a camera if none exists - ensure you set a tag and culling mask to only map
@@ -199,8 +197,9 @@ public class MapboxControls : EventWindow
             abstractMap.IsEditorPreviewEnabled = true;
             abstractMap.ResetMap();
         }
-        if (cameraBillboard != null && mapCam != null && cameraBillboard.GetCurrentCam() != mapCam)
-            cameraBillboard.SetCanvasCam(mapCam);
+        
+        if (cameraBillboard != null && mapCam != null && cameraBillboard.GetCamera() != mapCam)
+            cameraBillboard.SetCamera(mapCam);
 
         map._referenceCamera = mapCam;
     }
@@ -214,11 +213,11 @@ public class MapboxControls : EventWindow
         }
 
         //destroy all spawned objects when the window is closed
-        foreach (var obj in _spawnedObjects)
+        foreach (var obj in _markers)
         {
             DestroyImmediate(obj.gameObject);
         }
-        _spawnedObjects.Clear();
+        _markers.Clear();
         map._dragStartedOnUI = false;
     }
 
@@ -382,9 +381,8 @@ public class MapboxControls : EventWindow
             var locationString = _locationStrings[i];
             _locations[i] = Conversions.StringToLatLon(locationString);
         }
-        var _markerPrefab = spawnOnMap._markerPrefab;
-        var instance = Instantiate(_markerPrefab);
-        _spawnedObjects.Add(instance);
+        var marker = spawnOnMap.Markers.AddMarker(currentLocationName);
+        _markers.Add(marker);
         _locationNames.Add(currentLocationName);
         if (currentLocationSprite == null)
         {

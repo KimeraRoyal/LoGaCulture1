@@ -1,0 +1,19 @@
+{
+    "name": "KR.Map.Marker",
+    "rootNamespace": "KR",
+    "references": [
+        "GUID:9d81d408dd8328e40b0386196ad1f484",
+        "GUID:498a2242ba4560c468d39a7d86851516",
+        "GUID:0f854e16be525f444a5d02fdca8c8e11",
+        "GUID:509f07218d844cf49a468b24f99da183"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
