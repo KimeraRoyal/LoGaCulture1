@@ -1,10 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace KR.Map.Marker
 {
     public class Marker : MonoBehaviour
     {
+        private Button m_button;
+        
         private string m_label;
 
         private Sprite m_icon;
@@ -62,5 +65,16 @@ namespace KR.Map.Marker
         public Action<Color> OnColorUpdated;
 
         public Action<Camera> OnTargetCameraUpdated;
+
+        public Action OnPressed;
+
+        private void Awake()
+        {
+            m_button = GetComponentInChildren<Button>();
+            m_button.onClick.AddListener(Press);
+        }
+
+        private void Press()
+            => OnPressed?.Invoke();
     }
 }
