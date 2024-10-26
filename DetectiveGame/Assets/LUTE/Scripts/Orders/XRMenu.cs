@@ -1,3 +1,4 @@
+using System;
 using MoreMountains.InventoryEngine;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,6 +11,8 @@ using UnityEngine.XR.ARSubsystems;
 [AddComponentMenu("")]
 public class XRMenu : Order
 {
+    private XRHelper xrHelper;
+    
     [Tooltip("Custom icon to display for this menu")]
     [SerializeField] protected Sprite customButtonIcon;
     [FormerlySerializedAs("setIconButton")]
@@ -23,8 +26,30 @@ public class XRMenu : Order
     public PlaneDetectionMode planeDetectionMode = PlaneDetectionMode.Horizontal;
     [SerializeField]
     public GameObject planeVisualiser;
+    private ARPlaneManager planeManager;
     [SerializeField]
     public GameObject pointCloudVisualiser;
+    private ARPointCloudManager pointCloudManager;
+
+    [SerializeField]
+    public Camera xrCamera;
+
+    private void Awake()
+    {
+        xrHelper = XRHelper.getXRScript();
+        
+        if (planeVisualiser != null)
+        {
+            planeManager = xrHelper.GetComponentInChildren<ARPlaneManager>();
+        }
+
+        if (pointCloudVisualiser != null)
+        {
+            pointCloudManager = xrHelper.GetComponentInChildren<ARPointCloudManager>();
+        }
+        
+        xrCamera = xrHelper.GetComponentInChildren<Camera>();
+    }
 
     public override void OnEnter()
     {
@@ -48,19 +73,20 @@ public class XRMenu : Order
 
         UnityEngine.Events.UnityAction action = () =>
         {
-            //if the plane visualiser is not null, set it to the plane visualiser of the XR object
             if (planeVisualiser != null)
             {
-                var planeManager = XRHelper.getXRScript().gameObject.GetComponentInChildren<ARPlaneManager>();
                 planeManager.planePrefab = planeVisualiser;
             }
 
-            //if the point cloud visualiser is not null, set it to the point cloud visualiser of the XR object
             if (pointCloudVisualiser != null)
             {
-                var pointCloudManager = XRHelper.getXRScript().gameObject.GetComponentInChildren<ARPointCloudManager>();
                 pointCloudManager.pointCloudPrefab = pointCloudVisualiser;
             }
+
+            var xrEnabled = !xrCamera.enabled;
+        
+            xrCamera.enabled = xrEnabled;
+            xrHelper.gameObject.SetActive(xrEnabled);
         };
         popupIcon.SetAction(action);
         popupIcon.MoveToNextOption();

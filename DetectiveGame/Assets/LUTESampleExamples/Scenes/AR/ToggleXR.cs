@@ -1,5 +1,7 @@
 
 //using UnityEditor.EditorTools;
+
+using System;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -10,38 +12,59 @@ using UnityEngine.XR.ARSubsystems;
 [AddComponentMenu("")]
 public class ToggleXR : Order
 {
-
+    private XRHelper xrHelper;
+    
     [SerializeField]
     public bool toggle = true;
 
     [SerializeField]
     public PlaneDetectionMode planeDetectionMode = PlaneDetectionMode.Horizontal;
 
-
     [SerializeField]
     public GameObject planeVisualiser;
-
+    private ARPlaneManager planeManager;
+    
     [SerializeField]
     public GameObject pointCloudVisualiser;
+    private ARPointCloudManager pointCloudManager;
+
+    [SerializeField]
+    public Camera xrCamera;
+
+    private void Awake()
+    {
+        xrHelper = XRHelper.getXRScript();
+        
+        if (planeVisualiser != null)
+        {
+            planeManager = xrHelper.GetComponentInChildren<ARPlaneManager>();
+        }
+
+        if (pointCloudVisualiser != null)
+        {
+            pointCloudManager = xrHelper.GetComponentInChildren<ARPointCloudManager>();
+        }
+        
+        xrCamera = xrHelper.GetComponentInChildren<Camera>();
+    }
 
     public override void OnEnter()
     {
-
-        //if the plane visualiser is not null, set it to the plane visualiser of the XR object
         if (planeVisualiser != null)
         {
-            var planeManager = XRHelper.getXRScript().gameObject.GetComponentInChildren<ARPlaneManager>();
             planeManager.planePrefab = planeVisualiser;
         }
 
-        //if the point cloud visualiser is not null, set it to the point cloud visualiser of the XR object
         if (pointCloudVisualiser != null)
         {
-            var pointCloudManager = XRHelper.getXRScript().gameObject.GetComponentInChildren<ARPointCloudManager>();
             pointCloudManager.pointCloudPrefab = pointCloudVisualiser;
         }
-            
-       
+
+        var xrEnabled = !xrCamera.enabled;
+        
+        xrCamera.enabled = xrEnabled;
+        xrHelper.gameObject.SetActive(xrEnabled);
+        
         Continue();
     }
 

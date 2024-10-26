@@ -38,14 +38,17 @@ namespace Mapbox.Examples
 
         private LocationVariable locationVariable;
         private If ifOrder;
-        private Node _parentNode;
 
-        private static List<string> _locationNames = new List<string>();
-        private static List<Sprite> _locationSprites = new List<Sprite>();
-        private static List<Color> _locationColours = new List<Color>();
-        private static List<bool> _locationShowNames = new List<bool>();
+        private static List<Location> _locationReferences = new List<Location>();
 
-        public Markers Markers => m_markers;
+        public Markers Markers
+        {
+            get
+            {
+                if(!m_markers) { m_markers = FindAnyObjectByType<Markers>(); }
+                return m_markers;
+            }
+        }
         
         private void Awake()
         {
@@ -74,52 +77,14 @@ namespace Mapbox.Examples
         private void ProcessNodes()
         {
             _locationData.Clear();
-            var nodes = engine.gameObject.GetComponents<Node>();
+            _locationReferences.Clear();
+            
+            var locations = engine.gameObject.GetComponents<LocationVariable>();
 
-            foreach (var node in nodes)
-            {
-                if (node == null) continue;
-
-                ProcessNodeLocation(node);
-                ProcessNodeOrders(node);
-            }
-        }
-
-        private void ProcessNodeLocation(Node node)
-        {
-            if (node.NodeLocation != null)
-                AddUniqueLocation(node.NodeLocation);
-        }
-
-        private void ProcessNodeOrders(Node node)
-        {
-            if (node.OrderList == null || node.OrderList.Count == 0) return;
-
-            foreach (var order in node.OrderList)
-            {
-                ProcessOrderLocations(order);
-                ProcessIfOrderLocation(order, node);
-            }
-        }
-
-        private void ProcessOrderLocations(Order order)
-        {
-            var locations = new List<LocationVariable>();
-            order.GetLocationVariables(ref locations);
             foreach (var location in locations)
-                AddUniqueLocation(location);
-        }
-
-        private void ProcessIfOrderLocation(Order order, Node parentNode)
-        {
-            if (order is If ifOrder)
             {
-                var locationVariable = ifOrder.ReferencesLocation();
-                if (locationVariable != null)
-                {
-                    _parentNode = parentNode;
-                    AddUniqueLocation(locationVariable);
-                }
+                if (location == null) continue;
+                AddUniqueLocation(location);
             }
         }
 
@@ -152,12 +117,13 @@ namespace Mapbox.Examples
                 {
                     Position = latLong,
                     Name = location.Key,
-                    Sprite = location.locationSprite,
-                    Color = location.locationColor,
-                    ShowName = location.showLocationName
+                    Sprite = location.Location.DefaultIcon,
+                    Color = location.Location.Color,
+                    ShowName = location.Location.ShowName
                 };
 
                 _locationData.Add(newLocationData);
+                _locationReferences.Add(location.Location);
                 return newLocationData;
             }
         }
@@ -424,38 +390,21 @@ namespace Mapbox.Examples
         {
             var marker = _markers[index];
             var locationData = _locationData[index];
+            var locationReference = _locationReferences[index];
 
             if (!marker) return;
-
-            UpdateMarkerPosition(marker, locationData.Position);
-            UpdateMarkerScale(marker);
-            UpdateMarkerBillboard(marker, locationData);
-        }
-
-        private void UpdateMarkerPosition(Marker marker, Vector2d location)
-        {
-            marker.transform.localPosition = _map.GeoToWorldPosition(location, true);
-        }
-
-        private void UpdateMarkerScale(Marker marker)
-        {
+            
+            marker.transform.localPosition = _map.GeoToWorldPosition(locationData.Position, true);
             marker.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-        }
+            
+            marker.Name = locationReference.Label;
 
-        private void UpdateMarkerBillboard(Marker marker, LocationData locationData)
-        {
-            /*var cam = GetComponent<QuadTreeCameraMovement>()?._referenceCameraGame;
-            billboard.SetCanvasCam(cam);*/
-
-            var displayName = locationData.Name.Replace("_", " ");
-            marker.Name = displayName;
-
-            if (locationData.Sprite)
+            if (locationReference.DefaultIcon)
             {
-                marker.Icon = locationData.Sprite;
+                marker.Icon = locationReference.DefaultIcon;
             }
 
-            marker.Color = locationData.Color;
+            marker.Color = locationReference.Color;
         }
 
         private void UpdateTracker()

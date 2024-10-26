@@ -38,6 +38,7 @@ public class MapboxControls : EventWindow
     protected bool camRendered = false;
     protected Event e;
 
+    private static Location currentLocationReference;
     private static string currentLocationName = "New Location";
     private static Sprite currentLocationSprite = null;
     private static Sprite defautSprite;
@@ -144,9 +145,9 @@ public class MapboxControls : EventWindow
                         var locString = string.Format("{0}, {1}", locVal.x, locVal.y);
                         _locationStrings.Add(locString);
                         _locationNames.Add(loc.Key);
-                        _locationSprites.Add(loc.locationSprite);
-                        _locationColors.Add(loc.locationColor);
-                        _locationShowNames.Add(loc.showLocationName);
+                        _locationSprites.Add(loc.Location.DefaultIcon);
+                        _locationColors.Add(loc.Location.Color);
+                        _locationShowNames.Add(loc.Location.ShowName);
                     }
                 }
             }
@@ -157,20 +158,22 @@ public class MapboxControls : EventWindow
         spawnScale = spawnOnMap._spawnScale;
         _locations = new Vector2d[_locationStrings.Count];
         _markers = new List<Marker>();
-        
-        if(!spawnOnMap || !spawnOnMap.Markers) { return; }
-        
-        for (int i = 0; i < _locationStrings.Count; i++)
+
+        if (spawnOnMap && spawnOnMap.Markers)
         {
-            var locationString = _locationStrings[i];
-            _locations[i] = Conversions.StringToLatLon(locationString);
+            // TODO: Fix Markers
+            /*for (int i = 0; i < _locationStrings.Count; i++)
+            {
+                var locationString = _locationStrings[i];
+                _locations[i] = Conversions.StringToLatLon(locationString);
             
-            if(_locationNames.Count <= i) { continue; }
+                if(_locationNames.Count <= i) { continue; }
             
-            var marker = spawnOnMap.Markers.AddMarker(_locationNames[i]);
-            marker.transform.localPosition = abstractMap.GeoToWorldPosition(_locations[i], true);
-            marker.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
-            _markers.Add(marker);
+                var marker = spawnOnMap.Markers.AddMarker(_locationNames[i]);
+                marker.transform.localPosition = abstractMap.GeoToWorldPosition(_locations[i], true);
+                marker.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
+                _markers.Add(marker);
+            }*/
         }
 
         //create a camera if none exists - ensure you set a tag and culling mask to only map
@@ -318,32 +321,57 @@ public class MapboxControls : EventWindow
         // Create a GUI box allowing a custom name and showing current location
         GUILayout.BeginVertical();
         GUILayout.Space(20);
+        
+        GUILayout.BeginHorizontal();
+        GUILayout.Label("Reference: ");
+        var previousLocation = currentLocationReference;
+        currentLocationReference = EditorGUILayout.ObjectField(currentLocationReference, typeof(Location), false) as Location;
+        if (currentLocationReference != previousLocation) { UpdateValues(currentLocationReference); }
+        GUILayout.EndHorizontal();
+
+        var hasReference = currentLocationReference != null;
         GUILayout.BeginHorizontal();
         GUILayout.Label("Name: ");
         currentLocationName = EditorGUILayout.TextField(currentLocationName);
         GUILayout.EndHorizontal();
+            
         GUILayout.BeginHorizontal();
         GUILayout.Label("Show Name: ");
-        currentLocationNameBool = EditorGUILayout.Toggle(currentLocationNameBool);
+        var showName = EditorGUILayout.Toggle(currentLocationNameBool);
+        if (!hasReference) { currentLocationNameBool = showName; }
         GUILayout.EndHorizontal();
+            
         GUILayout.BeginHorizontal();
         GUILayout.Label("Color: ");
-        locationColor = EditorGUILayout.ColorField(locationColor);
+        var color = EditorGUILayout.ColorField(locationColor);
+        if (!hasReference) { locationColor = color; }
         GUILayout.EndHorizontal();
+        
         GUILayout.BeginHorizontal();
         GUILayout.Label("Icon: ");
-        currentLocationSprite = EditorGUILayout.ObjectField(currentLocationSprite, typeof(Sprite), true) as Sprite;
+        var icon = EditorGUILayout.ObjectField(currentLocationSprite, typeof(Sprite), true) as Sprite;
+        if (!hasReference) { currentLocationSprite = icon; }
         GUILayout.EndHorizontal();
+            
         GUILayout.BeginHorizontal();
         GUILayout.Label("Location: ");
         GUILayout.Label(currentLocationString);
         GUILayout.EndHorizontal();
-
+        
         if (GUILayout.Button("Add", EditorStyles.toolbarButton))
         {
             AddNewLocation();
         }
         GUILayout.EndVertical();
+    }
+
+    private void UpdateValues(Location location)
+    {
+        if(!location) { return; }
+
+        currentLocationNameBool = location.ShowName;
+        locationColor = location.Color;
+        currentLocationSprite = location.DefaultIcon;
     }
 
     protected override void OnKeyDown(Event e)
@@ -381,8 +409,9 @@ public class MapboxControls : EventWindow
             var locationString = _locationStrings[i];
             _locations[i] = Conversions.StringToLatLon(locationString);
         }
-        var marker = spawnOnMap.Markers.AddMarker(currentLocationName);
-        _markers.Add(marker);
+        // TODO: Fix markers here too
+        /*var marker = spawnOnMap.Markers.AddMarker(currentLocationName);
+        _markers.Add(marker);*/
         _locationNames.Add(currentLocationName);
         if (currentLocationSprite == null)
         {
@@ -395,15 +424,25 @@ public class MapboxControls : EventWindow
 
         if (engine != null)
         {
-            LocationVariable locVar = new LocationVariable();
-            var loc = Conversions.StringToLatLon(currentLocationString);
-            LocationVariable newVar = VariableSelectPopupWindowContent.AddVariable(locVar.GetType(), currentLocationName, currentLocationString) as LocationVariable;
-            newVar.locationSprite = currentLocationSprite;
+            var locationVariable = VariableSelectPopupWindowContent.AddVariable(typeof(LocationVariable), currentLocationName, currentLocationString) as LocationVariable;
+            if (!locationVariable)
+            {
+                Debug.LogError("Invalid location variable generated!");
+                return;
+            }
+            
+            if (!currentLocationReference)
+            {
+                currentLocationReference = Location.CreateLocation(currentLocationName, currentLocationNameBool, currentLocationSprite, locationColor, LogaConstants.DefaultRadius);
+                AssetDatabase.CreateAsset(currentLocationReference, $"Assets/LUTE/Resources/Locations/{currentLocationName}.asset");
+            }
+
+            locationVariable.LocationReference.Location = currentLocationReference;
             _locationSprites.Add(currentLocationSprite);
-            newVar.locationColor = locationColor;
             _locationColors.Add(locationColor);
-            newVar.showLocationName = currentLocationNameBool;
             _locationShowNames.Add(currentLocationNameBool);
+
+            currentLocationReference = null;
             currentLocationName = "New Location";
             locationColor = Color.white;
             currentLocationNameBool = true;

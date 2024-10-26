@@ -7,7 +7,7 @@ namespace KR
 {
     public class Markers : MonoBehaviour
     {
-        private List<Marker> m_markerList;
+        [SerializeField] [HideInInspector] private List<Marker> m_markerList;
         private Dictionary<string, Marker> m_markerDictionary;
 
         [SerializeField] private Marker m_markerPrefab;
@@ -28,6 +28,8 @@ namespace KR
         public Marker AddMarker(string _name)
         {
             if (m_markerDictionary.TryGetValue(_name, out var marker)) { return marker; }
+            
+            Debug.Log("Fuck");
 
             marker = Instantiate(m_markerPrefab, transform);
             marker.OnPressed += () => Press(_name);

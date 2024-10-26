@@ -9,12 +9,16 @@ using UnityEngine;
 [System.Serializable]
 public class LocationVariable : BaseVariable<string>
 {
-    [SerializeField] public Sprite locationSprite;
-    public Color locationColor = Color.white;
-    public bool showLocationName = true;
+    [SerializeField] private LocationReference m_locationReference;
+    
     public bool locationDisabled = false;
 
     protected float radiusIncrease = 0.0f;
+
+    public Location Location => m_locationReference.Location;
+#if UNITY_EDITOR
+    public LocationReference LocationReference => m_locationReference ??= new LocationReference();
+#endif
 
     public float RadiusIncrease
     {
