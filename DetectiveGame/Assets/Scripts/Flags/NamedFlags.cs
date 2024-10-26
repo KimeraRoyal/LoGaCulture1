@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace KW.Flags
@@ -25,9 +26,12 @@ namespace KW.Flags
         public List<string> FlagNames => m_flagNames;
         public IReadOnlyDictionary<string, int> FlagNameDictionary => m_flagNameDictionary;
 
+        public Action<string, bool> OnFlagUpdated;
+
         private void Awake()
         {
             m_flags = FindAnyObjectByType<Flags>();
+            m_flags.OnFlagUpdated += CompareUpdatedFlag;
 
             m_flagNameDictionary = new Dictionary<string, int>();
             for (var i = 0; i < m_flagNames.Count; i++)
@@ -100,6 +104,14 @@ namespace KW.Flags
             var index = m_flagNames.Count;
             m_flagNameDictionary.Add(_flag, index);
             return index;
+        }
+
+        private void CompareUpdatedFlag(int _flag, bool _value)
+        {
+            var key = m_flagNameDictionary.FirstOrDefault(pair => pair.Value == _flag).Key;
+            if(key == null) { return; }
+            
+            OnFlagUpdated?.Invoke(key, _value);
         }
 
         private void OnValidate()

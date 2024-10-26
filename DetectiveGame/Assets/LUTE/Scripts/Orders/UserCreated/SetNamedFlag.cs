@@ -65,6 +65,7 @@ public class SetNamedFlag : Order
 
     private void ValidateFlagName()
     {
+        if(!NamedFlags) { return; }
         var flagNames = NamedFlags.FlagNames;
 
         for (var i = 0; i < flagNames.Count; i++)

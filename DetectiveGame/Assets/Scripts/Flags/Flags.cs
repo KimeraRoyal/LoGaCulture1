@@ -19,6 +19,9 @@ namespace KW.Flags
     
         [SerializeField] protected List<uint> m_flagBits;
 
+        public Action<int, bool> OnFlagUpdated;
+        public Action OnFlagsCleared;
+        
         public void SetFlag(int _index, bool _flag)
         {
             if(_flag) { SetFlag(_index); }
@@ -52,6 +55,7 @@ namespace KW.Flags
                 m_flagBits.AddRange(Enumerable.Repeat((uint) 0, difference));
             }
             m_flagBits[indexInArray] |= (uint) 1 << (_index % c_sizeInBits);
+            OnFlagUpdated?.Invoke(_index, true);
         }
 
         public void ClearFlag(int _index)
@@ -63,6 +67,7 @@ namespace KW.Flags
                 m_flagBits.AddRange(Enumerable.Repeat((uint) 0, difference));
             }
             m_flagBits[indexInArray] &= ~((uint) 1 << (_index % c_sizeInBits));
+            OnFlagUpdated?.Invoke(_index, false);
         }
 
         public void ToggleFlag(int _index)
@@ -74,6 +79,7 @@ namespace KW.Flags
                 m_flagBits.AddRange(Enumerable.Repeat((uint) 0, difference));
             }
             m_flagBits[indexInArray] ^= (uint) 1 << (_index % c_sizeInBits);
+            OnFlagUpdated?.Invoke(_index, IsFlagSet(_index));
         }
 
         public bool IsFlag(int _index, bool _set)
@@ -86,7 +92,10 @@ namespace KW.Flags
             return (m_flagBits[indexInArray] & (uint) 1 << (_index % c_sizeInBits)) > 0;
         }
 
-        public void ClearFlags() 
-            => m_flagBits.Clear();
+        public void ClearFlags()
+        {
+            m_flagBits.Clear();
+            OnFlagsCleared?.Invoke();
+        }
     }
 }
