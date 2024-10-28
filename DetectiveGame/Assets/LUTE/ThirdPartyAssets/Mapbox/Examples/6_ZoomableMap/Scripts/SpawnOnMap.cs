@@ -153,7 +153,12 @@ namespace Mapbox.Examples
             marker.transform.localPosition = _map.GeoToWorldPosition(locationData.Position, true);
             marker.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 
-            // Set additional properties based on locationData
+            marker.Name = locationData.Name;
+            marker.Color = locationData.Color;
+            if (locationData.Sprite)
+            {
+                marker.Icon = locationData.Sprite;
+            }
 
             _markers.Add(marker);
         }
@@ -396,15 +401,6 @@ namespace Mapbox.Examples
             
             marker.transform.localPosition = _map.GeoToWorldPosition(locationData.Position, true);
             marker.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-            
-            marker.Name = locationReference.Label;
-
-            if (locationReference.DefaultIcon)
-            {
-                marker.Icon = locationReference.DefaultIcon;
-            }
-
-            marker.Color = locationReference.Color;
         }
 
         private void UpdateTracker()

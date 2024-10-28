@@ -8,8 +8,8 @@ public class MarkerPressedHandler : EventHandler
 {
     private Markers m_markers;
     
-    [Tooltip("The name of the location marker to track")]
-    [SerializeField] protected string m_markerName = "Location";
+    [Tooltip("The location to track")]
+    [SerializeField] protected LocationVariableReference m_location;
 
     protected virtual void Awake()
     {
@@ -19,10 +19,11 @@ public class MarkerPressedHandler : EventHandler
 
     private void OnMarkerPressed(string _name)
     {
-        if(_name != m_markerName) { return; }
+        if(!m_location.Variable || _name != m_location.Variable.Key) { return; }
         ExecuteNode();
     }
 
     public override string GetSummary()
-        => $"This node will execute when the \"{m_markerName}\" location node is pressed.";
+        => m_location.Variable ? $"This node will execute when the \"{m_location.Variable.Location.ShowName}\" location node is pressed."
+            : "No location set";
 }

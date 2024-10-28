@@ -10,11 +10,11 @@ namespace KR.Elements.Graphic
 
         private void Awake()
             => m_image = GetComponent<Image>();
-
-        public UnityEngine.Sprite GetSprite()
+        
+        public Sprite GetSprite()
             => m_image.sprite;
 
-        public void SetSprite(UnityEngine.Sprite _sprite)
+        public void SetSprite(Sprite _sprite)
             => m_image.sprite = _sprite;
     }
 }

@@ -10,7 +10,7 @@ public class SetMarkerIcon : Order
     private Markers m_markers;
 
     [Tooltip("The location whose marker will be updated")]
-    [SerializeField] protected LocationVariable m_marker;
+    [SerializeField] protected LocationVariableReference m_marker;
 
     [Tooltip("The icon to set. Leave as none to indicate the location has nothing of note right now")]
     [SerializeField] protected Sprite m_icon;
@@ -22,14 +22,18 @@ public class SetMarkerIcon : Order
 
     public override void OnEnter()
     {
-        var marker = m_markers.GetMarker(m_marker.name);
-        if(!marker) { return; }
+        var marker = m_markers.GetMarker(m_marker.Variable.Key);
+        if (!marker)
+        {
+            Debug.LogError($"Invalid Marker ID {m_marker.Variable.Key}");
+            return;
+        }
 
         marker.Icon = m_icon;
         Continue();
     }
 
     public override string GetSummary()
-        => m_marker ? $"{(m_icon ? "Sets" : "Clears")} the icon of location marker \"{m_marker.name}\""
+        => m_marker.Variable ? $"{(m_icon ? "Sets" : "Clears")} the icon of location marker \"{m_marker.Variable.Location.Label}\""
             : "Invalid marker";
 }
