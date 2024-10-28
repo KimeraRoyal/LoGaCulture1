@@ -55,6 +55,7 @@ public class SetNamedFlag : Order
         return $"{m_operation}s Named Flag \"{m_flagName}\"";
     }
 
+#if UNITY_EDITOR
     public override void OnValidate()
     {
         m_flagName = m_flagName?.ToLower();
@@ -62,6 +63,7 @@ public class SetNamedFlag : Order
         
         base.OnValidate();
     }
+#endif
 
     private void ValidateFlagName()
     {

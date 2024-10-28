@@ -20,6 +20,8 @@ EditorBuildSettings:
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: a3b44f079399f1e40bf8b146f79bb5bc, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 63e45294c0ecc394ab4c91a81eef3d66, type: 2}
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 0a659a1200d62ad438e7b55ba3761d4b, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: dca5ce4f30ca548468d3f53945e7d072, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: a59364800c21df44a95df71d425583e7, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 4329e4e5071ac414ca4e4ea6d2bb52a4, type: 2}
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: e7899ec8c3242c946ba548017f2eeed8, type: 2}

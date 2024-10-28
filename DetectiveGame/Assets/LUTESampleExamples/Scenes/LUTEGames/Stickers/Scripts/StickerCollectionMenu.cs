@@ -1,3 +1,4 @@
+using System;
 using MoreMountains.InventoryEngine;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace LoGaCulture.LUTE
 
         public static T[] GetAllInstances<T>() where T : ScriptableObject
         {
+#if UNITY_EDITOR
             string[] guids = AssetDatabase.FindAssets("t:" + typeof(T).Name); //FindAssets uses tags check documentation for more info
             T[] instances = new T[guids.Length];
             for (int i = 0; i < guids.Length; i++) //probably could get optimized
@@ -29,6 +31,9 @@ namespace LoGaCulture.LUTE
             }
 
             return instances;
+#else
+            return Array.Empty<T>();
+#endif
         }
 
         protected virtual void Start()

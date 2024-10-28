@@ -524,8 +524,9 @@ namespace LoGaCulture.LUTE
             return message;
         }
     }
-
+#if UNITY_EDITOR
     [InitializeOnLoad]
+#endif
     public class LocationFailureHandlerInitializer
     {
         static LocationFailureHandlerInitializer()
