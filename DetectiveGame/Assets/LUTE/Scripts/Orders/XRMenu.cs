@@ -22,33 +22,13 @@ public class XRMenu : Order
     [SerializeField] protected bool showIcon = true;
 
     [Header("XR Settings")]
-    [SerializeField]
-    public PlaneDetectionMode planeDetectionMode = PlaneDetectionMode.Horizontal;
-    [SerializeField]
-    public GameObject planeVisualiser;
-    private ARPlaneManager planeManager;
-    [SerializeField]
-    public GameObject pointCloudVisualiser;
-    private ARPointCloudManager pointCloudManager;
-
-    [SerializeField]
-    public Camera xrCamera;
+    [SerializeField] public PlaneDetectionMode planeDetectionMode = PlaneDetectionMode.Horizontal;
+    [SerializeField] public GameObject planeVisualiser;
+    [SerializeField] public GameObject pointCloudVisualiser;
 
     private void Awake()
     {
         xrHelper = XRHelper.getXRScript();
-        
-        if (planeVisualiser != null)
-        {
-            planeManager = xrHelper.GetComponentInChildren<ARPlaneManager>();
-        }
-
-        if (pointCloudVisualiser != null)
-        {
-            pointCloudManager = xrHelper.GetComponentInChildren<ARPointCloudManager>();
-        }
-        
-        xrCamera = xrHelper.GetComponentInChildren<Camera>();
     }
 
     public override void OnEnter()
@@ -71,29 +51,24 @@ public class XRMenu : Order
             popupIcon.SetActive(true);
         }
 
-        UnityEngine.Events.UnityAction action = () =>
-        {
-            if (planeVisualiser != null)
-            {
-                planeManager.planePrefab = planeVisualiser;
-            }
-
-            if (pointCloudVisualiser != null)
-            {
-                pointCloudManager.pointCloudPrefab = pointCloudVisualiser;
-            }
-
-            var xrEnabled = !xrCamera.enabled;
-        
-            xrCamera.enabled = xrEnabled;
-            xrHelper.gameObject.SetActive(xrEnabled);
-        };
-        popupIcon.SetAction(action);
+        popupIcon.SetAction(ToggleXR);
         popupIcon.MoveToNextOption();
 
         Continue();
     }
 
+    private void ToggleXR()
+    {
+        if (planeVisualiser)
+        {
+            xrHelper.PlaneManager.planePrefab = planeVisualiser;
+            xrHelper.PlaneManager.requestedDetectionMode = planeDetectionMode;
+        }
+        if (pointCloudVisualiser) { xrHelper.PointCloudManager.pointCloudPrefab = pointCloudVisualiser; }
+
+        xrHelper.ToggleXR();
+    }
+    
     public override string GetSummary()
     {
         return "Creates a button which will toggle the XR camera on/off";

@@ -1,6 +1,3 @@
-using Mapbox.Json.Bson;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.Management;
@@ -11,25 +8,30 @@ public class XRHelper : MonoBehaviour
 
     private static bool isInitialised = false;
 
+    private bool isEnabled;
 
+    private ARPlaneManager planeManager;
+    private ARPointCloudManager pointCloudManager;
+    
+    private Camera camera;
 
-    // Start is called before the first frame update
-    void Start()
+    public bool IsEnabled => isEnabled;
+
+    public ARPlaneManager PlaneManager => planeManager;
+    public ARPointCloudManager PointCloudManager => pointCloudManager;
+
+    public Camera Camera => camera;
+    
+    void Awake()
     {
-
-        //xrRig = GameObject.Find("XR Origin (XR Rig)");
-
-        //deactivate the two objects
-        //xrRig.SetActive(false);
-        //arSession.SetActive(false);
-
-        //StartCoroutine(disableafter(.5f));
-
+        planeManager = GetComponentInChildren<ARPlaneManager>();
+        pointCloudManager = GetComponentInChildren<ARPointCloudManager>();
+        
+        camera = GetComponentInChildren<Camera>();
     }
 
     public static bool initiliaseXR()
     {
-
         if (isInitialised)
         {
             return false;
@@ -70,94 +72,18 @@ public class XRHelper : MonoBehaviour
     //    arSession.SetActive(false);
     //}
 
+    public void ToggleXR()
+        => SetXREnabled(!isEnabled);
 
-
-    public static bool toggleXR()
+    public void SetXREnabled(bool enabled)
     {
-
-        if (!isInitialised)
-        {
-            initiliaseXR();
-        }
-
-        //if the xrObject is in the scene, then remove it
-        if (spawnedXRObject.activeSelf)
-        {
-            spawnedXRObject.SetActive(false);
-            return false;
-        }
-        else
-        {
-            spawnedXRObject.SetActive(true);
-            return true;
-        }
-        ////toggle the two objects on and off
-        //if(arSession.activeSelf)
-        //{
-        //    xrRig.SetActive(false);
-        //    arSession.SetActive(false);
-
-        //    //get the camera game object and set it to true
-        //    GameObject camera = GameObject.Find("Camera");
-        //    if(camera != null)
-        //    {
-        //        camera.SetActive(true);
-        //    }
-
-        //    return false;
-        //}
-        //else
-        //{
-        //    xrRig.SetActive(true);
-        //    arSession.SetActive(true);
-
-        //    //get the camera game object and set it to false
-        //    GameObject camera = GameObject.Find("Camera");
-        //    if(camera != null)
-        //    {
-        //        camera.SetActive(false);
-        //    }
-
-        //    return true;
-        //}
-
-
-    }
-
-    public static bool setXRActive(bool active)
-    {
-
-        if (!isInitialised)
-        {
-            initiliaseXR();
-        }
-
-
-
-        if (active)
-        {
-            //main camera is not needed
-            GameObject camera = GameObject.Find("Camera");
-            if (camera != null)
-            {
-                camera.SetActive(false);
-            }
-        }
-        else
-        {
-            //main camera is needed
-            GameObject camera = GameObject.Find("Camera");
-            if (camera != null)
-            {
-                camera.SetActive(true);
-            }
-        }
-
-        spawnedXRObject.SetActive(active);
-
-
-
-        return active;
+        if(isEnabled == enabled) { return; }
+        isEnabled = enabled;
+        
+        if (!isInitialised) { initiliaseXR(); }
+        
+        camera.enabled = isEnabled;
+        transform.GetChild(0).gameObject.SetActive(isEnabled);
     }
 
     public static XRHelper getXRScript()

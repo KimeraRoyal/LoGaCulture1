@@ -4,10 +4,10 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
 
-[CustomEditor(typeof(ToggleXR))]
+[CustomEditor(typeof(EnableXR))]
 public class ToggleXREditor : OrderEditor
 {
-    protected SerializedProperty toggle;
+    protected SerializedProperty enableXR;
 
     protected SerializedProperty planeVisualiser;
     protected SerializedProperty planeDetectionMode;
@@ -17,7 +17,7 @@ public class ToggleXREditor : OrderEditor
     {
         base.OnEnable();
 
-        toggle = serializedObject.FindProperty("toggle");
+        enableXR = serializedObject.FindProperty("enableXR");
         
         planeVisualiser = serializedObject.FindProperty("planeVisualiser");
 
@@ -48,13 +48,13 @@ public class ToggleXREditor : OrderEditor
 
     public override void DrawOrderGUI()
     {
-        ToggleXR t = target as ToggleXR;
+        EnableXR t = target as EnableXR;
         var engine = (BasicFlowEngine)t.GetEngine();
 
-        EditorGUILayout.PropertyField(toggle);
+        EditorGUILayout.PropertyField(enableXR);
 
        //if toggle is on, show everything else
-       if (toggle.boolValue)
+       if (enableXR.boolValue)
         {
             EditorGUILayout.PropertyField(planeVisualiser);
             EditorGUILayout.PropertyField(planeDetectionMode);

@@ -1,46 +1,54 @@
+using Mapbox.Examples;
 using UnityEngine;
 
 [OrderInfo("Map",
-             "Reveal Location",
-             "Reveals a location marker based on the location provided - can be hidden again using the 'Hide Location Marker' Order")]
+             "Show Location",
+             "Shows / hides a location marker based on the location provided")]
 [AddComponentMenu("")]
 public class ShowLocationMarker : Order
 {
-    [Tooltip("The location of the marker to show.")]
-    [SerializeField] protected LocationVariable location;
-    public override void OnEnter()
+    private SpawnOnMap m_map;
+    
+    [Tooltip("The location of the marker to show / hide.")]
+    [SerializeField] protected LocationVariableReference location;
+
+    [Tooltip("Whether to show or hide the marker.")]
+    [SerializeField] protected bool show = true;
+
+    private void Awake()
     {
         var engine = GetEngine();
+        if(!engine) { return; }
+        
+        m_map = engine.GetMap();
+    }
 
-        if (engine == null)
-        {
-            Continue();
-            return;
-        }
-
-        var map = engine.GetMap();
-
-        if (map == null)
-        {
-            Continue();
-            return;
-        }
-
+    public override void OnEnter()
+    {
         if (location == null)
         {
             Continue();
             return;
         }
 
-        map.ShowLocationMarker(location);
+        HideLocation();
         Continue();
+    }
+
+    private void HideLocation()
+    {
+        if (!m_map || !location.Variable)
+        {
+            Continue();
+            return;
+        }
+        if(show) { m_map.ShowLocationMarker(location.Variable); }
+        else { m_map.HideLocationMarker(location.Variable); }
     }
 
     public override string GetSummary()
     {
-        if (location != null)
-            return "Shows location marker at: " + location?.Key;
-
+        if (location.Variable) { return $"{(show ? "Shows" : "Hides")} location marker at {location.Variable.Location.Label}"; }
         return "Error: No location provided.";
     }
 }

@@ -227,11 +227,8 @@ public class TrackImage : Order
         //some orders may not lead to another node so you can call continue if you wish to move to the next order after this one   
         //Continue();
 
-       
-
-       
-
-        XRHelper.setXRActive(true);
+        // TODO: Sort out whatever is going on here
+        //XRHelper.setXRActive(true);
         Debug.Log("AR SESSSION IS:" + ARSession.state.ToString());
 
 
