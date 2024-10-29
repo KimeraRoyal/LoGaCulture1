@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.Management;
@@ -21,6 +22,9 @@ public class XRHelper : MonoBehaviour
     public ARPointCloudManager PointCloudManager => pointCloudManager;
 
     public Camera Camera => camera;
+
+    public Action OnEnabled;
+    public Action OnDisabled;
     
     void Awake()
     {
@@ -84,6 +88,9 @@ public class XRHelper : MonoBehaviour
         
         camera.enabled = isEnabled;
         transform.GetChild(0).gameObject.SetActive(isEnabled);
+        
+        if(isEnabled) { OnEnabled?.Invoke(); }
+        else { OnDisabled?.Invoke(); }
     }
 
     public static XRHelper getXRScript()
