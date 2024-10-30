@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4311129107438912382}
   - component: {fileID: 8200320936804688510}
   - component: {fileID: 5170910693414577563}
+  - component: {fileID: 7572189675515519038}
   m_Layer: 11
-  m_Name: Magnifying Glass
+  m_Name: Item Preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,8 +51,6 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -101,3 +100,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_amount: {x: 0, y: 0.2, z: 0}
   m_speed: 0.8
+--- !u!114 &7572189675515519038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8357848492022216206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f808ea194c065b489c301330ca3dc83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5255349356572970139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113260223023116819, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_job
+      value: Pub Landlord
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[0].m_text
+      value: Owns the local pub - not too far from the scene of the crime.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[1].m_text
+      value: His alibi seems spotty - nobody can account for him at the time of the
+        murder.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[2].m_text
+      value: The hammer found close to the crime scene belongs to him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[0].m_namedFlags
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[1].m_namedFlags
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[2].m_namedFlags
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[0].m_requiredFlag
+      value: landlord_trait1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[1].m_requiredFlag
+      value: landlord_trait2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[2].m_requiredFlag
+      value: landlord_trait3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[1].m_requiredFlagNameIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[2].m_requiredFlagNameIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991638375607060180, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_Name
+      value: Landlord Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterName
+      value: The Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[0]
+      value: 
+      objectReference: {fileID: 620352287172272054, guid: 83f1bbee75a477c45aaada87f75a368f, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}

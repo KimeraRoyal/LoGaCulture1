@@ -28,7 +28,7 @@ namespace MoreMountains.InventoryEngine
 		public string ItemID;
 		/// the inventory name into which this item will be stored
 		[Tooltip("the inventory name into which this item will be stored")]
-		public string TargetInventoryName = "MainInventory";
+		public string TargetInventoryName = "Inventory";
 		/// if this is true, the item won't be added anywhere's there's room in the inventory, but instead at the specified TargetIndex slot
 		[Tooltip("if this is true, the item won't be added anywhere's there's room in the inventory, but instead at the specified TargetIndex slot")]
 		public bool ForceSlotIndex = false;

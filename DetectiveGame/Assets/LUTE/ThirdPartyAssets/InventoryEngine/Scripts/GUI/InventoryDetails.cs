@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using MoreMountains.Tools;
@@ -56,6 +57,8 @@ namespace MoreMountains.InventoryEngine
 		protected float _fadeDelay=0.2f;
 		protected CanvasGroup _canvasGroup;
 
+		public Action<InventoryItem> OnDetailsFilled;
+
 		/// <summary>
 		/// On Start, we grab and store the canvas group and determine our current Hidden status
 		/// </summary>
@@ -107,7 +110,7 @@ namespace MoreMountains.InventoryEngine
 				}
 			}
 		}
-
+		
 		/// <summary>
 		/// Fills the various detail fields with the item's metadata
 		/// </summary>
@@ -122,6 +125,7 @@ namespace MoreMountains.InventoryEngine
 			if (Description!=null) { Description.text = item.Description;}
 			if (Quantity!=null) { Quantity.text = item.Quantity.ToString();}
 			if (Icon!=null) { Icon.sprite = item.Icon;}
+			OnDetailsFilled?.Invoke(item);
 			
 			if (HideOnEmptySlot && !Hidden && (item.Quantity == 0))
 			{

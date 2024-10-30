@@ -9,22 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92de2cb83d65e6f4facf11c6c8fa4cd2, type: 3}
-  m_Name: KeyChest
+  m_Script: {fileID: 11500000, guid: 9fac9bd89dcafc049b19f543ccf8fd57, type: 3}
+  m_Name: Hammer
   m_EditorClassIdentifier: 
-  ItemID: KeyChest
-  TargetInventoryName: MainInventory
+  ItemID: Hammer
+  TargetInventoryName: Inventory
   ForceSlotIndex: 0
   TargetIndex: 0
-  Usable: 1
+  Usable: 0
   Consumable: 1
   ConsumeQuantity: 1
   Equippable: 0
   EquippableIfInventoryIsFull: 1
   MoveWhenEquipped: 1
-  Droppable: 1
-  CanMoveObject: 1
-  CanSwapObject: 1
+  Droppable: 0
+  CanMoveObject: 0
+  CanSwapObject: 0
   DisplayProperties:
     DisplayEquipUseButton: 1
     DisplayMoveButton: 1
@@ -33,10 +33,12 @@ MonoBehaviour:
     DisplayUseButton: 1
     DisplayUnequipButton: 1
   Quantity: 1
-  ItemName: Secrets
-  ShortDescription: May Contain Key
-  Description: Possibly contains a key which may or may not be metal...
-  Icon: {fileID: 1675896503, guid: c3eb904e61cd60b4d95701449f5276fa, type: 3}
+  ItemName: Hammer
+  ShortDescription: A powerful tool of destruction
+  Description: For centuries, the "Hammer" has been known as one of the most powerful
+    "Destructive Tools", capable of "Demolition Techniques" and "Securing Nails".
+    This was left near the scene of the crime...
+  Icon: {fileID: 21300000, guid: 53895c712d35d6d46bc05031d1255718, type: 3}
   Prefab: {fileID: 0}
   ForcePrefabDropQuantity: 0
   PrefabDropQuantity: 1
@@ -83,22 +85,10 @@ MonoBehaviour:
     MaximumScale: {x: 1, y: 1, z: 1}
   MaximumStack: 1
   MaximumQuantity: 999999999
-  ItemClass: 5
+  ItemClass: 0
   TargetEquipmentInventoryName: 
   EquippedSound: {fileID: 0}
   UsedSound: {fileID: 0}
   MovedSound: {fileID: 0}
   DroppedSound: {fileID: 0}
   UseDefaultSoundsIfNull: 1
-  requiresKey: 1
-  keyID: WoodenKey
-  delayBetweenUses: 0
-  unlimitedActivations: 1
-  showPrompt: 1
-  activationFeedback: {fileID: 0}
-  deniedFeedback: {fileID: 0}
-  openSprite: {fileID: 1178443118, guid: c3eb904e61cd60b4d95701449f5276fa, type: 3}
-  items:
-  - {fileID: 11400000, guid: 78c82163ee32d38418bde5dfd24caddb, type: 2}
-  - {fileID: 11400000, guid: 1955d4b2456f81a41a4483b341d86207, type: 2}
-  quantities: 0100000063000000

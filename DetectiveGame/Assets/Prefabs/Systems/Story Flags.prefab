@@ -64,4 +64,7 @@ MonoBehaviour:
   - sheep_trait1
   - sheep_trait2
   - sheep_trait3
+  - landlord_trait1
+  - landlord_trait2
+  - landlord_trait3
   m_invalidFlagBehaviour: 0

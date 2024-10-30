@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7909651602562276741}
   - component: {fileID: 6149604024188362010}
   m_Layer: 0
-  m_Name: Sheep
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6991638375607060180}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,11 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52287538592bb04b8a2d1345e48bd7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Sheep
+  characterName: ???
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   characterSound: {fileID: 0}
-  characterPortraits:
-  - {fileID: -8636221404721523813, guid: 95bbdde39ebd42547834cc14247db51a, type: 3}
+  characterPortraits: []
   facingDirection: 1
   talkSpeed: 1
 --- !u!114 &6149604024188362010
@@ -64,20 +63,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef676526d224b04b97ed6de340a035e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_job: Sheep
-  m_traits:
-  - m_namedFlags: {fileID: 0}
-    m_text: It's a sheep, I guess.
-    m_requiredFlag: sheep_trait1
-    m_requiredFlagNameIndex: 2
-    m_lastNamedFlagCount: 5
-  - m_namedFlags: {fileID: 0}
-    m_text: This thing is deeply suspicious.
-    m_requiredFlag: sheep_trait2
-    m_requiredFlagNameIndex: 3
-    m_lastNamedFlagCount: 5
-  - m_namedFlags: {fileID: 0}
-    m_text: If I disappear, the sheep did it.
-    m_requiredFlag: sheep_trait3
-    m_requiredFlagNameIndex: 4
-    m_lastNamedFlagCount: 5
+  m_job: ???
+  m_traits: []

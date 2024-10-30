@@ -35,10 +35,10 @@ MonoBehaviour:
   Quantity: 1
   ItemName: Magnifying Glass
   ShortDescription: A tool for hunting clues.
-  Description: A <b>magnifying glass</b> is a <b>detective</b>'s most trustworthy
-    tool, you would never even think about going on an investigation without one.
-    You can use it to hunt for <b>clues</b> in the <b>real world</b>.
-  Icon: {fileID: 21300000, guid: 16a86a7f581fc4dfb953e0df8ad3ecac, type: 3}
+  Description: A "Magnifying Glass" is a "Detective's" most trustworthy tool, you
+    would never even think about going on an "Investigation" without one. You can
+    use it to hunt for "Clues" in "Real's World".
+  Icon: {fileID: -2017020377919991991, guid: 618acc5ab81077b4d8c735c1333984a4, type: 3}
   Prefab: {fileID: 0}
   ForcePrefabDropQuantity: 0
   PrefabDropQuantity: 1

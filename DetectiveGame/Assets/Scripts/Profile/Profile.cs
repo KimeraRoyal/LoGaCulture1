@@ -35,6 +35,9 @@ public class Profile : MonoBehaviour
 
     public Action OnOpened;
     public Action OnClosed;
+
+    public Action OnSelectedPrevious;
+    public Action OnSelectedNext;
     
     private void Awake()
     {
@@ -65,6 +68,22 @@ public class Profile : MonoBehaviour
 
         m_characterIndex = _index;
         OnCharacterSelected?.Invoke(SelectedCharacter);
+    }
+
+    public void SelectPrevious()
+    {
+        var index = m_characterIndex - 1;
+        if (index < 0) { index += m_characters.Length; }
+        Select(index);
+        OnSelectedPrevious?.Invoke();
+    }
+
+    public void SelectNext()
+    {
+        var index = m_characterIndex + 1;
+        if (index >= m_characters.Length) { index -= m_characters.Length; }
+        Select(index);
+        OnSelectedNext?.Invoke();
     }
 
     public void Toggle()

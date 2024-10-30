@@ -68,6 +68,8 @@ namespace MoreMountains.InventoryEngine
 		/// whether or not the inventory is full (doesn't have any remaining free slots)
 		public virtual bool IsFull => NumberOfFreeSlots <= 0;
 
+		public Action<InventoryItem> OnItemAdded;
+
 		/// The number of filled slots 
 		public int NumberOfFilledSlots
 		{
@@ -237,6 +239,7 @@ namespace MoreMountains.InventoryEngine
 			}
 			// if we're still here, we add the item in the first available slot
 			MMInventoryEvent.Trigger(MMInventoryEventType.ContentChanged, null, this.name, null, 0, 0, PlayerID);
+			OnItemAdded?.Invoke(itemToAdd);
 			return true;
 		}
 
@@ -275,6 +278,7 @@ namespace MoreMountains.InventoryEngine
 
 			// if we're still here, we add the item in the first available slot
 			MMInventoryEvent.Trigger(MMInventoryEventType.ContentChanged, null, this.name, null, 0, 0, PlayerID);
+			OnItemAdded?.Invoke(itemToAdd);
 			return true;
 		}
 
