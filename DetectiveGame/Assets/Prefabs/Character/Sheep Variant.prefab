@@ -94,15 +94,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
@@ -122,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: characterName
-      value: Sheep
+      value: The Sheep
       objectReference: {fileID: 0}
     - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: characterPortraits.Array.size

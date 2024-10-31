@@ -9,6 +9,7 @@ public class CharacterEditor : Editor
     protected SerializedProperty soundEffectProp;
     protected SerializedProperty portraitsProp;
     protected SerializedProperty portraitsFaceProp;
+    protected SerializedProperty unlockedProp;
     protected SerializedProperty talkSpeedProp;
 
     protected virtual void OnEnable()
@@ -18,6 +19,7 @@ public class CharacterEditor : Editor
         soundEffectProp = serializedObject.FindProperty("characterSound");
         portraitsProp = serializedObject.FindProperty("characterPortraits");
         portraitsFaceProp = serializedObject.FindProperty("facingDirection");
+        unlockedProp = serializedObject.FindProperty("unlocked");
         talkSpeedProp = serializedObject.FindProperty("talkSpeed");
     }
 
@@ -64,6 +66,8 @@ public class CharacterEditor : Editor
         };
         portraitsFaceProp.enumValueIndex = EditorGUILayout.Popup("Portraits Face", (int)portraitsFaceProp.enumValueIndex, facingArrows);
 
+        EditorGUILayout.PropertyField(unlockedProp, new GUIContent("Unlocked", "Whether this character is unlocked (Profile is viewable) by default."));
+        
         EditorGUILayout.PropertyField(talkSpeedProp, new GUIContent("Talk Speed", "A multiplier for how quickly the character talks."));
 
         EditorGUILayout.Separator();

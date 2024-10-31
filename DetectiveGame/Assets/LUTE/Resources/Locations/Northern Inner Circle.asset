@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf2a60ec98b9644eafeb403c5a96105, type: 3}
+  m_Name: Northern Inner Circle
+  m_EditorClassIdentifier: 
+  m_label: Northern Inner Circle
+  m_showName: 1
+  m_defaultIcon: {fileID: 21300000, guid: 0d77f64dcf23ba448b2a63ad6f4c50c2, type: 3}
+  m_color: {r: 1, g: 1, b: 1, a: 1}
+  m_radius: 100

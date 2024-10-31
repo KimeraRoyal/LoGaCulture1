@@ -31,19 +31,18 @@ public class ShowLocationMarker : Order
             return;
         }
 
-        HideLocation();
+        ShowLocation(m_map, location.Variable, show);
         Continue();
     }
 
-    private void HideLocation()
+    public static bool ShowLocation(SpawnOnMap _map, LocationVariable _location, bool _show)
     {
-        if (!m_map || !location.Variable)
-        {
-            Continue();
-            return;
-        }
-        if(show) { m_map.ShowLocationMarker(location.Variable); }
-        else { m_map.HideLocationMarker(location.Variable); }
+        if (!_map || !_location) { return false; }
+        
+        if(_show) { _map.ShowLocationMarker(_location); }
+        else { _map.HideLocationMarker(_location); }
+
+        return true;
     }
 
     public override string GetSummary()

@@ -90,7 +90,17 @@ public class BasicFlowEngine : MonoBehaviour, ISubstitutionHandler
     [SerializeField] protected Vector2 variablesScrollPos;
     [SerializeField] protected List<Vector2> mapLocations = new List<Vector2>();
     [Tooltip("If true, the engine will be in demo map mode. This means that any location conditions are evaluated on the centre position rather than the device location")]
-    [SerializeField] protected bool demoMapMode = false;
+    
+#if UNITY_EDITOR
+    [SerializeField]
+#endif
+    protected bool demoMapMode
+#if UNITY_EDITOR
+        = true;
+#else
+        = false;
+#endif
+    
     [SerializeField] protected List<Sprite> mapSprites = new List<Sprite>();
     [SerializeField] protected bool colourOrders = true;
     [SerializeField] protected bool showLineNumbers = false;

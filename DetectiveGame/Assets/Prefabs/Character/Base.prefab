@@ -48,8 +48,10 @@ MonoBehaviour:
   characterName: ???
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   characterSound: {fileID: 0}
-  characterPortraits: []
+  characterPortraits:
+  - {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
   facingDirection: 1
+  unlocked: 0
   talkSpeed: 1
 --- !u!114 &6149604024188362010
 MonoBehaviour:

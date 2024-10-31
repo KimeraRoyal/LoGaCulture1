@@ -78,7 +78,7 @@ public class IfNamedFlag : Condition
     {
         get
         {
-            if(!m_namedFlags) { m_namedFlags = FindAnyObjectByType<NamedFlags>(); }
+            if (!m_namedFlags) { m_namedFlags = FindAnyObjectByType<NamedFlags>(); } 
             return m_namedFlags;
         }
     }
@@ -105,6 +105,7 @@ public class IfNamedFlag : Condition
             conditions.Add(new NamedFlagCondition());
         }
 
+        if(!NamedFlags) { return; }
         foreach (var condition in conditions)
         {
             condition.Validate(NamedFlags);

@@ -139,9 +139,9 @@ namespace Mapbox.Examples
         private void CreateMarkers()
         {
             _markers = new List<Marker>();
-            foreach (var locationData in _locationData)
+            for (var i = 0; i < _locationData.Count; i++)
             {
-                CreateMarker(locationData);
+                CreateMarker(_locationData[i]);
             }
         }
 
@@ -153,7 +153,6 @@ namespace Mapbox.Examples
             marker.transform.localPosition = _map.GeoToWorldPosition(locationData.Position, true);
             marker.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 
-            marker.Name = locationData.Name;
             marker.Color = locationData.Color;
             if (locationData.Sprite)
             {
@@ -398,6 +397,9 @@ namespace Mapbox.Examples
             var locationReference = _locationReferences[index];
 
             if (!marker) return;
+            
+            marker.Name = locationReference.Label;
+            marker.Color = locationReference.Color;
             
             marker.transform.localPosition = _map.GeoToWorldPosition(locationData.Position, true);
             marker.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
