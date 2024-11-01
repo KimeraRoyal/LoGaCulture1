@@ -250,17 +250,27 @@ public class XRObjectAtLocation : Order
         m_debugText.DebugLine($"Distance: {LatLonDistance(new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude), m_targetLatLon)}");
     }
 
-    // https://stackoverflow.com/a/21623206
+    // https://discussions.unity.com/t/how-to-get-distance-from-2-locations-with-unity-location-service/169850/4
     private float LatLonDistance(Vector2 _a, Vector2 _b)
     {
-        const float r = 6371.0f;
-        const float p = Mathf.PI / 180.0f;
+        const float c_r = 6371.0f; // Radius of earth
 
-        var a = 0.5f
-                - Mathf.Cos((_b.x - _a.x) * p) / 2.0f
-                + Mathf.Cos(_a.x * p) * Mathf.Cos(_b.x * p) 
-                * (1.0f - Mathf.Cos((_b.y - _a.y) * p)) / 2.0f;
-        return 2.0f * r * Mathf.Asin(Mathf.Sqrt(a));
+        var aLatRadian = Mathf.Deg2Rad * _a.x;
+        var bLatRadian = Mathf.Deg2Rad * _b.x;
+        var latDistanceRadian = Mathf.Deg2Rad * (_b.x - _a.x);
+        var longDistanceRadian = Mathf.Deg2Rad * (_b.y - _a.y);
+
+        m_debugText.DebugLine($"a lat: {aLatRadian}\nb lat: {bLatRadian}\nlat distance: {latDistanceRadian}\nlong distance: {longDistanceRadian}");
+
+        var a = Mathf.Pow(Mathf.Sin(latDistanceRadian / 2.0f), 2.0f) +
+                Mathf.Pow(Mathf.Sin(longDistanceRadian / 2.0f), 2.0f)
+                * Mathf.Cos(aLatRadian) * Mathf.Cos(bLatRadian);
+        var c = 2.0f * Mathf.Atan2(Mathf.Sqrt(a), Mathf.Sqrt(1.0f - a));
+        var totalDistance = c_r * c * 1000.0f;
+
+        m_debugText.DebugLine($"a: {a}, c: {c}");
+
+        return totalDistance;
     }
 
     public override string GetSummary()
