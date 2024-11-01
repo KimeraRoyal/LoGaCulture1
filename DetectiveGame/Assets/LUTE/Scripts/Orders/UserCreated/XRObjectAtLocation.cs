@@ -39,6 +39,7 @@ public class XRObjectAtLocation : Order
 
     [Tooltip("Where this item will be placed on the map")]
     [SerializeField] protected LocationVariable objectLocation;
+    private Vector2 m_targetLatLon;
 
     [Tooltip("The maximum distance the object can be spawned from the target GPS position, in meters")]
     [SerializeField] protected float distanceFromLocation = 1.0f;
@@ -65,6 +66,9 @@ public class XRObjectAtLocation : Order
         m_xr = FindAnyObjectByType<XRHelper>();
         m_raycastManager = FindAnyObjectByType<ARRaycastManager>();
         m_planeManager = FindAnyObjectByType<ARPlaneManager>();
+
+        var targetComponents = objectLocation.Value.Split(", ");
+        m_targetLatLon = new Vector2(float.Parse(targetComponents[0]), float.Parse(targetComponents[1]));
     }
 
     IEnumerator start()
@@ -103,20 +107,8 @@ public class XRObjectAtLocation : Order
             Debug.LogError("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
         
             locationInit = true;
-
-            //Debug.Log("Trying to use mapbox to get location");
-
-            //Debug.Log("Is this null" + LocationProvider);
-
-            //var deviceLoc = LocationProvider.CurrentLocation.LatitudeLongitude;
-
-            //Debug.LogError("Device Location based on mapbox: " + deviceLoc.x + " " + deviceLoc.y);
-
         }
-
-
     }
-
 
     public override void OnEnter()
     {
@@ -252,8 +244,23 @@ public class XRObjectAtLocation : Order
     {
         m_debugText.DebugLine($"Location Services {Input.location.status}");
         if(!locationInit) { return; }
-        m_debugText.DebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
+        m_debugText.DebugLine($"Target Location: {m_targetLatLon.x}, {m_targetLatLon.y}");
+        m_debugText.DebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude);
         m_debugText.DebugLine($"Last Intersected Plane: {m_lastCoordinates}");
+        m_debugText.DebugLine($"Distance: {LatLonDistance(new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude), m_targetLatLon)}");
+    }
+
+    // https://stackoverflow.com/a/21623206
+    private float LatLonDistance(Vector2 _a, Vector2 _b)
+    {
+        const float r = 6371.0f;
+        const float p = Mathf.PI / 180.0f;
+
+        var a = 0.5f
+                - Mathf.Cos((_b.x - _a.x) * p) / 2.0f
+                + Mathf.Cos(_a.x * p) * Mathf.Cos(_b.x * p) 
+                * (1.0f - Mathf.Cos((_b.y - _a.y) * p)) / 2.0f;
+        return 2.0f * r * Mathf.Asin(Mathf.Sqrt(a));
     }
 
     public override string GetSummary()
