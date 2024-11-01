@@ -42,7 +42,7 @@ public class XRObjectAtLocation : Order
     private Vector2 m_targetLatLon;
 
     [Tooltip("The maximum distance the object can be spawned from the target GPS position, in meters")]
-    [SerializeField] protected float distanceFromLocation = 1.0f;
+    [SerializeField] protected float distanceFromLocation = 6.0f;
 
     [Tooltip("The object to place at the location")]
     [SerializeField] protected GameObject objectToPlace;
@@ -112,7 +112,16 @@ public class XRObjectAtLocation : Order
 
     public override void OnEnter()
     {
-        xrObject = XRHelper.getXRScript().gameObject; 
+        xrObject = m_xr.gameObject;
+#if UNITY_EDITOR
+        var camTrans = m_xr.Camera.transform;
+
+        var arHit = new ARRayHit { plane = null, point = camTrans.position + camTrans.forward * 5.0f, normal = Vector3.up };
+        SpawnObjectAtLocation(arHit);
+        Continue();
+
+        return;
+#endif
         StartCoroutine(start());
 
         m_planeManager.planesChanged += OnPlaneDetected;

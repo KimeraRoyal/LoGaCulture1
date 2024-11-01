@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ToolCam
   - Map
+  - DragPiece
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI Background
   - UI Preview
   - 
-  - 
+  - XR Object
   - 
   - 
   - 

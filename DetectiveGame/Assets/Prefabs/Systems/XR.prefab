@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 8287598384507834920}
   - component: {fileID: 7046977892607484521}
   - component: {fileID: 7258431241348292588}
+  - component: {fileID: 5171865371941361290}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -109,7 +110,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 8224
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -262,6 +263,24 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+--- !u!114 &5171865371941361290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253241263930534602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf18df74687d4c24eb54211cbf99e2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_camera: {fileID: 1106599690332857109}
+  m_rayType: 1
+  m_mask:
+    serializedVersion: 2
+    m_Bits: 8192
+  m_hold: 0
 --- !u!1 &3102340570919007684
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7590471730138990568}
   - component: {fileID: 216595115704510691}
+  - component: {fileID: 784753999163906608}
   m_Layer: 0
   m_Name: XR
   m_TagString: Untagged
@@ -995,6 +1015,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f05e830a11ea7943ba4eb55c1a908ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &784753999163906608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7556894168781225824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f06f6cee278d57459bc7aa56fc35994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7634995078145913327

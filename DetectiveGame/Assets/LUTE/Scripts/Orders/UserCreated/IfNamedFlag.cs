@@ -139,5 +139,5 @@ public class IfNamedFlag : Condition
     }
 
     public override string GetSummary()
-        => $"Check if Named Flag(s) are set";
+        => $"Check if Named Flag(s) are(n't) set";
 }

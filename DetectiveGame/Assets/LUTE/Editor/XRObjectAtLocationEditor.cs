@@ -9,6 +9,7 @@ using UnityEngine;
 public class XRObjectAtLocationEditor : OrderEditor
 {
     protected SerializedProperty objectLocProp;
+    protected SerializedProperty distanceProp;
     protected SerializedProperty objectProp;
     protected SerializedProperty objectNameProp;
 
