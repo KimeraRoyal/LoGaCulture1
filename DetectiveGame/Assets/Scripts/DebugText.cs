@@ -23,5 +23,5 @@ public class DebugText : MonoBehaviour
         => m_debugString += $"{_line}\n";
 
     public void PersistentDebugLine(string _line)
-        => m_persistentDebugString += $"{m_persistentDebugString}\n";
+        => m_persistentDebugString += $"{_line}\n";
 }

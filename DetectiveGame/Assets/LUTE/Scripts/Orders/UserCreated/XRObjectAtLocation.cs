@@ -4,6 +4,8 @@ using Mapbox.Unity.Utilities;
 using MoreMountains.Feedbacks;
 using MoreMountains.InventoryEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -16,6 +18,10 @@ public class XRObjectAtLocation : Order
 {
     private DebugText m_debugText;
 
+    private XRHelper m_xr;
+    private ARRaycastManager m_raycastManager;
+    private ARPlaneManager m_planeManager;
+    
     ILocationProvider _locationProvider;
     ILocationProvider LocationProvider
     {
@@ -51,6 +57,10 @@ public class XRObjectAtLocation : Order
     private void Awake()
     {
         m_debugText = FindObjectOfType<DebugText>();
+        
+        m_xr = FindAnyObjectByType<XRHelper>();
+        m_raycastManager = FindAnyObjectByType<ARRaycastManager>();
+        m_planeManager = FindAnyObjectByType<ARPlaneManager>();
     }
 
     IEnumerator start()
@@ -74,7 +84,6 @@ public class XRObjectAtLocation : Order
         if (maxWait < 1)
         {
             Debug.LogError("Timed out");
-            m_debugText.PersistentDebugLine("Timed out");
             yield break;
         }
 
@@ -82,14 +91,12 @@ public class XRObjectAtLocation : Order
         if (Input.location.status == LocationServiceStatus.Failed)
         {
             Debug.LogError("Unable to determine device location");
-            m_debugText.PersistentDebugLine("Unable to determine device location");
             yield break;
         }
         else
         {
             // If the connection succeeded, this retrieves the device's current location and displays it in the Console window.
             Debug.LogError("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
-            m_debugText.PersistentDebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
         
             locationInit = true;
 
@@ -197,70 +204,65 @@ public class XRObjectAtLocation : Order
 
     private void OnPlaneDetected(ARPlanesChangedEventArgs args)
     {
-        Debug.Log("Plane detected");
-        m_debugText.PersistentDebugLine("Plane Detected");
-
         foreach (var plane in args.added)
         {
+            if (plane.alignment != PlaneAlignment.HorizontalUp) { continue; }
+
+            var ray = m_xr.Camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            if (!TestRay(ray, out var hit)) { continue; }
             
-            if(plane.alignment == PlaneAlignment.HorizontalUp)
+            var latLon = GamePosToGPS(hit.point);
+
+            //check if the object is within a radius of 1 meter from the location
+            if (Vector2.Distance(latLon, new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude)) <= 1)
             {
+                m_debugText.PersistentDebugLine("Object within 1 meter of location");
 
-                Debug.Log("Horizontal plane detected");
-                m_debugText.PersistentDebugLine("Horizontal plane Plane Detected");
+                var obj = Instantiate(objectToPlace, hit.point, Quaternion.identity);
+                XRObjectManager.AddObject(objectName, obj);
 
-                //do a raycast from the camera to the plane and get the position of the hit
-                Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-                RaycastHit hit;
-
-                Debug.Log("Raycasting");
-                
-                //once hit, get the position of the hit
-                if (Physics.Raycast(ray, out hit))
-                {
-                   //convert the position to real world coordinates
-                    var position = hit.point;
-
-                    Debug.Log("Hit point: " + position);
-
-                    //get the latitude and longitude of the position
-                    var latLon = GamePosToGPS(position);
-
-                    Debug.Log("LatLon: " + latLon);
-
-                    //check if the object is within a radius of 1 meter from the location
-                    if (Vector2.Distance(new Vector2(latLon.x, latLon.y), new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude)) <= 1)
-                    {
-
-                        Debug.Log("Object within 1 meter of location");
-                        m_debugText.PersistentDebugLine("Object within 1 meter of location");
-
-                        // Instantiate the game object
-                        var obj = Instantiate(objectToPlace, position, Quaternion.identity);
-
-                        XRObjectManager.AddObject(objectName, obj);
-
-                        Continue();
-
-                    }
-                    else
-                    {
-                        m_debugText.DebugLine("Object not 1 meter of location");
-                    }
-
-                    
-
-                }
-
-
+                Continue();
+                break;
             }
+        }
+    }
 
+    private struct ARRayHit
+    {
+        public ARPlane plane;
+        
+        public Vector3 point;
+        public Vector3 normal;
+    }
+
+    private bool TestRay(Ray _ray, out ARRayHit o_rayHit)
+    {
+        var rayHits = new List<ARRaycastHit>();
+        
+        if (!m_raycastManager.Raycast(_ray, rayHits))
+        {
+            o_rayHit = new ARRayHit();
+            return false;
         }
 
+        var planeHits = rayHits.Where(hit => (hit.hitType & TrackableType.Planes) != 0).ToList();
+        if(planeHits.Count < 1)
+        { 
+            o_rayHit = new ARRayHit();
+            return false;
+        }
+
+        var plane = m_planeManager.GetPlane(planeHits[0].trackableId);
+        var point = _ray.origin + _ray.direction * planeHits[0].distance;
+        var normal = plane.normal;
+        
+        o_rayHit = new ARRayHit { plane = plane, normal = normal, point = point };
+        return true;
     }
 
     private void Update()
     {
+        m_debugText.DebugLine($"Location Services {Input.location.status}");
         if(!locationInit) { return; }
         m_debugText.DebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
     }
