@@ -220,6 +220,7 @@ namespace Mapbox.Examples
                     locationData.Name = updatedText;
                     _locationData[locationIndex] = locationData;
                 }
+
                 locationMarker.gameObject.SetActive(true);
                 return locationMarker.gameObject;
             }
@@ -229,7 +230,7 @@ namespace Mapbox.Examples
         private Marker FindMarker(string label)
             => _markers.Find(marker =>
                 marker &&
-                marker.Name == label);
+                marker.ID == label);
 
         public bool IsWithinRadius(string location, string centre, float radius)
         {
@@ -397,8 +398,9 @@ namespace Mapbox.Examples
             var locationReference = _locationReferences[index];
 
             if (!marker) return;
-            
-            marker.Name = locationReference.Label;
+
+            marker.ID = locationData.Name;
+            marker.Label = locationReference.Label;
             marker.Color = locationReference.Color;
             
             marker.transform.localPosition = _map.GeoToWorldPosition(locationData.Position, true);

@@ -31,7 +31,7 @@ namespace KR.Map.Marker
 
         private void Start()
         {
-            UpdateNamedElements(m_marker.Name);
+            UpdateNamedElements(m_marker.Label);
             UpdateSpriteElements(m_marker.Icon);
             UpdateColoredElements(m_marker.Color);
             UpdateCameraElements(m_marker.TargetCamera);

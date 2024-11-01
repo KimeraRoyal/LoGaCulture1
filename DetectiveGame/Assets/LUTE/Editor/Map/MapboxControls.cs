@@ -79,7 +79,9 @@ public class MapboxControls : EventWindow
                 {
                     _locationNames[i] = ReplaceUnderscoresWithSpace(_locationNames[i]);
                 }
-                marker.Name = _locationNames[i];
+                Debug.Log(_locationNames[i]);
+                marker.ID = _locationNames[i];
+                marker.Label = _locationNames[i];
             }
             if (_locationSprites.Count > i)
             {

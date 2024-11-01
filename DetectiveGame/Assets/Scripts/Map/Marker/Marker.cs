@@ -7,7 +7,8 @@ namespace KR.Map.Marker
     public class Marker : MonoBehaviour
     {
         private Button m_button;
-        
+
+        private string m_id;
         private string m_label;
 
         private Sprite m_icon;
@@ -15,7 +16,13 @@ namespace KR.Map.Marker
 
         private Camera m_targetCamera;
 
-        public string Name
+        public string ID
+        {
+            get => m_id;
+            set => m_id = value;
+        }
+        
+        public string Label
         {
             get => m_label;
             set

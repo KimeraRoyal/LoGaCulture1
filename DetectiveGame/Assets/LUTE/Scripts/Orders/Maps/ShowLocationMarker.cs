@@ -35,14 +35,16 @@ public class ShowLocationMarker : Order
         Continue();
     }
 
-    public static bool ShowLocation(SpawnOnMap _map, LocationVariable _location, bool _show)
+    public static void ShowLocation(SpawnOnMap _map, LocationVariable _location, bool _show)
     {
-        if (!_map || !_location) { return false; }
+        if (!_map || !_location)
+        {
+            Debug.Log("Skipping Location");
+            return;
+        }
         
         if(_show) { _map.ShowLocationMarker(_location); }
         else { _map.HideLocationMarker(_location); }
-
-        return true;
     }
 
     public override string GetSummary()
