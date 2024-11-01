@@ -183,10 +183,9 @@ public class XRObjectAtLocation : Order
             if (!TestRay(ray, out var hit)) { continue; }
             
             var latLon = GamePosToGPS(hit.point);
-            var target = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
             m_lastCoordinates = $"({latLon.x}, {latLon.y})";
 
-            if (Vector2.Distance(latLon, target) > distanceFromLocation) { continue; }
+            if (LatLonDistance(latLon, m_targetLatLon) > distanceFromLocation) { continue; }
             
             SpawnObjectAtLocation(hit);
             Continue();
@@ -260,22 +259,17 @@ public class XRObjectAtLocation : Order
         var latDistanceRadian = Mathf.Deg2Rad * (_b.x - _a.x);
         var longDistanceRadian = Mathf.Deg2Rad * (_b.y - _a.y);
 
-        m_debugText.DebugLine($"a lat: {aLatRadian}\nb lat: {bLatRadian}\nlat distance: {latDistanceRadian}\nlong distance: {longDistanceRadian}");
-
         var a = Mathf.Pow(Mathf.Sin(latDistanceRadian / 2.0f), 2.0f) +
                 Mathf.Pow(Mathf.Sin(longDistanceRadian / 2.0f), 2.0f)
                 * Mathf.Cos(aLatRadian) * Mathf.Cos(bLatRadian);
         var c = 2.0f * Mathf.Atan2(Mathf.Sqrt(a), Mathf.Sqrt(1.0f - a));
         var totalDistance = c_r * c * 1000.0f;
 
-        m_debugText.DebugLine($"a: {a}, c: {c}");
-
         return totalDistance;
     }
 
     public override string GetSummary()
   {
- //you can use this to return a summary of the order which is displayed in the inspector of the order
       return "Places an object at a specified location";
   }
 }
