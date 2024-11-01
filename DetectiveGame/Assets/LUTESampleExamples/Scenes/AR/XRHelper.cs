@@ -28,10 +28,10 @@ public class XRHelper : MonoBehaviour
     
     void Awake()
     {
-        planeManager = GetComponentInChildren<ARPlaneManager>();
-        pointCloudManager = GetComponentInChildren<ARPointCloudManager>();
+        planeManager = GetComponentInChildren<ARPlaneManager>(true);
+        pointCloudManager = GetComponentInChildren<ARPointCloudManager>(true);
         
-        camera = GetComponentInChildren<Camera>();
+        camera = GetComponentInChildren<Camera>(true);
     }
 
     public static bool initiliaseXR()
@@ -84,10 +84,10 @@ public class XRHelper : MonoBehaviour
         if(isEnabled == enabled) { return; }
         isEnabled = enabled;
         
-        if (!isInitialised) { initiliaseXR(); }
-        
         camera.enabled = isEnabled;
         transform.GetChild(0).gameObject.SetActive(isEnabled);
+        
+        if (isEnabled && !isInitialised) { initiliaseXR(); }
         
         if(isEnabled) { OnEnabled?.Invoke(); }
         else { OnDisabled?.Invoke(); }

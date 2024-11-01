@@ -1,3 +1,4 @@
+using System;
 using Mapbox.Unity.Location;
 using Mapbox.Unity.Utilities;
 using MoreMountains.Feedbacks;
@@ -13,7 +14,7 @@ using UnityEngine.XR.ARSubsystems;
 [AddComponentMenu("")]
 public class XRObjectAtLocation : Order
 {
-
+    private DebugText m_debugText;
 
     ILocationProvider _locationProvider;
     ILocationProvider LocationProvider
@@ -47,7 +48,12 @@ public class XRObjectAtLocation : Order
 
     bool locationInit = false;
 
-   IEnumerator start()
+    private void Awake()
+    {
+        m_debugText = FindObjectOfType<DebugText>();
+    }
+
+    IEnumerator start()
     {
         // Check if the user has location service enabled.
         if (!Input.location.isEnabledByUser)
@@ -61,12 +67,14 @@ public class XRObjectAtLocation : Order
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
         {
             yield return new WaitForSeconds(1);
+            m_debugText.DebugLine($"Try #{20 - maxWait + 1}");
             maxWait--;
         }
         // If the service didn't initialize in 20 seconds this cancels location service use.
         if (maxWait < 1)
         {
             Debug.LogError("Timed out");
+            m_debugText.PersistentDebugLine("Timed out");
             yield break;
         }
 
@@ -74,13 +82,15 @@ public class XRObjectAtLocation : Order
         if (Input.location.status == LocationServiceStatus.Failed)
         {
             Debug.LogError("Unable to determine device location");
+            m_debugText.PersistentDebugLine("Unable to determine device location");
             yield break;
         }
         else
         {
             // If the connection succeeded, this retrieves the device's current location and displays it in the Console window.
             Debug.LogError("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
-
+            m_debugText.PersistentDebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
+        
             locationInit = true;
 
             //Debug.Log("Trying to use mapbox to get location");
@@ -187,8 +197,8 @@ public class XRObjectAtLocation : Order
 
     private void OnPlaneDetected(ARPlanesChangedEventArgs args)
     {
-
         Debug.Log("Plane detected");
+        m_debugText.PersistentDebugLine("Plane Detected");
 
         foreach (var plane in args.added)
         {
@@ -197,6 +207,7 @@ public class XRObjectAtLocation : Order
             {
 
                 Debug.Log("Horizontal plane detected");
+                m_debugText.PersistentDebugLine("Horizontal plane Plane Detected");
 
                 //do a raycast from the camera to the plane and get the position of the hit
                 Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
@@ -222,6 +233,7 @@ public class XRObjectAtLocation : Order
                     {
 
                         Debug.Log("Object within 1 meter of location");
+                        m_debugText.PersistentDebugLine("Object within 1 meter of location");
 
                         // Instantiate the game object
                         var obj = Instantiate(objectToPlace, position, Quaternion.identity);
@@ -230,6 +242,10 @@ public class XRObjectAtLocation : Order
 
                         Continue();
 
+                    }
+                    else
+                    {
+                        m_debugText.DebugLine("Object not 1 meter of location");
                     }
 
                     
@@ -245,7 +261,8 @@ public class XRObjectAtLocation : Order
 
     private void Update()
     {
-        
+        if(!locationInit) { return; }
+        m_debugText.DebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
     }
 
     public override string GetSummary()

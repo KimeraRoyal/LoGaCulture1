@@ -8,7 +8,6 @@ using UnityEngine;
 [CustomEditor(typeof(XRObjectAtLocation))]
 public class XRObjectAtLocationEditor : OrderEditor
 {
-
     protected SerializedProperty objectLocProp;
     protected SerializedProperty objectProp;
     protected SerializedProperty objectNameProp;
