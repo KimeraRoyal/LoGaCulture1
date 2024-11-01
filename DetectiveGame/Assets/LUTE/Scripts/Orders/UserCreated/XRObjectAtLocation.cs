@@ -40,6 +40,9 @@ public class XRObjectAtLocation : Order
     [Tooltip("Where this item will be placed on the map")]
     [SerializeField] protected LocationVariable objectLocation;
 
+    [Tooltip("The maximum distance the object can be spawned from the target GPS position, in meters")]
+    [SerializeField] protected float distanceFromLocation = 1.0f;
+
     [Tooltip("The object to place at the location")]
     [SerializeField] protected GameObject objectToPlace;
 
@@ -53,6 +56,7 @@ public class XRObjectAtLocation : Order
     private GameObject xrObject;
 
     bool locationInit = false;
+    private bool spawnedObject;
 
     private void Awake()
     {
@@ -116,40 +120,11 @@ public class XRObjectAtLocation : Order
 
     public override void OnEnter()
     {
+        xrObject = XRHelper.getXRScript().gameObject; 
+        StartCoroutine(start());
 
-       xrObject = XRHelper.getXRScript().gameObject;
-
-
-       StartCoroutine(start());
-
-       
-        //get the AR plane manager
-        var planeManager = xrObject.GetComponentInChildren<ARPlaneManager>();
-
-        Debug.Log(planeManager.gameObject);
-
-        planeManager.planesChanged += OnPlaneDetected;
-
-        //if (raycastHitEvent != null)
-        //{
-        //    if (automaticallyPlaceObject)
-        //    {
-               
-        //    }
-        //    else
-        //    {
-        //        raycastHitEvent.eventRaised += MoveObject;
-        //        raycastHitEvent.eventRaised += PlaceObjectAt;
-        //    }
-        //}
-
-
-
-
-        //versions.GeoToWorldPosition(objectLocation., out Vector3 position);
-        //this code gets executed as the order is called
-        //some orders may not lead to another node so you can call continue if you wish to move to the next order after this one   
-        //Continue();
+        m_planeManager.planesChanged += OnPlaneDetected;
+        spawnedObject = false;
     }
 
     private float GetLongitudeDegreeDistance(float latitude)
@@ -202,8 +177,12 @@ public class XRObjectAtLocation : Order
         obj.transform.localScale = new Vector3(4, 4, 4);
     }
 
+    private string m_lastCoordinates;
+
     private void OnPlaneDetected(ARPlanesChangedEventArgs args)
     {
+        if(spawnedObject) { return; }
+        
         foreach (var plane in args.added)
         {
             if (plane.alignment != PlaneAlignment.HorizontalUp) { continue; }
@@ -212,19 +191,28 @@ public class XRObjectAtLocation : Order
             if (!TestRay(ray, out var hit)) { continue; }
             
             var latLon = GamePosToGPS(hit.point);
+            var target = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
+            m_lastCoordinates = $"({latLon.x}, {latLon.y})";
 
-            //check if the object is within a radius of 1 meter from the location
-            if (Vector2.Distance(latLon, new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude)) <= 1)
-            {
-                m_debugText.PersistentDebugLine("Object within 1 meter of location");
-
-                var obj = Instantiate(objectToPlace, hit.point, Quaternion.identity);
-                XRObjectManager.AddObject(objectName, obj);
-
-                Continue();
-                break;
-            }
+            if (Vector2.Distance(latLon, target) > distanceFromLocation) { continue; }
+            
+            SpawnObjectAtLocation(hit);
+            Continue();
+            break;
         }
+    }
+
+    private void SpawnObjectAtLocation(ARRayHit _hit)
+    {
+        if(spawnedObject) { return; }
+        
+        m_debugText.PersistentDebugLine($"Found valid plane at {m_lastCoordinates}");
+
+        var obj = Instantiate(objectToPlace, _hit.point, Quaternion.identity);
+        XRObjectManager.AddObject(objectName, obj);
+        
+        m_planeManager.planesChanged -= OnPlaneDetected;
+        spawnedObject = true;
     }
 
     private struct ARRayHit
@@ -265,6 +253,7 @@ public class XRObjectAtLocation : Order
         m_debugText.DebugLine($"Location Services {Input.location.status}");
         if(!locationInit) { return; }
         m_debugText.DebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
+        m_debugText.DebugLine($"Last Intersected Plane: {m_lastCoordinates}");
     }
 
     public override string GetSummary()
