@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5255349356572970139
+--- !u!1001 &8288576781324127468
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -50,24 +50,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_job
-      value: Pub Owner
+      value: Scholar, Artist, Researcher, Gentleman
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_text
-      value: Owns the local pub - not too far from the scene of the crime.
+      value: Not local to Avebury. A Renaissance man of sorts, it seems.
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[1].m_text
-      value: His alibi seems spotty - nobody can account for him at the time of the
-        murder.
+      value: A travelling gentleman who knew the Barber-Surgeon - not closely, but
+        they were familiar.
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[2].m_text
-      value: The hammer found close to the crime scene belongs to him.
+      value: A travelling gentleman. He knew the Barber-Surgeon, before the Farmhand
+        killed them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[3].m_text
+      value: 'Holds an interest in Avebury - wants to paint it, write about it, try
+        and excavate hidden stones... Talk about multidisciplinary. '
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_namedFlags
@@ -82,16 +88,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: m_traits.Array.data[0].m_requiredFlag
-      value: landlord_trait1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: m_traits.Array.data[1].m_requiredFlag
-      value: landlord_trait2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: m_traits.Array.data[2].m_requiredFlag
-      value: landlord_trait3
+      propertyPath: m_traits.Array.data[3].m_namedFlags
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
@@ -106,28 +104,32 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[3].m_lastNamedFlagCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
-      value: 7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[1].m_requiredFlagNameIndex
-      value: 8
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[2].m_requiredFlagNameIndex
-      value: 9
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[3].m_requiredFlagNameIndex
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6991638375607060180, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_Name
-      value: Landlord Variant
+      value: Gentleman Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: characterName
-      value: The Landlord
-      objectReference: {fileID: 0}
-    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: characterPortraits.Array.size
-      value: 1
+      value: The Visitor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

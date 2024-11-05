@@ -57,6 +57,10 @@ PrefabInstance:
       value: You Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: characterName
       value: You
       objectReference: {fileID: 0}

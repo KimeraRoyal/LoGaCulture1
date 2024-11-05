@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5255349356572970139
+--- !u!1001 &2058197519055115683
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -50,24 +50,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_job
-      value: Pub Owner
+      value: Farmhand
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.size
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_text
-      value: Owns the local pub - not too far from the scene of the crime.
+      value: Lives nearby, works at a nearby farm.
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[1].m_text
-      value: His alibi seems spotty - nobody can account for him at the time of the
-        murder.
+      value: Lives nearby, works at a nearby farm. Has to get up very early for work.
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[2].m_text
-      value: The hammer found close to the crime scene belongs to him.
+      value: Has been noticed to be off during work. Bad week?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[3].m_text
+      value: Seems cagey about the Barber-Surgeon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[4].m_text
+      value: Seems cagey about the Barber-Surgeon. Seems the two had some kind of
+        falling out recently.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[5].m_text
+      value: Had a fight with the Barber-Surgeon recently. Seems real shaken up over
+        it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[6].m_text
+      value: Accidentally killed the Barber-Surgeon. Had an argument, turned into
+        a fight, turned into an accident, couldn't face it and ran.
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_namedFlags
@@ -82,16 +100,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: m_traits.Array.data[0].m_requiredFlag
-      value: landlord_trait1
+      propertyPath: m_traits.Array.data[3].m_namedFlags
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: m_traits.Array.data[1].m_requiredFlag
-      value: landlord_trait2
+      propertyPath: m_traits.Array.data[4].m_namedFlags
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: m_traits.Array.data[2].m_requiredFlag
-      value: landlord_trait3
+      propertyPath: m_traits.Array.data[5].m_namedFlags
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[6].m_namedFlags
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
@@ -106,28 +128,56 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[3].m_lastNamedFlagCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[4].m_lastNamedFlagCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[5].m_lastNamedFlagCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[6].m_lastNamedFlagCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
-      value: 7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[1].m_requiredFlagNameIndex
-      value: 8
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[2].m_requiredFlagNameIndex
-      value: 9
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[3].m_requiredFlagNameIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[4].m_requiredFlagNameIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[5].m_requiredFlagNameIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: m_traits.Array.data[6].m_requiredFlagNameIndex
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6991638375607060180, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_Name
-      value: Landlord Variant
+      value: Farmhand Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: characterName
-      value: The Landlord
-      objectReference: {fileID: 0}
-    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
-      propertyPath: characterPortraits.Array.size
-      value: 1
+      value: The Farmhand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
