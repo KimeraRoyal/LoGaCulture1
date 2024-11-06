@@ -24,19 +24,6 @@ public class ShowAllLocations : Order
         
         m_map = engine.GetMap();
         m_locations = engine.GetComponents<LocationVariable>().Where(CheckLocationValid).ToArray();
-
-        var locations = "Locations: ";
-        for (var i = 0; i < m_locations.Length; i++)
-        {
-            if (i > 0) { locations += ", "; }
-            locations += m_locations[i].Location.Label;
-        }
-        Debug.Log(locations);
-       
-        return;
-
-        bool CheckLocationValid(LocationVariable location)
-            => exclude.All(excluded => excluded.Variable != location);
     }
 
     public override void OnEnter()
@@ -54,4 +41,7 @@ public class ShowAllLocations : Order
         var hasExclusions = exclude is { Length: > 0 };
         return $"{(show ? "Shows" : "Hides")}{(!hasExclusions ? " all" : "")} location markers{(hasExclusions ? $", except for {exclude.Length} excluded" : "")}";
     }
+    
+    private bool CheckLocationValid(LocationVariable location)
+        => exclude.All(excluded => excluded.Variable != location);
 }

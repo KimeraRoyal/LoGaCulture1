@@ -3032,7 +3032,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 613.4975
     y: 397.5957
-    width: 117.04545
+    width: 118.354416
     height: 40
   nodeName: Find Letter
   nodeDescription: Spawns an object in XR, waits for the player to click it, then
@@ -3400,7 +3400,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 838.04254
     y: 407.8229
-    width: 135.22726
+    width: 133.54428
     height: 40
   nodeName: Find Hammer
   nodeDescription: Spawns an object in XR, waits for the player to click it, then
@@ -3551,7 +3551,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 839.634
     y: 316.91388
-    width: 193.1818
+    width: 196.8354
     height: 40
   nodeName: Southern Circle Marker
   nodeDescription: Basic building block of a narrative engine
@@ -3619,7 +3619,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1225.6367
     y: 323.72498
-    width: 186.36362
+    width: 184.17719
     height: 40
   nodeName: Farmhand Breakdown
   nodeDescription: Basic building block of a narrative engine
@@ -3835,7 +3835,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1181.8302
     y: 412.5806
-    width: 219.31816
+    width: 219.62021
     height: 40
   nodeName: Farmhand Post-Breakdown
   nodeDescription: Basic building block of a narrative engine
@@ -3895,7 +3895,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1007.31494
     y: 516.56854
-    width: 203.40907
+    width: 201.8987
     height: 40
   nodeName: Farmhand Tell the Truth
   nodeDescription: Basic building block of a narrative engine
@@ -4159,7 +4159,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1222.2065
     y: 520.02747
-    width: 172.72726
+    width: 168.9873
     height: 40
   nodeName: Farmhand Hammer
   nodeDescription: Basic building block of a narrative engine
@@ -4435,7 +4435,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1069.4208
     y: 323.18582
-    width: 127.27272
+    width: 128.48099
     height: 40
   nodeName: Field Marker
   nodeDescription: Basic building block of a narrative engine
@@ -4680,7 +4680,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 903.5122
     y: 70.91325
-    width: 115.90908
+    width: 117.08859
     height: 40
   nodeName: Show Field
   nodeDescription: Basic building block of a narrative engine
