@@ -275,6 +275,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
   m_PrefabInstance: {fileID: 1090460631108315130}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &440381963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7023248825346493838, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+  m_PrefabInstance: {fileID: 1090460631108315130}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52287538592bb04b8a2d1345e48bd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &496752327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5750301688382176425, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
@@ -516,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 1385231837}
     - target: {fileID: 151040076867823489, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_lastNamedFlagCount
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 273754233099638970, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -568,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 573397007734202843, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_lastNamedFlagCount
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 586453613206145685, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlag
@@ -656,11 +667,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 777207225248308530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.x
-      value: 439.17932
+      value: 455.59717
+      objectReference: {fileID: 0}
+    - target: {fileID: 777207225248308530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: nodeRect.y
+      value: 331.2719
       objectReference: {fileID: 0}
     - target: {fileID: 777207225248308530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 127.27272
+      value: 123.17072
       objectReference: {fileID: 0}
     - target: {fileID: 777207225248308530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: orderList.Array.size
@@ -708,7 +723,7 @@ PrefabInstance:
       objectReference: {fileID: 8642065375544709635}
     - target: {fileID: 1026973486151222658, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_lastNamedFlagCount
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1120872722096264046, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -928,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243298845012440634, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 75
+      value: 73.17073
       objectReference: {fileID: 0}
     - target: {fileID: 2408035489757361282, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1068,7 +1083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3098160493183971059, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 126.13635
+      value: 124.390236
       objectReference: {fileID: 0}
     - target: {fileID: 3098160493183971059, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: orderList.Array.size
@@ -1092,7 +1107,7 @@ PrefabInstance:
       objectReference: {fileID: 8642065375544709621}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: zoom
-      value: 0.8800001
+      value: 0.8200001
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: demoMapMode
@@ -1100,15 +1115,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.x
-      value: -869.4202
+      value: -162.96999
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.y
-      value: 184.76857
+      value: 24.463326
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeViewHeight
-      value: 602
+      value: 396
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: variables.Array.size
@@ -1145,11 +1160,11 @@ PrefabInstance:
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedNodes.Array.data[0]
       value: 
-      objectReference: {fileID: 8642065375544709738}
+      objectReference: {fileID: 8642065375544709891}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedOrders.Array.data[0]
       value: 
-      objectReference: {fileID: 8642065375544709827}
+      objectReference: {fileID: 0}
     - target: {fileID: 3484681732860787689, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1176,7 +1191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3506568102044949260, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 78.40909
+      value: 78.048775
       objectReference: {fileID: 0}
     - target: {fileID: 3658865938091852303, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1297,7 +1312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4680326423391361577, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_lastNamedFlagCount
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5120434793612905392, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1551,7 +1566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6546033984032138363, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 104.54545
+      value: 107.31706
       objectReference: {fileID: 0}
     - target: {fileID: 6569931661067523550, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.x
@@ -1563,7 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6569931661067523550, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 127.27272
+      value: 123.17072
       objectReference: {fileID: 0}
     - target: {fileID: 6569931661067523550, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: orderList.Array.size
@@ -1615,7 +1630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6638997938403108645, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 595.0321
+      value: 591.17944
       objectReference: {fileID: 0}
     - target: {fileID: 6638997938403108645, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.height
@@ -1687,7 +1702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_flagNames.Array.size
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_flagNames.Array.data[3]
@@ -1719,19 +1734,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_flagNames.Array.data[10]
-      value: spawned_letter
+      value: farmhand_1
       objectReference: {fileID: 0}
     - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_flagNames.Array.data[11]
-      value: spawned_hammer
+      value: farmhand_2
       objectReference: {fileID: 0}
     - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_flagNames.Array.data[12]
+      value: farmhand_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_flagNames.Array.data[13]
+      value: farmhand_suspicious
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_flagNames.Array.data[14]
+      value: spawned_letter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_flagNames.Array.data[15]
+      value: spawned_hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_flagNames.Array.data[16]
       value: farmhand_breakdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155830331072186265, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_flagNames.Array.data[17]
+      value: landlord_breakdown
       objectReference: {fileID: 0}
     - target: {fileID: 7293842536367596228, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 102.27272
+      value: 99.99999
       objectReference: {fileID: 0}
     - target: {fileID: 7328071738310467632, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1751,7 +1786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7528373283106153513, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 172.72726
+      value: 168.29266
       objectReference: {fileID: 0}
     - target: {fileID: 7639726139483108047, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1831,7 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7833082853590735088, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: conditions.Array.data[0].m_lastNamedFlagCount
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7892596166460577456, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_Padding.m_Top
@@ -1843,7 +1878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8089186057204533530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 79.54545
+      value: 80.4878
       objectReference: {fileID: 0}
     - target: {fileID: 8089186057204533530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: orderList.Array.size
@@ -1915,7 +1950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8467617819101912420, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 82.954544
+      value: 82.92683
       objectReference: {fileID: 0}
     - target: {fileID: 8490813166797793943, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2051,7 +2086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8899025496247126132, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
-      value: 130.68181
+      value: 126.829254
       objectReference: {fileID: 0}
     - target: {fileID: 8928079791047126686, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2404,6 +2439,195 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8642065375544709827}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709891}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709890}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709888}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709889}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709894}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709893}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709892}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709895}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709896}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709897}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709898}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709899}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709900}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709901}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709902}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709903}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709904}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709905}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709906}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709907}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709908}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709909}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709910}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709912}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709911}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709913}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709914}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709917}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709915}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709916}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709918}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709919}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709920}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709921}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709922}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709923}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709924}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709929}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709928}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709925}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709927}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709926}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709930}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709931}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709935}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709934}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709932}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709933}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709936}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709937}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709938}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709941}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709939}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709940}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709943}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709942}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709944}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709945}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709946}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709947}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709948}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709949}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8642065375544709950}
   m_SourcePrefab: {fileID: 100100000, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
 --- !u!114 &1090460631108315131 stripped
 MonoBehaviour:
@@ -2474,6 +2698,121 @@ PrefabInstance:
     - target: {fileID: 2703588987437033392, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[2].m_text
+      value: Could have moved a stone to make space for farmland to please his boss.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[3].m_text
+      value: Has been noticed to be off during work. Bad week?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[4].m_text
+      value: Seems cagey about the Barber-Surgeon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[5].m_text
+      value: Seems cagey about the Barber-Surgeon. Seems the two had some kind of
+        falling out recently.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[6].m_text
+      value: Had a fight with the Barber-Surgeon recently. Seems real shaken up over
+        it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[7].m_text
+      value: Accidentally killed the Barber-Surgeon. Had an argument, turned into
+        a fight, turned into an accident, couldn't face it and ran.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[7].m_namedFlags
+      value: 
+      objectReference: {fileID: 1635460186}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[0].m_requiredFlag
+      value: farmhand_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[1].m_requiredFlag
+      value: farmhand_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[2].m_requiredFlag
+      value: farmhand_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[3].m_requiredFlag
+      value: farmhand_suspicious
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[6].m_requiredFlag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[7].m_requiredFlag
+      value: farmhand_breakdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[3].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[4].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[5].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[6].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[7].m_lastNamedFlagCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[1].m_requiredFlagNameIndex
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[2].m_requiredFlagNameIndex
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[3].m_requiredFlagNameIndex
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[6].m_requiredFlagNameIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
+      propertyPath: m_traits.Array.data[7].m_requiredFlagNameIndex
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9049813791685120887, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_Name
@@ -2726,7 +3065,7 @@ MonoBehaviour:
   m_flagName: tip_1
   m_operation: 1
   m_lastIndex: 2
-  m_lastNamedFlagCount: 13
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2953,7 +3292,7 @@ MonoBehaviour:
   m_flagName: tip_2
   m_operation: 0
   m_lastIndex: 3
-  m_lastNamedFlagCount: 13
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2972,7 +3311,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: tip_2
     m_lastIndex: 3
-    m_lastNamedFlagCount: 13
+    m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3032,7 +3371,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 613.4975
     y: 397.5957
-    width: 118.354416
+    width: 115.85365
     height: 40
   nodeName: Find Letter
   nodeDescription: Spawns an object in XR, waits for the player to click it, then
@@ -3051,6 +3390,7 @@ MonoBehaviour:
   - {fileID: 8642065375544709632}
   - {fileID: 8642065375544709633}
   - {fileID: 8642065375544709653}
+  - {fileID: 8642065375544709942}
   eventHandler: {fileID: 0}
   isGrouped: 0
   groupIndex: -1
@@ -3081,8 +3421,8 @@ MonoBehaviour:
   - m_namedFlags: {fileID: 1635460186}
     m_isSet: 0
     m_flagName: spawned_letter
-    m_lastIndex: 10
-    m_lastNamedFlagCount: 13
+    m_lastIndex: 14
+    m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3188,7 +3528,7 @@ MonoBehaviour:
   m_flagName: tip_2
   m_operation: 1
   m_lastIndex: 3
-  m_lastNamedFlagCount: 13
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3242,8 +3582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_flagName: spawned_letter
   m_operation: 0
-  m_lastIndex: 10
-  m_lastNamedFlagCount: 13
+  m_lastIndex: 14
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3331,8 +3671,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_flagName: spawned_hammer
   m_operation: 0
-  m_lastIndex: 11
-  m_lastNamedFlagCount: 13
+  m_lastIndex: 15
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3366,8 +3706,8 @@ MonoBehaviour:
   - m_namedFlags: {fileID: 1635460186}
     m_isSet: 0
     m_flagName: spawned_hammer
-    m_lastIndex: 11
-    m_lastNamedFlagCount: 13
+    m_lastIndex: 15
+    m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3400,7 +3740,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 838.04254
     y: 407.8229
-    width: 133.54428
+    width: 130.4878
     height: 40
   nodeName: Find Hammer
   nodeDescription: Spawns an object in XR, waits for the player to click it, then
@@ -3551,7 +3891,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 839.634
     y: 316.91388
-    width: 196.8354
+    width: 191.4634
     height: 40
   nodeName: Southern Circle Marker
   nodeDescription: Basic building block of a narrative engine
@@ -3619,7 +3959,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1225.6367
     y: 323.72498
-    width: 184.17719
+    width: 179.26828
     height: 40
   nodeName: Farmhand Breakdown
   nodeDescription: Basic building block of a narrative engine
@@ -3835,7 +4175,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1181.8302
     y: 412.5806
-    width: 219.62021
+    width: 213.41461
     height: 40
   nodeName: Farmhand Post-Breakdown
   nodeDescription: Basic building block of a narrative engine
@@ -3895,7 +4235,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1007.31494
     y: 516.56854
-    width: 201.8987
+    width: 196.34145
     height: 40
   nodeName: Farmhand Tell the Truth
   nodeDescription: Basic building block of a narrative engine
@@ -4082,7 +4422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2622c24c531374345ab7bd27b01406a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: That's all
+  text: Nothing right now
   description: 
   targetNode: {fileID: 8642065375544709736}
   hideIfVisited: 0
@@ -4159,7 +4499,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1222.2065
     y: 520.02747
-    width: 168.9873
+    width: 164.63412
     height: 40
   nodeName: Farmhand Hammer
   nodeDescription: Basic building block of a narrative engine
@@ -4435,7 +4775,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1069.4208
     y: 323.18582
-    width: 128.48099
+    width: 125.60975
     height: 40
   nodeName: Field Marker
   nodeDescription: Basic building block of a narrative engine
@@ -4509,8 +4849,8 @@ MonoBehaviour:
   - m_namedFlags: {fileID: 1635460186}
     m_isSet: 1
     m_flagName: farmhand_breakdown
-    m_lastIndex: 12
-    m_lastNamedFlagCount: 13
+    m_lastIndex: 16
+    m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4569,8 +4909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_flagName: farmhand_breakdown
   m_operation: 1
-  m_lastIndex: 12
-  m_lastNamedFlagCount: 13
+  m_lastIndex: 16
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4586,7 +4926,7 @@ MonoBehaviour:
   m_flagName: landlord_trait3
   m_operation: 0
   m_lastIndex: 9
-  m_lastNamedFlagCount: 13
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4617,7 +4957,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait3
     m_lastIndex: 9
-    m_lastNamedFlagCount: 13
+    m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4648,7 +4988,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_trait3
     m_lastIndex: 9
-    m_lastNamedFlagCount: 13
+    m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4680,7 +5020,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 903.5122
     y: 70.91325
-    width: 117.08859
+    width: 114.63414
     height: 40
   nodeName: Show Field
   nodeDescription: Basic building block of a narrative engine
@@ -4716,8 +5056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_flagName: farmhand_breakdown
   m_operation: 0
-  m_lastIndex: 12
-  m_lastNamedFlagCount: 13
+  m_lastIndex: 16
+  m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4767,7 +5107,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait3
     m_lastIndex: 9
-    m_lastNamedFlagCount: 13
+    m_lastNamedFlagCount: 18
 --- !u!114 &8642065375544709825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4811,6 +5151,1705 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 0
   storyText: Just one more thing - why don't you just buy your own hammer?
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8516596426904712408, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+  m_PrefabInstance: {fileID: 1090460631108315130}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6b6fee47fe44e48b3fa567bf2412cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8642065375544709888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 910.97205
+    y: 619.20245
+    width: 171.9512
+    height: 40
+  nodeName: Landlord Breakdown
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 1
+  orderList:
+  - {fileID: 8642065375544709889}
+  - {fileID: 8642065375544709894}
+  - {fileID: 8642065375544709893}
+  - {fileID: 8642065375544709892}
+  - {fileID: 8642065375544709895}
+  - {fileID: 8642065375544709896}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Excellent quality...{wc}High durability...{wc}R-rustic charms...{wc}AAARRGGGHHHH!!!!!!!{wc}*huff*
+    *huff*
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e7793442132754aae21f752b1a47a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNode: {fileID: 8642065375544709891}
+  m_location:
+    m_variable: {fileID: 8642065375544709829}
+--- !u!114 &8642065375544709891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 401.6858
+    y: 411.92258
+    width: 108.536575
+    height: 40
+  nodeName: Pub Node
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 0
+  orderList:
+  - {fileID: 8642065375544709941}
+  - {fileID: 8642065375544709940}
+  - {fileID: 8642065375544709939}
+  - {fileID: 8642065375544709911}
+  eventHandler: {fileID: 8642065375544709890}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5353331352799401030}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: You and I both know the stone was of great historical significance.
+    Alive, too.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Tr-truly... an excellent material...{wc}P-perfect for... walls... cobbled
+    flooring... a, chimney, p-perhaps...{wc}But, ah, a fantastic table... yes, that's
+    what called out to me!{wc}I knew I couldn't do it in the daytime - that era has
+    long since passed.{wc}Brought a hammer, one hit was all I needed. I work out,
+    you see.{wc}Cover of night... Hauled the pieces somewhere safe... Set to work...{wc}But
+    I forgot it. The hammer. Went to bed and all. Woke up in a sweat.{wc}Knew I had
+    to find it - but it was nowhere when I checked. Had to just hope.{wc}I couldn't
+    tell you it was mine but... now you know...{wc}So yeah! I did it! S-so what!
+    Not a person, just a stone! Lock me up, officer!
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: ?!?!
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Stone's a stone, no matter what! Alive, inanimate, historically significant
+    or laying in a field! I see it and you know what I see?{wc}Tasteful furniture!
+    Homely texturing! It R-ROCKS!!!{wc}GRRAAAARRGGHHH!!!
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: He... got so angry he turned to stone.{wc}That's honestly kind of incredible.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 406.5479
+    y: 594.3075
+    width: 178.04877
+    height: 40
+  nodeName: Landlord Farmhand 1
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 3
+  orderList:
+  - {fileID: 8642065375544709898}
+  - {fileID: 8642065375544709899}
+  - {fileID: 8642065375544709900}
+  - {fileID: 8642065375544709901}
+  - {fileID: 8642065375544709917}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5353331352799401030}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Could you tell me a little about the Farmhand?
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Mhrm... Yeah, I know the kid. He's done work for me before.{wc}Just
+    needed an extra pair of hands around a couple times, offer him a couple free
+    drinks for it and he's happy to help.{wc}Has to get up <i>real</i> early for
+    work, you know how it is. Get the "hand" to do all the gross bits before you're
+    even up.{wc}But hey, free bacon and eggs, right? Perks of the job.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeba0ec21d97e3e44a7b63b578688273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flagName: farmhand_1
+  m_operation: 1
+  m_lastIndex: 10
+  m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeba0ec21d97e3e44a7b63b578688273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flagName: farmhand_2
+  m_operation: 0
+  m_lastIndex: 11
+  m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 429.48105
+    y: 511.13788
+    width: 148.78047
+    height: 40
+  nodeName: Asking Landlord
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 4
+  orderList:
+  - {fileID: 8642065375544709903}
+  - {fileID: 8642065375544709904}
+  - {fileID: 8642065375544709906}
+  - {fileID: 8642065375544709905}
+  - {fileID: 8642065375544709907}
+  - {fileID: 8642065375544709908}
+  - {fileID: 8642065375544709910}
+  - {fileID: 8642065375544709909}
+  - {fileID: 8642065375544709918}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5353331352799401030}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: I just have a couple of things I'd like to ask you.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Sure, sure. No drinks need pouring.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2622c24c531374345ab7bd27b01406a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: The Farmhand
+  description: 
+  targetNode: {fileID: 8642065375544709897}
+  hideIfVisited: 0
+  interactable: 1
+  setMenuDialogue: {fileID: 0}
+  hideThisOption: 0
+  closeMenuOnSelect: 1
+--- !u!114 &8642065375544709906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755648b0af4e8df4bad9b9695b19bde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - m_namedFlags: {fileID: 1635460186}
+    m_isSet: 1
+    m_flagName: farmhand_1
+    m_lastIndex: 10
+    m_lastNamedFlagCount: 18
+  - m_namedFlags: {fileID: 1635460186}
+    m_isSet: 1
+    m_flagName: farmhand_2
+    m_lastIndex: 11
+    m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8642065375544709908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755648b0af4e8df4bad9b9695b19bde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - m_namedFlags: {fileID: 1635460186}
+    m_isSet: 1
+    m_flagName: farmhand_suspicious
+    m_lastIndex: 13
+    m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8642065375544709910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2622c24c531374345ab7bd27b01406a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Farmhand Suspicious
+  description: 
+  targetNode: {fileID: 8642065375544709912}
+  hideIfVisited: 0
+  interactable: 1
+  setMenuDialogue: {fileID: 0}
+  hideThisOption: 0
+  closeMenuOnSelect: 1
+--- !u!114 &8642065375544709911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8642065375544709902}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8642065375544709912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 588.3773
+    y: 596.93854
+    width: 178.04877
+    height: 40
+  nodeName: Landlord Farmhand 2
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 5
+  orderList:
+  - {fileID: 8642065375544709913}
+  - {fileID: 8642065375544709914}
+  - {fileID: 8642065375544709916}
+  - {fileID: 8642065375544709915}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5353331352799401030}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: The Farmhand - is there any reason why he might want a standing stone
+    to disappear?
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Mm... Mmmm... Had a crush maybe? Hoh-hoh!!{wc}Nah, probably not. Could
+    be the lad's boss.{wc}Wants the stones gone - that could be prime farmland right
+    there, I'm sure.{wc}Not sure what they'd <i>do</i> with the things, maybe repurpose
+    them?{wc}You'd need to break the things down to move them, though. Much too heavy,
+    certainly for that lad, hoh-hoh!!
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8642065375544709902}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8642065375544709916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeba0ec21d97e3e44a7b63b578688273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flagName: farmhand_3
+  m_operation: 0
+  m_lastIndex: 12
+  m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8642065375544709902}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8642065375544709918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2622c24c531374345ab7bd27b01406a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Nothing right now
+  description: 
+  targetNode: {fileID: 8642065375544709919}
+  hideIfVisited: 0
+  interactable: 1
+  setMenuDialogue: {fileID: 0}
+  hideThisOption: 0
+  closeMenuOnSelect: 1
+--- !u!114 &8642065375544709919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 643.58136
+    y: 534.50775
+    width: 175.60974
+    height: 40
+  nodeName: Asking Landlord End
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 6
+  orderList:
+  - {fileID: 8642065375544709921}
+  - {fileID: 8642065375544709920}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce69c06420f569946a060f1472a18de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8642065375544709921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Come back if you need any more information on this village, or a pint
+    on me! Oh-hoh-hoh!{wc}Not really. I <i>do</i> need to earn money.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 186.42546
+    y: 429.61325
+    width: 134.14633
+    height: 40
+  nodeName: Landlord First
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 7
+  orderList:
+  - {fileID: 8642065375544709924}
+  - {fileID: 8642065375544709923}
+  - {fileID: 8642065375544709929}
+  - {fileID: 8642065375544709928}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Oh-hoh-hoh!!! Welcome to my pub, detective!{wc}I heard you'd be coming.
+    How about a pint on me?
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Before me stood a jovial-looking man. I'm not precisely sure what time
+    he would originate from - perhaps the 1700s?
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -27.561058
+    y: 507.47314
+    width: 186.58534
+    height: 40
+  nodeName: Landlord Accept Drink
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 8
+  orderList:
+  - {fileID: 8642065375544709926}
+  - {fileID: 8642065375544709930}
+  - {fileID: 8642065375544709931}
+  - {fileID: 8642065375544709935}
+  - {fileID: 8642065375544709934}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5353331352799401030}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Yeah, sure! I could do with something.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 210.69112
+    y: 488.8858
+    width: 181.7073
+    height: 40
+  nodeName: Landlord Reject Drink
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 9
+  orderList:
+  - {fileID: 8642065375544709937}
+  - {fileID: 8642065375544709938}
+  - {fileID: 8642065375544709936}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2622c24c531374345ab7bd27b01406a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: No thanks
+  description: 
+  targetNode: {fileID: 8642065375544709927}
+  hideIfVisited: 0
+  interactable: 1
+  setMenuDialogue: {fileID: 0}
+  hideThisOption: 0
+  closeMenuOnSelect: 1
+--- !u!114 &8642065375544709929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2622c24c531374345ab7bd27b01406a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Sure
+  description: 
+  targetNode: {fileID: 8642065375544709925}
+  hideIfVisited: 0
+  interactable: 1
+  setMenuDialogue: {fileID: 0}
+  hideThisOption: 0
+  closeMenuOnSelect: 1
+--- !u!114 &8642065375544709930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Let me just fetch that for you, then!
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: The Landlord disappears, behind the counter of the Pub.{wc}...
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 193.92548
+    y: 584.2951
+    width: 129.26828
+    height: 40
+  nodeName: Landlord Met
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 10
+  orderList:
+  - {fileID: 8642065375544709947}
+  - {fileID: 8642065375544709933}
+  - {fileID: 8642065375544709946}
+  - {fileID: 8642065375544709944}
+  - {fileID: 8642065375544709950}
+  - {fileID: 8642065375544709943}
+  - {fileID: 8642065375544709945}
+  - {fileID: 8642065375544709948}
+  - {fileID: 8642065375544709949}
+  eventHandler: {fileID: 0}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 0
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &8642065375544709933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeba0ec21d97e3e44a7b63b578688273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flagName: landlord_trait1
+  m_operation: 0
+  m_lastIndex: 7
+  m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8642065375544709932}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8642065375544709935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: So it turns out, you don't earn money if you give things away for free.{wc}Sorry!
+    My hands are tied! Oh-hoh!!
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8642065375544709932}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8642065375544709937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 5353331352799401030}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: No thanks, I'm on the job after all.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Hoh!!! Well, that's quite alright.{wc}Probably for the best I don't
+    go giving out all my stock willy-nilly, anyhow.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8642065375544709940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8642065375544709922}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8642065375544709941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755648b0af4e8df4bad9b9695b19bde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - m_namedFlags: {fileID: 1635460186}
+    m_isSet: 0
+    m_flagName: landlord_trait1
+    m_lastIndex: 7
+    m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42219bf6cfefa0c4c96104f85e9af442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  location:
+    m_variable: {fileID: 8642065375544709829}
+  show: 1
+--- !u!114 &8642065375544709943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81000a54f770b444f863e5613d2e29ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEngine: {fileID: 0}
+  targetNode: {fileID: 8642065375544709902}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &8642065375544709944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755648b0af4e8df4bad9b9695b19bde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anyOrAllCondition: 0
+  conditions:
+  - m_namedFlags: {fileID: 1635460186}
+    m_isSet: 1
+    m_flagName: farmhand_1
+    m_lastIndex: 10
+    m_lastNamedFlagCount: 18
+  - m_namedFlags: {fileID: 1635460186}
+    m_isSet: 1
+    m_flagName: farmhand_2
+    m_lastIndex: 11
+    m_lastNamedFlagCount: 18
+  - m_namedFlags: {fileID: 1635460186}
+    m_isSet: 1
+    m_flagName: farmhand_suspicious
+    m_lastIndex: 13
+    m_lastNamedFlagCount: 18
+--- !u!114 &8642065375544709945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b319c96f49b7a49b87135a6e3241c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8642065375544709946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: It's a pleasure to meet you!
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c906758f1001f14f9ec70d7fbf45634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_unlock: 1
+  m_target: {fileID: 440381963}
+--- !u!114 &8642065375544709948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  characterPortrait: {fileID: 0}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: You too!{wc}I'll be back if I need anything.
+  letterDuration: 0.04
+  punctuationDuration: 0.04
+  extendPrevious: 0
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  fadeWhenDone: 0
+  allowLineSkip: 1
+  waitForClick: 1
+  timeToWait: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setDialogueBox: {fileID: 0}
+--- !u!114 &8642065375544709949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce69c06420f569946a060f1472a18de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8642065375544709950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376437397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6b77eb00dafe45bc66ef633cccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 440381963}
+  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterName: 
+  characterNameColour:
+    serializedVersion: 2
+    rgba: 0
+  storyText: Anything else you need from me while I'm here?
   letterDuration: 0.04
   punctuationDuration: 0.04
   extendPrevious: 0

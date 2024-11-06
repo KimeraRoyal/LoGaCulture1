@@ -83,7 +83,7 @@ namespace KW.Flags
         }
 
         public bool IsFlag(int _index, bool _set)
-            => IsFlagSet(_index) | !_set;
+            => IsFlagSet(_index) ^ !_set;
 
         public bool IsFlagSet(int _index)
         {
