@@ -3416,7 +3416,7 @@ MonoBehaviour:
   m_flagName: tip_1
   m_operation: 1
   m_lastIndex: 2
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3643,7 +3643,7 @@ MonoBehaviour:
   m_flagName: tip_2
   m_operation: 0
   m_lastIndex: 3
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3662,7 +3662,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: tip_2
     m_lastIndex: 3
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3722,7 +3722,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 613.4975
     y: 397.5957
-    width: 107.812485
+    width: 118.3544
     height: 40
   nodeName: Find Letter
   nodeDescription: Spawns an object in XR, waits for the player to click it, then
@@ -3775,7 +3775,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: spawned_letter
     m_lastIndex: 17
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3881,7 +3881,7 @@ MonoBehaviour:
   m_flagName: tip_2
   m_operation: 1
   m_lastIndex: 3
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3936,7 +3936,7 @@ MonoBehaviour:
   m_flagName: spawned_letter
   m_operation: 0
   m_lastIndex: 17
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4025,7 +4025,7 @@ MonoBehaviour:
   m_flagName: spawned_hammer
   m_operation: 0
   m_lastIndex: 18
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4060,7 +4060,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: spawned_hammer
     m_lastIndex: 18
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4093,7 +4093,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 838.04254
     y: 407.8229
-    width: 121.87498
+    width: 133.54428
     height: 40
   nodeName: Find Hammer
   nodeDescription: Spawns an object in XR, waits for the player to click it, then
@@ -4248,7 +4248,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 839.634
     y: 316.91388
-    width: 173.43745
+    width: 196.83539
     height: 40
   nodeName: Southern Circle Marker
   nodeDescription: Basic building block of a narrative engine
@@ -4316,7 +4316,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1317.0997
     y: 172.5054
-    width: 165.62497
+    width: 184.17715
     height: 40
   nodeName: Farmhand Breakdown
   nodeDescription: Basic building block of a narrative engine
@@ -4532,7 +4532,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1311.0977
     y: 261.361
-    width: 193.74995
+    width: 219.62018
     height: 40
   nodeName: Farmhand Post-Breakdown
   nodeDescription: Basic building block of a narrative engine
@@ -4592,7 +4592,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1207.3147
     y: 400.71487
-    width: 176.56245
+    width: 201.89867
     height: 40
   nodeName: Farmhand Tell the Truth
   nodeDescription: Basic building block of a narrative engine
@@ -4803,7 +4803,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1530.4104
     y: 547.7387
-    width: 164.06247
+    width: 187.97462
     height: 40
   nodeName: Asking Farmhand End
   nodeDescription: Basic building block of a narrative engine
@@ -4856,7 +4856,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1336.84
     y: 467.58844
-    width: 153.12497
+    width: 168.9873
     height: 40
   nodeName: Farmhand Hammer
   nodeDescription: Basic building block of a narrative engine
@@ -5132,7 +5132,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1076.7378
     y: 229.28334
-    width: 115.62498
+    width: 128.48099
     height: 40
   nodeName: Field Marker
   nodeDescription: Basic building block of a narrative engine
@@ -5211,7 +5211,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: farmhand_breakdown
     m_lastIndex: 19
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5287,7 +5287,7 @@ MonoBehaviour:
   m_flagName: landlord_trait3
   m_operation: 0
   m_lastIndex: 11
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5318,7 +5318,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait3
     m_lastIndex: 11
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5349,7 +5349,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_trait3
     m_lastIndex: 11
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5399,7 +5399,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait3
     m_lastIndex: 11
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5483,7 +5483,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 910.97205
     y: 619.20245
-    width: 157.81247
+    width: 176.58223
     height: 40
   nodeName: Landlord Breakdown
   nodeDescription: Basic building block of a narrative engine
@@ -5573,7 +5573,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 401.6858
     y: 411.92258
-    width: 98.437485
+    width: 110.75947
     height: 40
   nodeName: Pub Node
   nodeDescription: Basic building block of a narrative engine
@@ -5784,7 +5784,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 615.4086
     y: 644.9406
-    width: 160.93747
+    width: 182.91133
     height: 40
   nodeName: Landlord Farmhand 1
   nodeDescription: Basic building block of a narrative engine
@@ -5925,7 +5925,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 429.48105
     y: 511.13788
-    width: 134.37497
+    width: 152.5316
     height: 40
   nodeName: Asking Landlord
   nodeDescription: Basic building block of a narrative engine
@@ -6065,12 +6065,12 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: farmhand_1
     m_lastIndex: 12
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
   - m_namedFlags: {fileID: 1635460186}
     m_isSet: 1
     m_flagName: farmhand_2
     m_lastIndex: 13
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6101,7 +6101,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: farmhand_suspicious
     m_lastIndex: 16
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6166,7 +6166,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 657.9975
     y: 591.8753
-    width: 160.93747
+    width: 182.91133
     height: 40
   nodeName: Landlord Farmhand 2
   nodeDescription: Basic building block of a narrative engine
@@ -6343,7 +6343,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 643.58136
     y: 534.50775
-    width: 156.24997
+    width: 180.3797
     height: 40
   nodeName: Asking Landlord End
   nodeDescription: Basic building block of a narrative engine
@@ -6426,7 +6426,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 186.42546
     y: 429.61325
-    width: 123.43748
+    width: 137.34174
     height: 40
   nodeName: Landlord First
   nodeDescription: Basic building block of a narrative engine
@@ -6532,7 +6532,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -27.561058
     y: 507.47314
-    width: 167.18747
+    width: 191.7721
     height: 40
   nodeName: Landlord Accept Drink
   nodeDescription: Basic building block of a narrative engine
@@ -6605,7 +6605,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 210.69112
     y: 488.8858
-    width: 164.06247
+    width: 186.7088
     height: 40
   nodeName: Landlord Reject Drink
   nodeDescription: Basic building block of a narrative engine
@@ -6748,7 +6748,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 193.92548
     y: 584.2951
-    width: 118.74998
+    width: 132.27844
     height: 40
   nodeName: Landlord Met
   nodeDescription: Basic building block of a narrative engine
@@ -6792,7 +6792,7 @@ MonoBehaviour:
   m_flagName: landlord_trait1
   m_operation: 0
   m_lastIndex: 9
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6969,7 +6969,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait1
     m_lastIndex: 9
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7019,17 +7019,17 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: farmhand_1
     m_lastIndex: 12
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
   - m_namedFlags: {fileID: 1635460186}
     m_isSet: 1
     m_flagName: farmhand_2
     m_lastIndex: 13
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
   - m_namedFlags: {fileID: 1635460186}
     m_isSet: 1
     m_flagName: farmhand_suspicious
     m_lastIndex: 16
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7180,7 +7180,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1008.092
     y: 376.75586
-    width: 131.24997
+    width: 144.93668
     height: 40
   nodeName: Farmhand First
   nodeDescription: Basic building block of a narrative engine
@@ -7437,7 +7437,7 @@ MonoBehaviour:
   m_flagName: farmhand_1
   m_operation: 0
   m_lastIndex: 12
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7454,7 +7454,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1109.3102
     y: 492.60974
-    width: 142.18747
+    width: 160.12654
     height: 40
   nodeName: Asking Farmhand
   nodeDescription: Basic building block of a narrative engine
@@ -7571,7 +7571,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: farmhand_1
     m_lastIndex: 12
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7636,7 +7636,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1223.9421
     y: 758.46216
-    width: 134.37497
+    width: 147.46832
     height: 40
   nodeName: Farmhand Work
   nodeDescription: Basic building block of a narrative engine
@@ -7742,7 +7742,7 @@ MonoBehaviour:
   m_flagName: farmhand_off
   m_operation: 0
   m_lastIndex: 15
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544709974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7759,7 +7759,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1433.6984
     y: 695.0483
-    width: 159.37497
+    width: 180.3797
     height: 40
   nodeName: Re-asking Farmhand
   nodeDescription: Basic building block of a narrative engine
@@ -7861,7 +7861,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1286.2584
     y: 593.9501
-    width: 160.93747
+    width: 181.64552
     height: 40
   nodeName: Farmhand Questions
   nodeDescription: Basic building block of a narrative engine
@@ -8042,7 +8042,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 832.1417
     y: 146.4289
-    width: 135.93747
+    width: 151.26578
     height: 40
   nodeName: Gentleman First
   nodeDescription: Basic building block of a narrative engine
@@ -8186,7 +8186,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1300.0568
     y: 33.45888
-    width: 123.43748
+    width: 134.81009
     height: 40
   nodeName: Gentlewomen
   nodeDescription: Basic building block of a narrative engine
@@ -8298,7 +8298,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1001.156
     y: 113.678696
-    width: 128.12497
+    width: 143.67084
     height: 40
   nodeName: Gallery Marker
   nodeDescription: Basic building block of a narrative engine
@@ -8385,7 +8385,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1301.1565
     y: -202.80478
-    width: 168.74997
+    width: 194.30374
     height: 40
   nodeName: Asking Gentleman End
   nodeDescription: Basic building block of a narrative engine
@@ -8423,7 +8423,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1039.6177
     y: -114.89271
-    width: 165.62497
+    width: 187.97462
     height: 40
   nodeName: Gentleman Questions
   nodeDescription: Basic building block of a narrative engine
@@ -8461,7 +8461,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1087.9688
     y: 41.151154
-    width: 164.06247
+    width: 186.7088
     height: 40
   nodeName: Re-asking Gentleman
   nodeDescription: Basic building block of a narrative engine
@@ -8499,7 +8499,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 882.5096
     y: -18.18943
-    width: 146.87497
+    width: 166.45566
     height: 40
   nodeName: Asking Gentleman
   nodeDescription: Basic building block of a narrative engine
@@ -8568,7 +8568,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: gentleman_1
     m_lastIndex: 7
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544710004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8795,7 +8795,7 @@ MonoBehaviour:
   m_flagName: gentleman_1
   m_operation: 0
   m_lastIndex: 7
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544710015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8873,7 +8873,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: gentleman_feminism
     m_lastIndex: 8
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544710020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8906,7 +8906,7 @@ MonoBehaviour:
   m_flagName: gentleman_feminism
   m_operation: 0
   m_lastIndex: 8
-  m_lastNamedFlagCount: 21
+  m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544710022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8936,7 +8936,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 207.25447
     y: 682.6642
-    width: 156.24997
+    width: 176.58223
     height: 40
   nodeName: Landlord Gentleman
   nodeDescription: Basic building block of a narrative engine
@@ -9064,7 +9064,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: gentleman_1
     m_lastIndex: 7
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544710028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9178,7 +9178,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: gentleman_feminism
     m_lastIndex: 8
-    m_lastNamedFlagCount: 21
+    m_lastNamedFlagCount: 23
 --- !u!114 &8642065375544710034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9333,7 +9333,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 467.50952
     y: 692.92725
-    width: 182.81245
+    width: 208.22778
     height: 40
   nodeName: Landlord Barber-Surgeon
   nodeDescription: Basic building block of a narrative engine
