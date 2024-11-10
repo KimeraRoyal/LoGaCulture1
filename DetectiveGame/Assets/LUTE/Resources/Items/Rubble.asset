@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fac9bd89dcafc049b19f543ccf8fd57, type: 3}
-  m_Name: Equal Opportunities
+  m_Name: Rubble
   m_EditorClassIdentifier: 
-  ItemID: Equal Opportunities
+  ItemID: Rubble
   TargetInventoryName: Inventory
   ForceSlotIndex: 0
   TargetIndex: 0
@@ -22,9 +22,9 @@ MonoBehaviour:
   Equippable: 0
   EquippableIfInventoryIsFull: 1
   MoveWhenEquipped: 1
-  Droppable: 1
-  CanMoveObject: 1
-  CanSwapObject: 1
+  Droppable: 0
+  CanMoveObject: 0
+  CanSwapObject: 0
   DisplayProperties:
     DisplayEquipUseButton: 1
     DisplayMoveButton: 1
@@ -33,12 +33,10 @@ MonoBehaviour:
     DisplayUseButton: 1
     DisplayUnequipButton: 1
   Quantity: 1
-  ItemName: Feminism
-  ShortDescription: The world is so beautiful when everybody can participate!
-  Description: A representation of the true "Gentleman's Way" - that anybody can
-    be a gentleman regardless of who they are, provided they have curiosity, dignity,
-    elegance, and extremely rich parents.
-  Icon: {fileID: 21300000, guid: 9c0c2e7fb3908094687b6cca597bf2e7, type: 3}
+  ItemName: Rubble
+  ShortDescription: Suggests a struggle
+  Description: 
+  Icon: {fileID: 0}
   Prefab: {fileID: 0}
   ForcePrefabDropQuantity: 0
   PrefabDropQuantity: 1

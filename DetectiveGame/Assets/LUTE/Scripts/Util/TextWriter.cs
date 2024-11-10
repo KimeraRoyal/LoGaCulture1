@@ -10,6 +10,10 @@ public class TextWriter : MonoBehaviour
 {
     protected List<IWriterListener> writerListeners = new List<IWriterListener>();
 
+    [SerializeField] protected string format = "{0}<color=\"white\"><alpha=#55>{1}";
+
+    [SerializeField] protected float speed = 1.0f;
+    
     [SerializeField] protected char[] punctuation = new char[] {' ', ',', '.', '!', '?'};
     private bool followingPunctuation;
 
@@ -51,7 +55,7 @@ public class TextWriter : MonoBehaviour
         allowSkippingLine = _state.AllowLineSkip;
         
         if (displayRoutine != null) { StopCoroutine(displayRoutine); }
-        displayRoutine = StartCoroutine(DisplayText(text, _state.Display, _state.LetterDuration, _state.PunctuationDuration));
+        displayRoutine = StartCoroutine(DisplayText(text, _state.Display, _state.LetterDuration * speed, _state.PunctuationDuration * speed));
     }
 
     private IEnumerator DisplayText(string text, TMP_Text textUI, float letterDuration, float punctuationDuration)
@@ -62,9 +66,12 @@ public class TextWriter : MonoBehaviour
         isTyping = true;
         addingRichText = false;
 
-        var finalText = textUI.text + text;
-        foreach (var c in text)
+        var previousText = textUI.text;
+        var finalText = previousText + text;
+        
+        for(var i = 0; i < text.Length; i++)
         {
+            var c = text[i];
             if (clicked)
             {
                 clicked = false;
@@ -86,8 +93,8 @@ public class TextWriter : MonoBehaviour
             }
             
             if (c == '>') { addingRichText = false; }
-        
-            textUI.text += c;
+
+            textUI.text = string.Format(format, previousText + text[..i], text[i..]);
 
             if (!addingRichText)
             {

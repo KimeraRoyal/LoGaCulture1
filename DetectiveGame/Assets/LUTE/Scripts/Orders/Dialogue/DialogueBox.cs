@@ -126,13 +126,10 @@ public class DialogueBox : MonoBehaviour
 
     protected virtual CanvasGroup GetCanvasGroup()
     {
-        if (canvasGroup != null)
-        {
-            return canvasGroup;
-        }
+        if (canvasGroup) { return canvasGroup; }
 
         canvasGroup = GetComponent<CanvasGroup>();
-        if (canvasGroup == null)
+        if (!canvasGroup)
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
@@ -175,16 +172,23 @@ public class DialogueBox : MonoBehaviour
         {
             targetAlpha = 1f;
             fadeCoolDownTimer = 0.1f;
-        }
-        else if (fadeWhenDone && Mathf.Approximately(fadeCoolDownTimer, 0f))
-        {
-            targetAlpha = 0f;
+
+            GetCanvasGroup().blocksRaycasts = true;
         }
         else
         {
-            // Add a short delay before we start fading in case there's another text order in the next frame or two
-            // This avoids a noticeable flicker between consecutive text orders
-            fadeCoolDownTimer = Mathf.Max(0f, fadeCoolDownTimer - Time.deltaTime);
+            if (fadeWhenDone && Mathf.Approximately(fadeCoolDownTimer, 0f))
+            {
+                targetAlpha = 0f;
+            }
+            else
+            {
+                // Add a short delay before we start fading in case there's another text order in the next frame or two
+                // This avoids a noticeable flicker between consecutive text orders
+                fadeCoolDownTimer = Mathf.Max(0f, fadeCoolDownTimer - Time.deltaTime);
+            }
+
+            GetCanvasGroup().blocksRaycasts = false;
         }
 
         CanvasGroup canvasGroup = GetCanvasGroup();
