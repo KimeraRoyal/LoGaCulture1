@@ -16,8 +16,6 @@ using UnityEngine.XR.ARSubsystems;
 [AddComponentMenu("")]
 public class XRObjectAtLocation : Order
 {
-    private DebugText m_debugText;
-
     private XRHelper m_xr;
     private ARRaycastManager m_raycastManager;
     private ARPlaneManager m_planeManager;
@@ -61,8 +59,6 @@ public class XRObjectAtLocation : Order
 
     private void Awake()
     {
-        m_debugText = FindObjectOfType<DebugText>();
-        
         m_xr = FindAnyObjectByType<XRHelper>();
         m_raycastManager = FindAnyObjectByType<ARRaycastManager>();
         m_planeManager = FindAnyObjectByType<ARPlaneManager>();
@@ -85,7 +81,6 @@ public class XRObjectAtLocation : Order
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
         {
             yield return new WaitForSeconds(1);
-            m_debugText.DebugLine($"Try #{20 - maxWait + 1}");
             maxWait--;
         }
         // If the service didn't initialize in 20 seconds this cancels location service use.
@@ -206,8 +201,6 @@ public class XRObjectAtLocation : Order
     {
         if(spawnedObject) { return; }
         
-        m_debugText.PersistentDebugLine($"Found valid plane at {m_lastCoordinates}");
-
         var obj = Instantiate(objectToPlace, _hit.point, Quaternion.identity);
         XRObjectManager.AddObject(objectName, obj);
         
@@ -246,16 +239,6 @@ public class XRObjectAtLocation : Order
         
         o_rayHit = new ARRayHit { plane = plane, normal = normal, point = point };
         return true;
-    }
-
-    private void Update()
-    {
-        m_debugText.DebugLine($"Location Services {Input.location.status}");
-        if(!locationInit) { return; }
-        m_debugText.DebugLine($"Target Location: {m_targetLatLon.x}, {m_targetLatLon.y}");
-        m_debugText.DebugLine("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude);
-        m_debugText.DebugLine($"Last Intersected Plane: {m_lastCoordinates}");
-        m_debugText.DebugLine($"Distance: {LatLonDistance(new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude), m_targetLatLon)}");
     }
 
     // https://discussions.unity.com/t/how-to-get-distance-from-2-locations-with-unity-location-service/169850/4

@@ -774,8 +774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b714a5e293dfc45a5a939b69ebe0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  format: '{0}<color="white"><alpha=#AA>{1}'
-  speed: 0.25
+  format: '{0}<alpha=#00>{1}'
+  speed: 0.6
   punctuation: 20002c002e0021003f00
 --- !u!114 &9047346322034707460
 MonoBehaviour:
