@@ -12,6 +12,8 @@ using UnityEngine.UI;
 /// 
 public class DialogueBox : MonoBehaviour
 {
+    private Shake m_portraitShake;
+    
     [Tooltip("The continue button UI object")]
     [SerializeField] protected Button continueButton;
     [Tooltip("The text UI object")]
@@ -42,6 +44,15 @@ public class DialogueBox : MonoBehaviour
     protected float startStoryTextWidth;
     protected float startStoryTextInset;
     protected static Character speakingCharacter;
+
+    public Shake PortraitShake
+    {
+        get
+        {
+            if(!m_portraitShake) { m_portraitShake = characterImage.GetComponent<Shake>(); }
+            return m_portraitShake;
+        }
+    }
 
     protected DialogueParser Parser
     {

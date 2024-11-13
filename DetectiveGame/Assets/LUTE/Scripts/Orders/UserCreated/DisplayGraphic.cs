@@ -1,10 +1,10 @@
 using UnityEngine;
 
-[OrderInfo("Narrative",
-              "Show Dialogue Graphic",
-              "Pops up an image in front of dialogue")]
+[OrderInfo("VFX",
+              "Display Graphic",
+              "Pops up an image in front of the screen")]
 [AddComponentMenu("")]
-public class ShowDialogueGraphic : Order
+public class DisplayGraphic : Order
 {
     private DialogueGraphic m_dialogueGraphic;
 
