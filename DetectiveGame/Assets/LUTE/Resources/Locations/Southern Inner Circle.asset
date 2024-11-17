@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_label: Southern Inner Circle
   m_showName: 1
-  m_defaultIcon: {fileID: 21300000, guid: 0d77f64dcf23ba448b2a63ad6f4c50c2, type: 3}
+  m_defaultIcon: {fileID: 21300000, guid: 32659a36fde15194e904190c476ef748, type: 3}
   m_color: {r: 1, g: 1, b: 1, a: 1}
   m_radius: 100
