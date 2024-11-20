@@ -1,0 +1,22 @@
+{
+    "version": "1.0",
+    "fileName": "gentleman.png",
+    "width": 512,
+    "height": 128,
+    "columns": 4,
+    "rows": 1,
+    "frames": [
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        }
+    ]
+}

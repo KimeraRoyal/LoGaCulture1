@@ -280,7 +280,6 @@ public class DialogueBox : MonoBehaviour
         }
         else
         {
-
             string characterName = character.CharacterName;
 
             if (characterName == "")
@@ -290,9 +289,16 @@ public class DialogueBox : MonoBehaviour
             }
 
             SetCharacterName(characterName, character.NameColour);
+            speakingCharacter = character;
 
             talkSpeed = character.TalkSpeed;
         }
+    }
+
+    public virtual void SetCharacterImage(int imageIndex)
+    {
+        var portrait = speakingCharacter ? speakingCharacter.GetPortrait(imageIndex) : null;
+        SetCharacterImage(portrait);
     }
 
     public virtual void SetCharacterImage(Sprite sprite)

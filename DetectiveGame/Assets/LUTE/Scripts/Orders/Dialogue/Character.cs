@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 //Character class is used to identify characters in the scene that can be used in dialogues
 [ExecuteInEditMode]
@@ -104,25 +105,13 @@ public class Character : MonoBehaviour, IComparer<Character>
     /// Looks for a portrait by name on a character
     public virtual Sprite GetPortrait(string portraitString)
     {
-        if (string.IsNullOrEmpty(portraitString))
-        {
-            return null;
-        }
-
-        for (int i = 0; i < characterPortraits.Count; i++)
-        {
-            if (characterPortraits[i] != null && string.Compare(characterPortraits[i].name, portraitString, true) == 0)
-            {
-                return characterPortraits[i];
-            }
-        }
-        return null;
+        if (string.IsNullOrEmpty(portraitString)) { return null; }
+        return characterPortraits.FirstOrDefault(t => t != null && string.Compare(t.name, portraitString, StringComparison.OrdinalIgnoreCase) == 0);
     }
 
     public virtual Sprite GetPortrait(int index)
     {
         if (index < 0 || index >= characterPortraits.Count) { return null; }
-
         return characterPortraits[index];
     }
 

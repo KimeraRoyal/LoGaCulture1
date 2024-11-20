@@ -65,8 +65,10 @@ public class DialogueParser : MonoBehaviour
 
     private void InitialiseParsers()
     {
+        var dialogueBox = FindAnyObjectByType<DialogueBox>();
+        var portraitShake = dialogueBox.PortraitShake;
+        
         var flash = FindAnyObjectByType<Flash>();
-        var portraitShake = FindAnyObjectByType<DialogueBox>().PortraitShake;
         
         m_commandParsers.Add("w", args => { return new DialogueCommand[] { new WaitCommand(args) }; });
         m_commandParsers.Add("wi", _ => { return new DialogueCommand[] { new WaitForInputCommand() }; });
@@ -75,6 +77,7 @@ public class DialogueParser : MonoBehaviour
         m_commandParsers.Add("x", _ => { return new DialogueCommand[] { new BreakCommand() }; });
         m_commandParsers.Add("flash", args => { return new DialogueCommand[] { new FlashCommand(flash, args) }; });
         m_commandParsers.Add("shake_portrait", args => { return new DialogueCommand[] { new ShakeCommand(portraitShake, args) }; });
+        m_commandParsers.Add("portrait", args => { return new DialogueCommand[] { new PortraitCommand(dialogueBox, args) }; });
     }
 
     public DialogueCommand GetNextCommand()

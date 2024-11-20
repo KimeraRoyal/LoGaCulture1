@@ -93,19 +93,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[3].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
@@ -131,6 +131,26 @@ PrefabInstance:
       propertyPath: characterName
       value: The Visitor
       objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[0]
+      value: 
+      objectReference: {fileID: 1448086734, guid: 46711a6b6e7727a4d8b1e2ed9e888049, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[1]
+      value: 
+      objectReference: {fileID: -922180697, guid: 46711a6b6e7727a4d8b1e2ed9e888049, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[2]
+      value: 
+      objectReference: {fileID: -121768067, guid: 46711a6b6e7727a4d8b1e2ed9e888049, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[3]
+      value: 
+      objectReference: {fileID: 35095530, guid: 46711a6b6e7727a4d8b1e2ed9e888049, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

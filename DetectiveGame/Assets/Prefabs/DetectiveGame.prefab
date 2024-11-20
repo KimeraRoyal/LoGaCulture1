@@ -5250,7 +5250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -5284,7 +5284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -5334,7 +5334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -5385,7 +5385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -5435,7 +5435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -5564,7 +5564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -6054,7 +6054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -6100,7 +6100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -6133,7 +6133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -6240,7 +6240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -6275,7 +6275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -6309,7 +6309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7023,7 +7023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7056,7 +7056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7088,7 +7088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7129,7 +7129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7162,7 +7162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7234,7 +7234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7267,7 +7267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7393,7 +7393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7566,7 +7566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7598,7 +7598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7630,7 +7630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7662,7 +7662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7695,7 +7695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7729,7 +7729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -7762,7 +7762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8052,7 +8052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8190,7 +8190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8223,7 +8223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8255,7 +8255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8295,7 +8295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3095502249841877814}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8368,7 +8368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8400,7 +8400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8690,7 +8690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8723,7 +8723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8877,7 +8877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8950,7 +8950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -8983,7 +8983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9136,7 +9136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9168,7 +9168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9200,7 +9200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9232,7 +9232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9353,7 +9353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9385,7 +9385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9465,7 +9465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9557,7 +9557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9590,7 +9590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9623,7 +9623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9656,7 +9656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9690,7 +9690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9724,7 +9724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9825,7 +9825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -9857,7 +9857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10008,7 +10008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10041,7 +10041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10218,7 +10218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10303,7 +10303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10404,7 +10404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 5576788436235770275}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10438,7 +10438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10471,7 +10471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 5576788436235770275}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10546,7 +10546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10579,7 +10579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 5576788436235770275}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10872,7 +10872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -10984,7 +10984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11016,7 +11016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11048,7 +11048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 5576788436235770275}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11223,7 +11223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11255,7 +11255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11353,7 +11353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11534,7 +11534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11566,7 +11566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11778,7 +11778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11856,7 +11856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -11889,7 +11889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12065,7 +12065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12190,7 +12190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12224,7 +12224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12258,7 +12258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12292,7 +12292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12359,7 +12359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12392,7 +12392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12483,7 +12483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12515,7 +12515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12772,7 +12772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -12821,7 +12821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -13095,7 +13095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -13128,7 +13128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -13349,7 +13349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -13381,7 +13381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -13413,7 +13413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -13945,7 +13945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14119,7 +14119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14168,7 +14168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14264,7 +14264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14555,7 +14555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14600,7 +14600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14724,7 +14724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14802,7 +14802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14835,7 +14835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14868,7 +14868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -14985,7 +14985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15111,7 +15111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15282,7 +15282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15315,7 +15315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15348,7 +15348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15438,7 +15438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15470,7 +15470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15502,7 +15502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15535,7 +15535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7717653795185703877}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15568,7 +15568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15601,7 +15601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1318092554261610504}
-  characterPortrait: {fileID: -2049046818, guid: 4b1a1ed5fe14e1b4c809e41edf9814a4, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15637,7 +15637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15908,7 +15908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15941,7 +15941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -15973,7 +15973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16069,7 +16069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16102,7 +16102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16136,7 +16136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16169,7 +16169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16202,7 +16202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 7023248825346493838}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16235,7 +16235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16268,7 +16268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16409,7 +16409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16516,7 +16516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16549,7 +16549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3536205181816430348}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16618,7 +16618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1043420081141978803}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -16650,7 +16650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 5576788436235770275}
-  characterPortrait: {fileID: 756739475, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -19736,6 +19736,10 @@ PrefabInstance:
     - target: {fileID: 775002072376558819, guid: cc6d5b3d498136b4380fc649a9953916, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237671491555322395, guid: cc6d5b3d498136b4380fc649a9953916, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5999175583187006779, guid: cc6d5b3d498136b4380fc649a9953916, type: 3}
       propertyPath: m_Pivot.x

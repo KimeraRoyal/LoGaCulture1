@@ -101,7 +101,7 @@ public class DialogueEditor : OrderEditor
         base.OnEnable();
 
         characterProp = serializedObject.FindProperty("character");
-        portraitProp = serializedObject.FindProperty("characterPortrait");
+        portraitProp = serializedObject.FindProperty("characterPortraitIndex");
         storyTextProp = serializedObject.FindProperty("storyText");
         voiceOverClipProp = serializedObject.FindProperty("voiceOverClip");
         showAlwaysProp = serializedObject.FindProperty("showAlways");
@@ -152,16 +152,16 @@ public class DialogueEditor : OrderEditor
 
         if (showPortraits)
         {
-            OrderEditor.ObjectField<Sprite>(portraitProp,
-                                              new GUIContent("Portrait", "Portrait representing speaking character"),
-                                              new GUIContent("<None>"),
-                                              t._Character.Portraits);
+            ObjectIndexField<Sprite>(portraitProp,
+                new GUIContent("Portrait", "Portrait representing speaking character"),
+                new GUIContent("<None>"),
+                t._Character.Portraits);
         }
         else
         {
             if (!t.ExtendPrevious)
             {
-                t.Portrait = null;
+                t.PortraitIndex = -1;
             }
         }
 

@@ -244,6 +244,47 @@ public class OrderEditor : Editor
 
         property.objectReferenceValue = result;
     }
+
+    public static void ObjectIndexField<T>(SerializedProperty property, GUIContent label, GUIContent nullLabel, List<T> objectList) where T : Object
+    {
+        if (property == null)
+        {
+            return;
+        }
+
+        List<GUIContent> objectNames = new List<GUIContent>();
+
+        int selectedObjectIndex = property.intValue;
+        int selectedChoiceIndex = -1; // Invalid index
+
+        // First option in list is <None>
+        objectNames.Add(nullLabel);
+        if (selectedObjectIndex < 0)
+        {
+            selectedChoiceIndex = 0;
+        }
+
+        for (var i = 0; i < objectList.Count; ++i)
+        {
+            if (objectList[i] == null) continue;
+            if (objectList[i].GetType() == typeof(LocationVariable))
+            {
+                LocationVariable locVar = objectList[i] as LocationVariable;
+                objectNames.Add(new GUIContent(locVar.Key));
+            }
+            else
+                objectNames.Add(new GUIContent(objectList[i].name));
+
+            if (selectedObjectIndex == i)
+            {
+                selectedChoiceIndex = i + 1;
+            }
+        }
+
+        selectedChoiceIndex = EditorGUILayout.Popup(label, selectedChoiceIndex, objectNames.ToArray());
+        property.intValue = selectedChoiceIndex - 1;
+    }
+    
     // When modifying custom editor code you can occasionally end up with orphaned editor instances.
     // When this happens, you'll get a null exception error every time the scene serializes / deserialized.
     // Once this situation occurs, the only way to fix it is to restart the Unity editor.

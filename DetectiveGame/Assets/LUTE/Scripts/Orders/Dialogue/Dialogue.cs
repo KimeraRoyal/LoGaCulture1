@@ -10,7 +10,7 @@ public class Dialogue : Order
     [Tooltip("Character that is speaking")]
     [SerializeField] protected Character character;
     [Tooltip("Portrait that represents speaking character")]
-    [SerializeField] protected Sprite characterPortrait;
+    [SerializeField] protected int characterPortraitIndex;
     [Tooltip("Character name to display in the box")]
     [SerializeField] protected string characterName;
     [Tooltip("Colour of the character name text ")]
@@ -48,7 +48,8 @@ public class Dialogue : Order
     protected int executionCount;
 
     public virtual Character _Character { get { return character; } }
-    public virtual Sprite Portrait { get { return characterPortrait; } set { characterPortrait = value; } }
+    public virtual int PortraitIndex { get => characterPortraitIndex; set => characterPortraitIndex = value; }
+    public virtual Sprite Portrait => PortraitIndex >= 0 ? character.GetPortrait(PortraitIndex) : null;
     public virtual bool ExtendPrevious { get { return extendPrevious; } }
 
     public override void OnEnter()
@@ -78,7 +79,7 @@ public class Dialogue : Order
         dialogueBox.SetActive(true);
 
         dialogueBox.SetCharacter(character);
-        dialogueBox.SetCharacterImage(characterPortrait);
+        dialogueBox.SetCharacterImage(PortraitIndex);
 
         // dialogueBox.SetCharacterImage(characterPortrait);
         // dialogueBox.SetCharacterName(characterName, characterNameColour);
