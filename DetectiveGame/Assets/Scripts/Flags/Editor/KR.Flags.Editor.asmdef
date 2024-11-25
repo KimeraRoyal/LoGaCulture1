@@ -1,0 +1,18 @@
+{
+    "name": "KR.Flags.Editor",
+    "rootNamespace": "KR",
+    "references": [
+        "GUID:23fddcdb29e48a644ad29f7d9e1c33b6"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,7 +1,9 @@
 {
-    "name": "KW.Flags",
-    "rootNamespace": "KW",
-    "references": [],
+    "name": "KR.CG",
+    "rootNamespace": "KR",
+    "references": [
+        "GUID:509f07218d844cf49a468b24f99da183"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

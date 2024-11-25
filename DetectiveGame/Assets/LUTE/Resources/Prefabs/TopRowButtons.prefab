@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 4208246470762330812}
   - component: {fileID: 2334826620712245202}
   - component: {fileID: 695019413519476973}
+  - component: {fileID: 8128384129218811981}
   - component: {fileID: 2259287852221406751}
   - component: {fileID: 1586459684689240117}
   m_Layer: 5
@@ -572,7 +573,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1015975561027071039
 MonoBehaviour:
@@ -660,6 +661,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_openParameterName: Open
+--- !u!114 &8128384129218811981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8759127800774876120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b2c6a34855c0343be040c3fb172714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_openParameterName: Show Back
 --- !u!114 &2259287852221406751
 MonoBehaviour:
   m_ObjectHideFlags: 0

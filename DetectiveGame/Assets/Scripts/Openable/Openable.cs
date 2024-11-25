@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace KR
@@ -21,8 +22,14 @@ namespace KR
                 
                 m_opened = value;
                 m_animator.SetBool(m_openHash, value);
+                
+                if(m_opened) { OnOpened?.Invoke(); }
+                else { OnClosed?.Invoke(); }
             }
         }
+
+        public Action OnOpened;
+        public Action OnClosed;
 
         private void Awake()
         {
