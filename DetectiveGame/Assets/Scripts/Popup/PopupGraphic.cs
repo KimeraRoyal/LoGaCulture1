@@ -14,8 +14,8 @@ namespace Popups
             get => m_element.GetSprite();
             set
             {
-                m_canvasGroup.alpha = value != null ? 1.0f : 0.0f;
                 m_element.SetSprite(value);
+                gameObject.SetActive(value);
             }
         }
         

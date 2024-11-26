@@ -10,7 +10,7 @@ public class ShowPopup : Order
 
     [SerializeField] private string m_title;
     [SerializeField] private Sprite m_graphic;
-    [SerializeField] private string m_description;
+    [SerializeField] [TextArea(3, 5)] private string m_description;
 
     private void Awake()
     {
