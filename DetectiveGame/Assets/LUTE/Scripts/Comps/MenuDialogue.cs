@@ -10,6 +10,8 @@ using UnityEngine.UI;
 /// Presents multiple choice buttons to the players - similar to a dialogue box but with buttons instead of text
 public class MenuDialogue : MonoBehaviour
 {
+    private CanvasGroup m_canvasGroup;
+    
     [SerializeField] protected bool autoSelectFirstButton = false;
     [SerializeField] protected TextMeshProUGUI textDisplay; //this needs to be on a new button class
     protected Button[] cachedButtons;
@@ -27,7 +29,7 @@ public class MenuDialogue : MonoBehaviour
     public virtual Slider CachedSlider { get { return cachedSlider; } }
     public virtual Slider[] CachedOptionSliders { get { return cachedOptionSliders; } }
     public virtual Toggle[] CachedOptionToggles { get { return cachedOptionToggles; } }
-
+    
     /// Sets the active state of the Menu gameobject.
     public virtual void SetActive(bool state)
     {
@@ -65,6 +67,8 @@ public class MenuDialogue : MonoBehaviour
 
     protected virtual void Awake()
     {
+        m_canvasGroup = GetComponent<CanvasGroup>();
+        
         Button[] optionButtons = GetComponentsInChildren<Button>();
         cachedButtons = optionButtons;
 
@@ -196,6 +200,8 @@ public class MenuDialogue : MonoBehaviour
         {
             CachedOptionToggles[i].gameObject.SetActive(false);
         }
+
+        m_canvasGroup.blocksRaycasts = false;
     }
 
     public virtual void HideDialogue()
@@ -268,6 +274,8 @@ public class MenuDialogue : MonoBehaviour
 
         button.onClick.AddListener(action);
 
+        m_canvasGroup.blocksRaycasts = true;
+        
         return true;
     }
 

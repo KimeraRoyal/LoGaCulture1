@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_label: Field
   m_showName: 1
-  m_defaultIcon: {fileID: 2062763160, guid: 84a5228d137c9c449a6d35eceb1a6382, type: 3}
+  m_defaultIcon: {fileID: 21300000, guid: dcb3e33692b6cf44180e9f71172ae495, type: 3}
   m_color: {r: 1, g: 1, b: 1, a: 1}
   m_radius: 100

@@ -191,6 +191,7 @@ public class DialogueBox : MonoBehaviour
             if (fadeWhenDone && Mathf.Approximately(fadeCoolDownTimer, 0f))
             {
                 targetAlpha = 0f;
+                GetCanvasGroup().blocksRaycasts = false;
             }
             else
             {
@@ -198,8 +199,6 @@ public class DialogueBox : MonoBehaviour
                 // This avoids a noticeable flicker between consecutive text orders
                 fadeCoolDownTimer = Mathf.Max(0f, fadeCoolDownTimer - Time.deltaTime);
             }
-
-            GetCanvasGroup().blocksRaycasts = false;
         }
 
         CanvasGroup canvasGroup = GetCanvasGroup();
