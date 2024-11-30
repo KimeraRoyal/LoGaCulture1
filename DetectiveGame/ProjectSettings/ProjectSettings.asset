@@ -57,10 +57,10 @@ PlayerSettings:
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
-  allowedAutorotateToPortrait: 0
-  allowedAutorotateToPortraitUpsideDown: 0
-  allowedAutorotateToLandscapeRight: 1
-  allowedAutorotateToLandscapeLeft: 1
+  allowedAutorotateToPortrait: 1
+  allowedAutorotateToPortraitUpsideDown: 1
+  allowedAutorotateToLandscapeRight: 0
+  allowedAutorotateToLandscapeLeft: 0
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   preserveFramebufferAlpha: 0
@@ -135,16 +135,8 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: v0.0.64
-  preloadedAssets:
-  - {fileID: -7266153786788055322, guid: c4d85c63106ed8c48aa04e516219bea9, type: 2}
-  - {fileID: -130703212049237420, guid: 3957fb0a01a98974b838b7380811275a, type: 2}
-  - {fileID: 11400000, guid: e7899ec8c3242c946ba548017f2eeed8, type: 2}
-  - {fileID: 11400000, guid: 4329e4e5071ac414ca4e4ea6d2bb52a4, type: 2}
-  - {fileID: 11400000, guid: 0a659a1200d62ad438e7b55ba3761d4b, type: 2}
-  - {fileID: 322271901115168275, guid: dca5ce4f30ca548468d3f53945e7d072, type: 2}
-  - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
-  - {fileID: 4800000, guid: 0945859e5a1034c2cb6dce53cb4fb899, type: 3}
+  bundleVersion: v0.0.73
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
