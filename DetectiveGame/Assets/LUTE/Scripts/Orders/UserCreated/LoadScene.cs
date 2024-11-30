@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [OrderInfo("Scenes",
               "LoadScene",
@@ -10,27 +12,31 @@ public class LoadScene : Order
   [SerializeField] protected string levelName;
   [Tooltip("the index of the target level")]
   [SerializeField] protected int levelIndex;
+  [Tooltip("whether to load the scene asynchronously and wait to continue")]
+  [SerializeField] protected bool loadAsync;
   public override void OnEnter()
+  { 
+    if (loadAsync) { StartCoroutine(LoadSceneAsync());}
+    else { LoadSceneNormal(); }
+  }
+
+  private void LoadSceneNormal()
   {
-    if (!string.IsNullOrEmpty(levelName))
-      LevelSelector.LoadScene(levelName);
-    else if (levelIndex >= 0)
-    {
-      //implement this later in level selector    
+    if(string.IsNullOrEmpty(levelName)) { SceneManager.LoadScene(levelIndex); }
+    else { SceneManager.LoadScene(levelName); }
+  }
+  
+  private IEnumerator LoadSceneAsync()
+  {
+    var asyncLoad = string.IsNullOrEmpty(levelName) ? SceneManager.LoadSceneAsync(levelIndex) : SceneManager.LoadSceneAsync(levelName);
+    if (asyncLoad == null) { yield break; }
+    
+    while (!asyncLoad.isDone)
+    { 
+      yield return null;
     }
-    else
-      Debug.LogError("No level name or index provided");
-    //Continue();
   }
 
   public override string GetSummary()
-  {
-    //you can use this to return a summary of the order which is displayed in the inspector of the order
-    string levelName = string.IsNullOrEmpty(this.levelName) ? "No level name provided" : this.levelName;
-    if (levelIndex >= 0)
-    {
-      levelName += " (Index: " + levelIndex + ")";
-    }
-    return "Loading Scene " + levelName;
-  }
+    => $"{(loadAsync ? "Asynchronously l" : "L")}oading Scene {(!string.IsNullOrEmpty(levelName) ? $"\"{levelName}\"" : $"Index: {levelIndex}")}.";
 }
