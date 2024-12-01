@@ -51,7 +51,6 @@ public class XRObjectAtLocation : Order
     [Tooltip("The name of the object to place at the location")]
     [SerializeField] protected string objectName;
 
-
     private GameObject xrObject;
 
     bool locationInit = false;

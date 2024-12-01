@@ -2,6 +2,7 @@
 //using UnityEditor.EditorTools;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -17,6 +18,11 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 [AddComponentMenu("")]
 public class PlaceObjectXR : Order
 {
+    private GameObject xrObject;
+    private XRHelper m_xr;
+    private ARRaycastManager m_raycastManager;
+    private ARPlaneManager m_planeManager;
+    
     [Tooltip("The 3D object to place when clicked")]
     [SerializeField] protected GameObject m_PrefabToPlace;
 
@@ -53,188 +59,83 @@ public class PlaceObjectXR : Order
         set => m_PrefabToPlace = value;
     }
 
-    /// <summary>
-    /// The spawned prefab instance.
-    /// </summary>
-    public GameObject spawnedObject
-    {
-        get => m_SpawnedObject;
-        set => m_SpawnedObject = value;
-    }
-
-    GameObject m_SpawnedObject;
-
+    public bool spawnedObject;
 
     ARPlaneManager planeManager;
 
- 
-    private void OnObjectSpawned(GameObject obj)
+    private void Awake()
     {
-       
-        Debug.Log("Object spawned");
-
-        //get the objectspawner from teh XR game object and remove the object from the object manager
-        ObjectSpawner objectSpawner = GameObject.Find("XR").GetComponentInChildren<ObjectSpawner>();
-        objectSpawner.objectSpawned -= OnObjectSpawned;
-
-        //get the XRGrabInteractable component of the object
-        XRGrabInteractable grabInteractable = obj.GetComponentInChildren<XRGrabInteractable>();
-
-        //set the track position, track rotation and track scale to the rotateable , moveable and scaleable variables
-        grabInteractable.trackPosition = moveable;
-        grabInteractable.trackRotation = rotateable;
-        grabInteractable.trackScale = scaleable;
-
-       //remove the object from the object spawner objectPrefabs list
-       objectSpawner.objectPrefabs.Remove(m_PrefabToPlace);
-
-        ObjectSpawner.IsCurrentlyPlacingObject = false;
-
-
-        //add the object to the object manager
-        XRObjectManager.AddObject(m_ObjectName, obj);
-
-
-        Continue();
-
-       
+        m_xr = FindAnyObjectByType<XRHelper>();
+        m_raycastManager = FindAnyObjectByType<ARRaycastManager>();
+        m_planeManager = FindAnyObjectByType<ARPlaneManager>();
     }
-
 
     public override void OnEnter()
     {
-
-        //get the XR game object
-        GameObject arObjectInstance = GameObject.Find("XR");
-        //get the AR plane manager
-        planeManager = arObjectInstance.GetComponentInChildren<ARPlaneManager>();
-
-        Debug.Log(planeManager.gameObject);
-
-        Debug.Log(arObjectInstance);
-        Debug.Log(arObjectInstance.GetComponentInChildren<ObjectSpawner>());
-      
-        //get the objectsopawner script in the children of the XR game object and subscribe to the event
-        ObjectSpawner objectSpawner = arObjectInstance.GetComponentInChildren<ObjectSpawner>();
-        objectSpawner.objectSpawned += OnObjectSpawned;
-
-        //add the object to the object spawner objectPrefabs list
-        objectSpawner.objectPrefabs.Add(m_PrefabToPlace);
-
-        ObjectSpawner.IsCurrentlyPlacingObject = true;
-
-
-        //register evenr for plane detection
-        if (raycastHitEvent == null || m_PrefabToPlace == null)
-        {
-            Debug.LogWarning($"{nameof(ARPlaceObject)} component on {name} has null inputs and will have no effect in this scene.", this);
-            return;
-        }
-
-        if (raycastHitEvent != null)
-        {
-            if (automaticallyPlaceObject)
-            {
-                planeManager.planesChanged += OnPlaneDetected;
-            }
-            else
-            {
-                //raycastHitEvent.eventRaised += MoveObject;
-                //raycastHitEvent.eventRaised += PlaceObjectAt;
-            }
-        }
-        
-
-        
-
+        xrObject = m_xr.gameObject;
+        m_planeManager.planesChanged += OnPlaneDetected;
+        spawnedObject = false;
     }
 
     private void OnPlaneDetected(ARPlanesChangedEventArgs args)
     {
-       
+        if(spawnedObject) { return; }
+        
         foreach (var plane in args.added)
         {
-            //if plabe is horizontal
-            if (plane.alignment == planeAlignment)
-            {
-                //create a new game object
-                GameObject go = Instantiate(m_PrefabToPlace, plane.transform.position, plane.transform.rotation);
-                //set the parent of the game object to the plane
-                go.transform.parent = plane.transform;
+            if (plane.alignment != PlaneAlignment.HorizontalUp) { continue; }
 
-                //add the object to the object manager
-                XRObjectManager.AddObject(m_ObjectName, go);
-
-                Continue();
-            }
-
-        }
-
-    }
-
-    private void PlaceObjectAt(object sender, ARRaycastHit hitPose)
-    {
-        if (m_SpawnedObject == null)
-        {
-            m_SpawnedObject = Instantiate(m_PrefabToPlace, hitPose.pose.position, hitPose.pose.rotation, hitPose.trackable.transform.parent);
-
-            var interactable = m_SpawnedObject.AddComponent<InteractableARObject>();
-
-            interactable.isScaleable = scaleable;
-            interactable.isMovable = moveable;
-            interactable.isRotatable = rotateable;
-
-            XRObjectManager.AddObject(m_ObjectName, m_SpawnedObject);
-
+            var ray = m_xr.Camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            if (!TestRay(ray, out var hit)) { continue; }
+            
+            SpawnObjectAtLocation(hit);
             Continue();
-        }
-        else
-        {
-            //m_SpawnedObject.transform.position = hitPose.pose.position;
-            //m_SpawnedObject.transform.parent = hitPose.trackable.transform.parent;
+            break;
         }
     }
 
-    //raycasthit event for moving object    
-    public void MoveObject(object sender, ARRaycastHit hitPose)
+    private void SpawnObjectAtLocation(ARRayHit _hit)
     {
-        if (moveable)
-        {
-            if (m_SpawnedObject != null)
-            {
-                
-                m_SpawnedObject.transform.position = hitPose.pose.position;
-                m_SpawnedObject.transform.parent = hitPose.trackable.transform.parent;
-
-            }
-        }
-    }
-
-    private void Update()
-    {
-        //check for rotating object using touch and two fingers
-        if (rotateable)
-        {
-            //if (Input.touchCount == 2)
-            //{
-            //    Touch touchZero = Input.GetTouch(0);
-            //    Touch touchOne = Input.GetTouch(1);
-
-            //    Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            //    Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-            //    float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-            //    float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
-
-            //    float difference = currentMagnitude - prevMagnitude;
-
-            //    if (m_SpawnedObject != null)
-            //    {
-            //        m_SpawnedObject.transform.Rotate(Vector3.up, difference * 10);
-            //    }
-            //}
+        if(spawnedObject) { return; }
         
+        var obj = Instantiate(m_PrefabToPlace, _hit.point, Quaternion.identity);
+        XRObjectManager.AddObject(m_ObjectName, obj);
+        
+        m_planeManager.planesChanged -= OnPlaneDetected;
+        spawnedObject = true;
+    }
+
+    private struct ARRayHit
+    {
+        public ARPlane plane;
+        
+        public Vector3 point;
+        public Vector3 normal;
+    }
+
+    private bool TestRay(Ray _ray, out ARRayHit o_rayHit)
+    {
+        var rayHits = new List<ARRaycastHit>();
+        
+        if (!m_raycastManager.Raycast(_ray, rayHits))
+        {
+            o_rayHit = new ARRayHit();
+            return false;
         }
+
+        var planeHits = rayHits.Where(hit => (hit.hitType & TrackableType.Planes) != 0).ToList();
+        if(planeHits.Count < 1)
+        { 
+            o_rayHit = new ARRayHit();
+            return false;
+        }
+
+        var plane = m_planeManager.GetPlane(planeHits[0].trackableId);
+        var point = _ray.origin + _ray.direction * planeHits[0].distance;
+        var normal = plane.normal;
+        
+        o_rayHit = new ARRayHit { plane = plane, normal = normal, point = point };
+        return true;
     }
 
     public override string GetSummary()
@@ -242,13 +143,7 @@ public class PlaceObjectXR : Order
         //you can use this to return a summary of the order which is displayed in the inspector of the order
         return "Places an object on a detected plane, automatically or manually";
     }
-
-
-
-
 }
-
-
 
 //Object Manager class that manages all the AR objects that are placed in the scene
 //it's static so that it can be accessed from anywhere in the scene

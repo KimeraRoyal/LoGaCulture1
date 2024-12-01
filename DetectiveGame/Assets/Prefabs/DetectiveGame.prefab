@@ -5678,7 +5678,7 @@ MonoBehaviour:
   m_flagName: game_start
   m_operation: 0
   m_lastIndex: 1
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &151040076867823489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5694,7 +5694,7 @@ MonoBehaviour:
   m_flagName: cutscene
   m_operation: 0
   m_lastIndex: 0
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &1026973486151222658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5710,7 +5710,7 @@ MonoBehaviour:
   m_flagName: cutscene
   m_operation: 1
   m_lastIndex: 0
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &956662491684335793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5897,7 +5897,7 @@ MonoBehaviour:
   m_flagName: tip_1
   m_operation: 0
   m_lastIndex: 2
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &3098160493183971059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5987,7 +5987,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: tip_1
     m_lastIndex: 2
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &777207225248308530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6197,7 +6197,7 @@ MonoBehaviour:
   m_flagName: tip_1
   m_operation: 1
   m_lastIndex: 2
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &7938235117813195307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6358,7 +6358,7 @@ MonoBehaviour:
   m_flagName: tip_2
   m_operation: 0
   m_lastIndex: 3
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &4288191128609575043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6377,7 +6377,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: tip_2
     m_lastIndex: 3
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &7126839507610539588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6489,7 +6489,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: spawned_letter
     m_lastIndex: 21
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &6977724104928814209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6595,7 +6595,7 @@ MonoBehaviour:
   m_flagName: tip_2
   m_operation: 1
   m_lastIndex: 3
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &8619359891240258807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6635,7 +6635,7 @@ MonoBehaviour:
   m_flagName: spawned_letter
   m_operation: 0
   m_lastIndex: 21
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &2352250468038490910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6720,7 +6720,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: spawned_hammer
     m_lastIndex: 22
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &1263843447577094554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6752,7 +6752,7 @@ MonoBehaviour:
   m_flagName: spawned_hammer
   m_operation: 0
   m_lastIndex: 22
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &8928159937256722871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7905,7 +7905,7 @@ MonoBehaviour:
   m_flagName: farmhand_breakdown
   m_operation: 1
   m_lastIndex: 24
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &5743518222020849058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7921,7 +7921,7 @@ MonoBehaviour:
   m_flagName: landlord_trait3
   m_operation: 0
   m_lastIndex: 12
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &6409211353436189513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7940,7 +7940,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: farmhand_breakdown
     m_lastIndex: 24
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &6647305767578381176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7971,7 +7971,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_trait3
     m_lastIndex: 12
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &745775446432734473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8017,7 +8017,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait3
     m_lastIndex: 12
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &2557764042207710072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8447,7 +8447,7 @@ MonoBehaviour:
   m_flagName: farmhand_1
   m_operation: 1
   m_lastIndex: 16
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &8985044241521457086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8463,7 +8463,7 @@ MonoBehaviour:
   m_flagName: farmhand_2
   m_operation: 0
   m_lastIndex: 17
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &8391333400631026400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8561,12 +8561,12 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: farmhand_1
     m_lastIndex: 16
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
   - m_namedFlags: {fileID: 7155830331072186265}
     m_isSet: 1
     m_flagName: farmhand_2
     m_lastIndex: 17
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &6613729637511621792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8597,7 +8597,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: farmhand_suspicious
     m_lastIndex: 20
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &3550044099083771816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8802,7 +8802,7 @@ MonoBehaviour:
   m_flagName: farmhand_3
   m_operation: 0
   m_lastIndex: 18
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &2044322947531947995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9333,7 +9333,7 @@ MonoBehaviour:
   m_flagName: landlord_trait1
   m_operation: 0
   m_lastIndex: 10
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &4925909995762017517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9433,7 +9433,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait1
     m_lastIndex: 10
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &8018617075351111492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9782,7 +9782,7 @@ MonoBehaviour:
   m_flagName: farmhand_1
   m_operation: 0
   m_lastIndex: 16
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &3752288820881361309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9904,7 +9904,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: farmhand_1
     m_lastIndex: 16
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &7609138926234821946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10087,7 +10087,7 @@ MonoBehaviour:
   m_flagName: farmhand_off
   m_operation: 0
   m_lastIndex: 19
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &3531801969795128954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10685,7 +10685,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: gentleman_1
     m_lastIndex: 8
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &3984204014678725077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11129,7 +11129,7 @@ MonoBehaviour:
   m_flagName: gentleman_1
   m_operation: 0
   m_lastIndex: 8
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &1851388393428101876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11177,7 +11177,7 @@ MonoBehaviour:
   m_flagName: gentleman_feminism
   m_operation: 0
   m_lastIndex: 9
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &5767835122411839226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11307,7 +11307,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: gentleman_1
     m_lastIndex: 8
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &7010971197178771015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11402,7 +11402,7 @@ MonoBehaviour:
   m_flagName: barber_mentioned
   m_operation: 0
   m_lastIndex: 26
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &6676663317981377601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11421,7 +11421,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: barber_mentioned
     m_lastIndex: 26
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &2300656297241282287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11472,12 +11472,12 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: barber_mentioned
     m_lastIndex: 26
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
   - m_namedFlags: {fileID: 7155830331072186265}
     m_isSet: 0
     m_flagName: barber_0
     m_lastIndex: 27
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &4347033039603615419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11634,7 +11634,7 @@ MonoBehaviour:
   m_flagName: barber_mentioned
   m_operation: 1
   m_lastIndex: 26
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &7704499881837703609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11650,7 +11650,7 @@ MonoBehaviour:
   m_flagName: barber_0
   m_operation: 0
   m_lastIndex: 27
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &2883951529421933907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11669,7 +11669,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: barber_mentioned
     m_lastIndex: 26
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &7598419627513614986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11700,7 +11700,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: barber_0
     m_lastIndex: 27
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &1693523793052041426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11958,17 +11958,17 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: gentleman_1
     m_lastIndex: 8
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
   - m_namedFlags: {fileID: 7155830331072186265}
     m_isSet: 0
     m_flagName: landlord_trait1
     m_lastIndex: 10
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
   - m_namedFlags: {fileID: 7155830331072186265}
     m_isSet: 0
     m_flagName: farmhand_1
     m_lastIndex: 16
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &1446390595406970224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12115,7 +12115,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: gentleman_1
     m_lastIndex: 8
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &169065363332553965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12146,7 +12146,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: farmhand_1
     m_lastIndex: 16
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &4682863243207001737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12165,7 +12165,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: landlord_trait1
     m_lastIndex: 10
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &3678966798541784323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13811,7 +13811,7 @@ MonoBehaviour:
     m_isSet: 0
     m_flagName: spawned_rubble
     m_lastIndex: 23
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &4292563179977427886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13843,7 +13843,7 @@ MonoBehaviour:
   m_flagName: spawned_rubble
   m_operation: 0
   m_lastIndex: 23
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &161917191104209281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14013,7 +14013,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_trait3
     m_lastIndex: 12
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &5057524562287233977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14217,7 +14217,7 @@ MonoBehaviour:
   m_flagName: landlord_show_hammer_1
   m_operation: 0
   m_lastIndex: 13
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &475574920645978450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14236,12 +14236,12 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_show_hammer_1
     m_lastIndex: 13
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
   - m_namedFlags: {fileID: 7155830331072186265}
     m_isSet: 1
     m_flagName: landlord_show_hammer_2
     m_lastIndex: 14
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &1611286834727181697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14493,7 +14493,7 @@ MonoBehaviour:
   m_flagName: landlord_show_rubble
   m_operation: 0
   m_lastIndex: 15
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &4949400165117021244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14512,7 +14512,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_show_rubble
     m_lastIndex: 15
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &4655864694389276005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14682,7 +14682,7 @@ MonoBehaviour:
   m_flagName: landlord_show_hammer_2
   m_operation: 0
   m_lastIndex: 14
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &5087214292447895348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14701,7 +14701,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_show_hammer_2
     m_lastIndex: 14
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &1038245365053622502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14920,7 +14920,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_show_rubble
     m_lastIndex: 15
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &8915679181517435595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15231,7 +15231,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_trait2
     m_lastIndex: 11
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &3561835457227747382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16688,7 +16688,7 @@ MonoBehaviour:
   m_flagName: landlord_trait2
   m_operation: 0
   m_lastIndex: 11
-  m_lastNamedFlagCount: 28
+  m_lastNamedFlagCount: 29
 --- !u!114 &6285544014835871215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16745,7 +16745,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: landlord_trait1
     m_lastIndex: 10
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &8409123841814054961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16788,7 +16788,7 @@ MonoBehaviour:
     m_isSet: 1
     m_flagName: barber_0
     m_lastIndex: 27
-    m_lastNamedFlagCount: 28
+    m_lastNamedFlagCount: 29
 --- !u!114 &2543557288282697608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21216,15 +21216,15 @@ PrefabInstance:
       objectReference: {fileID: 7155830331072186265}
     - target: {fileID: 7576927735932562662, guid: 234ee0d4483b43147b03259337d46f73, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7576927735932562662, guid: 234ee0d4483b43147b03259337d46f73, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7576927735932562662, guid: 234ee0d4483b43147b03259337d46f73, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7576927735932562662, guid: 234ee0d4483b43147b03259337d46f73, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
@@ -21310,10 +21310,6 @@ PrefabInstance:
     - target: {fileID: 4490212987084922749, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
       propertyPath: m_Name
       value: Story Flags
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406915204334724108, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
-      propertyPath: m_flagNames.Array.size
-      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6406915204334724108, guid: 3b7db541bf984ed478de1a4d7cb97b77, type: 3}
       propertyPath: m_invalidFlagBehaviour
@@ -21581,35 +21577,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[3].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[4].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[5].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[6].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[7].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5316472946260281529, guid: e4f8e6700c7b4914cb9cb9655e4cded9, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
@@ -21702,15 +21698,15 @@ PrefabInstance:
       objectReference: {fileID: 7155830331072186265}
     - target: {fileID: 2141752041961378177, guid: 52db77dfe569ab8469a7c30efd305b4d, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2141752041961378177, guid: 52db77dfe569ab8469a7c30efd305b4d, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2141752041961378177, guid: 52db77dfe569ab8469a7c30efd305b4d, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2141752041961378177, guid: 52db77dfe569ab8469a7c30efd305b4d, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
@@ -22946,19 +22942,19 @@ PrefabInstance:
       objectReference: {fileID: 7155830331072186265}
     - target: {fileID: 2761050640660517366, guid: 4fd91c55b148e564ebd8d06a0ee49c39, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2761050640660517366, guid: 4fd91c55b148e564ebd8d06a0ee49c39, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2761050640660517366, guid: 4fd91c55b148e564ebd8d06a0ee49c39, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2761050640660517366, guid: 4fd91c55b148e564ebd8d06a0ee49c39, type: 3}
       propertyPath: m_traits.Array.data[3].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5337835158943399679, guid: 4fd91c55b148e564ebd8d06a0ee49c39, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23095,15 +23091,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6750350319352693924, guid: 9b1cf6b7562e7d7479171bdc7c0a5d50, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 6750350319352693924, guid: 9b1cf6b7562e7d7479171bdc7c0a5d50, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 6750350319352693924, guid: 9b1cf6b7562e7d7479171bdc7c0a5d50, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 6750350319352693924, guid: 9b1cf6b7562e7d7479171bdc7c0a5d50, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex

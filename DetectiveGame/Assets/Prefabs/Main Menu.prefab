@@ -97,6 +97,10 @@ GameObject:
   - component: {fileID: 7790827669719288581}
   - component: {fileID: 5615361635498477873}
   - component: {fileID: 7609849848114913035}
+  - component: {fileID: 4977222668436373646}
+  - component: {fileID: 6324061697010896191}
+  - component: {fileID: 4292689558264016356}
+  - component: {fileID: 1222407721385574028}
   m_Layer: 0
   m_Name: BasicFlowEngine
   m_TagString: Untagged
@@ -137,10 +141,9 @@ MonoBehaviour:
   description: 
   hideComponents: 0
   localizationId: 
-  selectedOrders:
-  - {fileID: 5999184764390182725}
+  selectedOrders: []
   selectedNodes:
-  - {fileID: 8942905566632733575}
+  - {fileID: 4977222668436373646}
   nodeViewHeight: 400
   hideOrders: []
   variables: []
@@ -155,7 +158,7 @@ MonoBehaviour:
   showAnnotations: 1
   labelTint: {r: 1, g: 1, b: 1, a: 1}
   zoom: 0.90833306
-  scrollPos: {x: -204.50204, y: 340.54178}
+  scrollPos: {x: -184.68546, y: 342.74362}
   version: 1
   sidesOfDie: 6
   postcards: []
@@ -423,6 +426,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_show: 1
   m_waitToAnimate: 1
+--- !u!114 &4977222668436373646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642795229778442723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f689a21732a34489f55c1ed82a919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 468.72235
+    y: -115.954544
+    width: 78.62386
+    height: 40
+  nodeName: Start
+  nodeDescription: Basic building block of a narrative engine
+  groupDescription: A series of nodes that can be executed as a group
+  itemId: 0
+  orderList:
+  - {fileID: 1222407721385574028}
+  - {fileID: 4292689558264016356}
+  eventHandler: {fileID: 6324061697010896191}
+  isGrouped: 0
+  groupIndex: -1
+  repeatable: 1
+  nodeLocation: {fileID: 0}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  hoverStartTime: 0
+  targetUnlockNode: {fileID: 0}
+  targetKeyNode: {fileID: 0}
+  showDesc: 0
+  saveable: 0
+  NodeComplete: 0
+--- !u!114 &6324061697010896191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642795229778442723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38c0eb32b6f8e6488f591c0813b73db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNode: {fileID: 4977222668436373646}
+  waitForFrames: 1
+--- !u!114 &4292689558264016356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642795229778442723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9304f757dcb3f42ba0ee626c95c588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_show: 0
+  m_waitToAnimate: 0
+--- !u!114 &1222407721385574028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642795229778442723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e7ad385acaccf48b9cb2f7fef519f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
 --- !u!1 &1507258974821781857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,8 +1533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 430.53503, y: 0}
-  m_SizeDelta: {x: 861.07007, y: 0}
+  m_AnchoredPosition: {x: 394.53503, y: 0}
+  m_SizeDelta: {x: 789.07007, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2084873075006700010
 CanvasRenderer:
@@ -2238,7 +2320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000281479}
+  m_AnchoredPosition: {x: 0, y: 0.000013583005}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5642866884456054477
@@ -2558,7 +2640,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8630276451739610742}
   m_HandleRect: {fileID: 3746434098498528558}
   m_Direction: 2
-  m_Value: 1.0000001
+  m_Value: 1
   m_Size: 0.6246251
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4699,7 +4781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6626169051421731613, guid: 6adaf5169c37f4d4bb216e41e711b5bf, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 476
+      value: 440
       objectReference: {fileID: 0}
     - target: {fileID: 6626169051421731613, guid: 6adaf5169c37f4d4bb216e41e711b5bf, type: 3}
       propertyPath: m_LocalPosition.x
