@@ -117,31 +117,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[1].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[2].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[3].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[4].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[5].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[6].m_lastNamedFlagCount
-      value: 12
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6149604024188362010, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_traits.Array.data[0].m_requiredFlagNameIndex
@@ -179,6 +179,34 @@ PrefabInstance:
       propertyPath: characterName
       value: The Farmhand
       objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[0]
+      value: 
+      objectReference: {fileID: -807910914, guid: 35ad4b8678879ee4b817499aa08dc4aa, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[1]
+      value: 
+      objectReference: {fileID: 1191344958, guid: 35ad4b8678879ee4b817499aa08dc4aa, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[2]
+      value: 
+      objectReference: {fileID: 1624316410, guid: 35ad4b8678879ee4b817499aa08dc4aa, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[3]
+      value: 
+      objectReference: {fileID: -553495324, guid: 35ad4b8678879ee4b817499aa08dc4aa, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[4]
+      value: 
+      objectReference: {fileID: -7887040, guid: 35ad4b8678879ee4b817499aa08dc4aa, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[5]
+      value: 
+      objectReference: {fileID: -1138837005, guid: 35ad4b8678879ee4b817499aa08dc4aa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

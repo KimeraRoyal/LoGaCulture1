@@ -1,0 +1,28 @@
+{
+    "version": "1.0",
+    "fileName": "farmhand.png",
+    "width": 960,
+    "height": 128,
+    "columns": 6,
+    "rows": 1,
+    "frames": [
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        }
+    ]
+}
