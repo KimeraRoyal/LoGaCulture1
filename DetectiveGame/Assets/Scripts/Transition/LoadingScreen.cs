@@ -14,6 +14,9 @@ namespace KR
         private void Awake()
         {
             m_openable = GetComponent<Openable>();
+
+            var loadingScreens = FindObjectsOfType<LoadingScreen>();
+            if(loadingScreens.Length > 1) { Destroy(gameObject); }
             
             DontDestroyOnLoad(gameObject);
         }

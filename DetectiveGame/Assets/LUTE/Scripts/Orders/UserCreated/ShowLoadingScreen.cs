@@ -13,6 +13,15 @@ public class ShowLoadingScreen : Order
     [SerializeField] private bool m_show = true;
     [SerializeField] private bool m_waitToAnimate = true;
 
+    private LoadingScreen LoadingScreen
+    {
+        get
+        {
+            if (!m_loadingScreen) { m_loadingScreen = FindAnyObjectByType<LoadingScreen>(); }
+            return m_loadingScreen;
+        }
+    }
+
     private void Awake()
     {
         m_loadingScreen = FindAnyObjectByType<LoadingScreen>();
@@ -20,7 +29,11 @@ public class ShowLoadingScreen : Order
 
     public override void OnEnter()
     {
-        if(!m_loadingScreen) { Continue(); }
+        if (LoadingScreen == null)
+        {
+            Continue();
+            return;
+        }
         
         if (m_show)
         {
