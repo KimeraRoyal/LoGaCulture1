@@ -50,12 +50,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6991638375607060180, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: m_Name
-      value: Tip Variant
+      value: Informant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
       propertyPath: characterName
       value: The Informant
       objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[0]
+      value: 
+      objectReference: {fileID: -448124651, guid: a63eb320533661441ab2371fe2eee951, type: 3}
+    - target: {fileID: 7909651602562276741, guid: f9d5dfb3984475e4b8f97da91930b66a, type: 3}
+      propertyPath: characterPortraits.Array.data[1]
+      value: 
+      objectReference: {fileID: -2084924691, guid: a63eb320533661441ab2371fe2eee951, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

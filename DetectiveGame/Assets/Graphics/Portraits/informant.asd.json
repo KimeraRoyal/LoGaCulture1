@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "fileName": "informant.png",
+    "width": 320,
+    "height": 128,
+    "columns": 2,
+    "rows": 1,
+    "frames": [
+        {
+            "duration": 40
+        },
+        {
+            "duration": 40
+        }
+    ]
+}

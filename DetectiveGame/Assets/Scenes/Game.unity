@@ -507,6 +507,10 @@ PrefabInstance:
       propertyPath: m_traits.Array.data[7].m_lastNamedFlagCount
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 690384614133321120, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: characterPortraitIndex
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 691621823454056527, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_description
       value: 'Markers with a magnifying glass icon allow you to hunt for <b>clues</b>.
@@ -576,6 +580,11 @@ PrefabInstance:
     - target: {fileID: 777207225248308530, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
       value: 120.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 791236228709720832, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: storyText
+      value: Hello, Landlord. I've heard everything.{wc}{portrait=1}Detective, thank
+        you for getting to the bottom of this.{w=0.5} Now...
       objectReference: {fileID: 0}
     - target: {fileID: 895882241669228283, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
@@ -784,6 +793,10 @@ PrefabInstance:
     - target: {fileID: 1841819169596243945, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
       value: 184.28575
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849985663790274065, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 1073851455
       objectReference: {fileID: 0}
     - target: {fileID: 2050717669239570433, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1267,11 +1280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.x
-      value: 446.5257
+      value: -322.04587
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: scrollPos.y
-      value: 537.7507
+      value: -826.5351
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: variables.Array.size
@@ -1287,16 +1300,16 @@ PrefabInstance:
       objectReference: {fileID: 1090460631108315134}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedOrders.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedNodes.Array.data[0]
       value: 
-      objectReference: {fileID: 1090460631108316189}
+      objectReference: {fileID: 1090460631108315655}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedOrders.Array.data[0]
       value: 
-      objectReference: {fileID: 1090460631108316194}
+      objectReference: {fileID: 1090460631108316671}
     - target: {fileID: 3484681732860787689, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1541,6 +1554,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4601129709885598205, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: nodeRect.x
+      value: 618.8881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601129709885598205, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
       value: 167.14288
       objectReference: {fileID: 0}
@@ -1549,17 +1566,21 @@ PrefabInstance:
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4601129709885598205, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: orderList.Array.data[15]
+      value: 
+      objectReference: {fileID: 1090460631108316310}
+    - target: {fileID: 4601129709885598205, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: orderList.Array.data[16]
       value: 
       objectReference: {fileID: 1090460631108315656}
     - target: {fileID: 4601129709885598205, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: orderList.Array.data[17]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1090460631108315656}
     - target: {fileID: 4601129709885598205, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: orderList.Array.data[18]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1090460631108315656}
     - target: {fileID: 4617202013312726961, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1958,7 +1979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6433800170259209238, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: storyText
-      value: ...{wc}...{wc}......{wc}.........{wc}............{wc}...Fine.{wc}Fine
+      value: ...{wc}...{wc}......{wc}.........{wc}............{wc}...Fine.{wc}...{wait=0.5}Fine
         work you did today, detective.{wc}Let's go.
       objectReference: {fileID: 0}
     - target: {fileID: 6477554940392279313, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
@@ -2068,6 +2089,10 @@ PrefabInstance:
     - target: {fileID: 6569931661067523550, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
       value: 120.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622130228653342015, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 1073851455
       objectReference: {fileID: 0}
     - target: {fileID: 6638997938403108645, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: showDesc
@@ -2653,6 +2678,19 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -271
       objectReference: {fileID: 0}
+    - target: {fileID: 8752041732621112923, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 1073851455
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815733786835864258, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: storyText
+      value: 'Yes, I know. I too am a "Standing Stone" of Avebury. Detective, what
+        you''ve done today is magnificent. I appreciate it, truly.{wc}Now to you,
+        Landlord: what you have done is grave, indeed.{wc}You had plenty of ways
+        to get a new table, but you know that Avebury is a unique site. You can''t
+        grow new standing stones on trees.{wc}You''re coming with me. We''re going
+        to have you make up for what you''ve done.'
+      objectReference: {fileID: 0}
     - target: {fileID: 8863160446683130564, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -2899,6 +2937,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1090460631108316200}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1090460631108316670}
+    - targetCorrespondingSourceObject: {fileID: 3887621031724931651, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1090460631108316671}
   m_SourcePrefab: {fileID: 100100000, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
 --- !u!114 &1090460631108315131 stripped
 MonoBehaviour:
@@ -2961,7 +3005,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 70.05267
     y: 264.83768
-    width: 211.42862
+    width: 196.26869
     height: 40
   nodeName: North Atlantic Ocean Marker
   nodeDescription: Basic building block of a narrative engine
@@ -3119,13 +3163,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 539.4818
     y: 1594.4365
-    width: 88.57144
+    width: 82.83583
     height: 40
   nodeName: Ending
   nodeDescription: Basic building block of a narrative engine
   groupDescription: A series of nodes that can be executed as a group
   itemId: 0
   orderList:
+  - {fileID: 1090460631108316670}
+  - {fileID: 1090460631108316671}
   - {fileID: 1090460631108315658}
   - {fileID: 1090460631108315659}
   - {fileID: 1090460631108315657}
@@ -3797,7 +3843,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -133.72847
     y: 376.1126
-    width: 95.714294
+    width: 91.79105
     height: 40
   nodeName: Barn XR
   nodeDescription: Basic building block of a narrative engine
@@ -3971,7 +4017,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -76.31744
     y: -127.811584
-    width: 157.14288
+    width: 147.01495
     height: 40
   nodeName: Southern Circle XR
   nodeDescription: Basic building block of a narrative engine
@@ -4086,7 +4132,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -126.317406
     y: 13.616972
-    width: 167.14288
+    width: 154.47763
     height: 40
   nodeName: Crime Scene Marker
   nodeDescription: Basic building block of a narrative engine
@@ -4247,7 +4293,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -117.74597
     y: 60.759842
-    width: 142.85718
+    width: 133.5821
     height: 40
   nodeName: Crime Scene XR
   nodeDescription: Basic building block of a narrative engine
@@ -4270,6 +4316,49 @@ MonoBehaviour:
   showDesc: 0
   saveable: 0
   NodeComplete: 0
+--- !u!114 &1090460631108316310 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6630108978198716531, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+  m_PrefabInstance: {fileID: 1090460631108315130}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090460631108315133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce69c06420f569946a060f1472a18de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1090460631108316670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090460631108315133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b545d296b08bd44bd7af219b8d0f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playFlash: 1
+  m_configurationMode: 1
+  m_graphic: {fileID: 0}
+  m_color: {r: 1, g: 1, b: 1, a: 1}
+  m_fadeIn: 1
+  m_hold: 0.5
+  m_fadeOut: 1
+--- !u!114 &1090460631108316671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090460631108315133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e7ad385acaccf48b9cb2f7fef519f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
