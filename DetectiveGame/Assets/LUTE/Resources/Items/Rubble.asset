@@ -35,8 +35,10 @@ MonoBehaviour:
   Quantity: 1
   ItemName: Rubble
   ShortDescription: Suggests a struggle
-  Description: 
-  Icon: {fileID: 0}
+  Description: A scattering of small "Rock's" found near the "Crime's Scene". The
+    stones are "Sarsen" - a type of "Sandstone" found across southern "England".
+    This matches the "Standing Stones"' material.
+  Icon: {fileID: 21300000, guid: ff56ce388eaf043489d3f05efcdaa4cc, type: 3}
   Prefab: {fileID: 0}
   ForcePrefabDropQuantity: 0
   PrefabDropQuantity: 1
