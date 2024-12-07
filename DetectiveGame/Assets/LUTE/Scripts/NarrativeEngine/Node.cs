@@ -165,12 +165,14 @@ public class Node : MonoBehaviour
     {
         ShouldCancel = false;
 
+#if !UNITY_EDITOR
         // Wait until the node location is true (if it is set)
         while (NodeLocation != null && !NodeLocation.Evaluate(ComparisonOperator.Equals, null))
         {
             //set bool here to prevent node from executing
             yield return null;
         }
+#endif
 
         // Wait until the target unlock node is complete (if it is set)
         while (targetKeyNode != null && targetKeyNode.NodeComplete == false && targetKeyNode is not Group)
