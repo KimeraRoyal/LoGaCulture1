@@ -35,7 +35,10 @@ MonoBehaviour:
   Quantity: 1
   ItemName: Letter
   ShortDescription: The tip that started it all
-  Description: 'To Do: Write Letter here :)'
+  Description: 'A "Letter" you received in the "Post" outlinging the "Crime": at
+    some unknown time, around a week ago, one of Avebury''s "Standing Stones" went
+    missing. The suspicion is foul play, so The Informant wants you to find out the
+    missing stone''s location and what, if anything, happened to it.'
   Icon: {fileID: 21300000, guid: 22f137a42b7111e4582f0a443b4c2fb1, type: 3}
   Prefab: {fileID: 0}
   ForcePrefabDropQuantity: 0
