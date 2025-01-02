@@ -10,8 +10,10 @@ public class ShowPopup : Order
 
     [SerializeField] private string m_title;
     [SerializeField] private Sprite m_graphic;
+    
     [SerializeField] [TextArea(3, 5)] private string m_description;
-
+    [SerializeField] private float m_fontSize = 50;
+    
     private void Awake()
     {
         m_popup = FindAnyObjectByType<Popups.Popup>();
@@ -23,7 +25,7 @@ public class ShowPopup : Order
         var description = m_description != "" ? m_description : null;
 
         m_popup.OnClosed += OnPopupSelected;
-        m_popup.Show(title, m_graphic, description);
+        m_popup.Show(title, m_graphic, description, m_fontSize);
     }
 
     private void OnPopupSelected()

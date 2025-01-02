@@ -11,5 +11,11 @@ namespace KR.Elements.Label
 
         public void SetLabel(string _label)
             => gameObject.name = string.Format(m_textFormat, _label);
+
+        public float GetFontSize()
+            => 0;
+
+        public void SetFontSize(float _fontSize)
+        { }
     }
 }

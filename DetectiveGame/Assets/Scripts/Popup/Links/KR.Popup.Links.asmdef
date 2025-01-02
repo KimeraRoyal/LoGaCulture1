@@ -1,11 +1,8 @@
 {
-    "name": "KR.Popup",
-    "rootNamespace": "",
+    "name": "KR.Popup.Links",
+    "rootNamespace": "KR",
     "references": [
-        "GUID:0f854e16be525f444a5d02fdca8c8e11",
-        "GUID:509f07218d844cf49a468b24f99da183",
-        "GUID:9d293f32a9bf0024aa4cd1eed7cdb1f3",
-        "GUID:c07d2dcae8949f74aa377ed58cbc923b"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

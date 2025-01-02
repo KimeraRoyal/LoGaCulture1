@@ -18,6 +18,12 @@ namespace Popups
                 gameObject.SetActive(!string.IsNullOrEmpty(value));
             }
         }
+
+        public float FontSize
+        {
+            get => m_element.GetFontSize();
+            set => m_element.SetFontSize(value);
+        }
         
         private void Awake()
         {

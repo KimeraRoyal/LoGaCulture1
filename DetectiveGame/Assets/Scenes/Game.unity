@@ -888,7 +888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2210744102521921944, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: -40.00073
       objectReference: {fileID: 0}
     - target: {fileID: 2219906657119381866, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
@@ -996,6 +996,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2485861760073582678, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550528463866809456, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550528463866809456, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550528463866809456, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2624498177308516071, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
@@ -1316,7 +1328,7 @@ PrefabInstance:
       objectReference: {fileID: 1090460631108315134}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedOrders.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3470297105590137808, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: selectedNodes.Array.data[0]
@@ -1549,6 +1561,14 @@ PrefabInstance:
     - target: {fileID: 3926695256899550298, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287532145752455653, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287532145752455653, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00008046627
       objectReference: {fileID: 0}
     - target: {fileID: 4288191128609575043, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: conditions.Array.data[0].m_lastNamedFlagCount
@@ -1904,6 +1924,18 @@ PrefabInstance:
     - target: {fileID: 6144469823452344315, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151637131095965317, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151637131095965317, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151637131095965317, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6214233175161758843, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2458,6 +2490,51 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8319656354703370511, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_fontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319656354703370511, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_description
+      value: 'This game was created as part of the LoGaCulture project by Bournemouth
+        University, University of Southampton, and University of Bristol, alongside
+        the National Trust, and funded by the UKRI and European Commission.
+
+
+
+        Please
+        play safely, respect the historic environment, and be mindful of others -
+        do not use your device near the roads, cross carefully, be careful walking
+        on uneven ground, and ensure that your play does not alarm livestock or disturb
+        people enjoying Avebury around you.
+
+
+
+        Note that this game may present
+        a historical understanding of the nature and history of the Avebury site,
+        but as part of a fictional story. The factual history of ancient sites is
+        often unclear and ambiguous.
+
+
+
+        This game may log anonymous data
+        with regards to your usage, but not personal or identifiable information.
+        By playing this game you consent to this data being used anonymously for
+        research purposes - more information on the LoGaCulture research project
+        at Avebury can be found here: <link="https://logaculture.eu/case-study-1/">https://logaculture.eu/case-study-1/</link>.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319656354703370511, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_links.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319656354703370511, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_links.Array.data[0].m_id
+      value: case_study
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319656354703370511, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_links.Array.data[0].m_url
+      value: https://logaculture.eu/case-study-1/
+      objectReference: {fileID: 0}
     - target: {fileID: 8352256175239518700, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
       value: 154.28574
@@ -2730,6 +2807,26 @@ PrefabInstance:
     - target: {fileID: 8899025496247126132, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
       value: 124.285736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913397596480325533, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913397596480325533, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913397596480325533, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 737.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913397596480325533, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913397596480325533, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 368.9999
       objectReference: {fileID: 0}
     - target: {fileID: 8928079791047126686, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3255,6 +3352,7 @@ MonoBehaviour:
 
     You
     may now return to the main menu.'
+  m_fontSize: 50
 --- !u!114 &1090460631108315658
 MonoBehaviour:
   m_ObjectHideFlags: 0

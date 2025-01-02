@@ -13,6 +13,8 @@ namespace Popups
         private PopupGraphic m_graphic;
         private PopupLabel m_descriptionLabel;
 
+        private LinkedText m_links;
+
         public Action OnOpened
         {
             get => m_openable.OnOpened;
@@ -33,13 +35,16 @@ namespace Popups
             m_descriptionLabel = labels[1];
 
             m_graphic = GetComponentInChildren<PopupGraphic>();
+
+            m_links = GetComponentInChildren<LinkedText>();
         }
 
-        public void Show(string _title = null, Sprite _graphic = null, string _description = null)
+        public void Show(string _title = null, Sprite _graphic = null, string _description = null, float _descriptionFontSize = 50)
         {
             m_titleLabel.Label = _title;
             m_graphic.Graphic = _graphic;
             m_descriptionLabel.Label = _description;
+            m_descriptionLabel.FontSize = _descriptionFontSize;
             
             m_openable.Open();
         }
