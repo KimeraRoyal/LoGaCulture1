@@ -53,10 +53,6 @@ namespace Mapbox.Examples
         private void Awake()
         {
             m_markers = FindAnyObjectByType<Markers>();
-        }
-
-        void Start()
-        {
             InitializeEngine();
             if (engine == null) return;
 
