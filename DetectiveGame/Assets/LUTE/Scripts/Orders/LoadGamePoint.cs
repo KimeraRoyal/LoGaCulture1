@@ -22,36 +22,11 @@ public class LoadGamePoint : Order
     {
         var saveManager = LogaManager.Instance.SaveManager;
 
-        if (loadCustomPoint && !string.IsNullOrEmpty(customKey))
+        if (saveManager.HasSaveData(saveKey))
         {
-            if (string.IsNullOrEmpty(saveManager.StartScene))
-            {
-                saveManager.StartScene = SceneManager.GetActiveScene().name;
-            }
-            if (saveManager.HasSaveData(saveKey))
-            {
-                saveManager.Load(saveKey, true, customKey);
-            }
-            else if (returnToPreviousNode)
-            {
-                ReturnToPriorNode();
-            }
+            saveManager.Load(saveKey);
         }
-        else
-        {
-            if (string.IsNullOrEmpty(saveManager.StartScene))
-            {
-                saveManager.StartScene = SceneManager.GetActiveScene().name;
-            }
-            if (saveManager.HasSaveData(saveKey))
-            {
-                saveManager.Load(saveKey);
-            }
-            else if(returnToPreviousNode)
-            {
-                ReturnToPriorNode();
-            }
-        }
+        Continue();
     }
 
     protected void ReturnToPriorNode()

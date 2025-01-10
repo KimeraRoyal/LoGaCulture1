@@ -92,19 +92,15 @@ public class SavePointData
             var flags = Object.FindAnyObjectByType<Flags>();
             flags.FlagBits = savePointData.flagBits;
 
-            var flowEngine = Object.FindAnyObjectByType<BasicFlowEngine>();
             var spawnOnMap = Object.FindAnyObjectByType<SpawnOnMap>();
-
-            foreach (var markerID in savePointData.activeMarkers)
-            {
-                var locationVariable = flowEngine.Variables.Find(variable => variable.Key == markerID);
-                spawnOnMap.ShowLocationMarker((LocationVariable)locationVariable);
-            }
+            spawnOnMap.InitialMarkers = savePointData.activeMarkers;
 
             SaveManagerSignals.DoSavePointLoaded(savePointData.savePointKey);
         };
 
         SceneManager.sceneLoaded += onSceneLoadedAction;
+        
+        Debug.Log(savePointData.SceneName);
         SceneManager.LoadScene(savePointData.SceneName);
     }
 }

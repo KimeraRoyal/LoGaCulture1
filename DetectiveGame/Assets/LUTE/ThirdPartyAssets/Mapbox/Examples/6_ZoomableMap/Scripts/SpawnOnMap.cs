@@ -33,6 +33,7 @@ namespace Mapbox.Examples
         private DirectionsFactory _directionPrefab;
 
         List<Marker> _markers;
+        private List<string> _initialMarkers;
 
         public bool _isWithinRadius = false;
 
@@ -49,15 +50,33 @@ namespace Mapbox.Examples
                 return m_markers;
             }
         }
+
+        public List<string> InitialMarkers
+        {
+            get => _initialMarkers;
+            set => _initialMarkers = value;
+        }
         
         private void Awake()
         {
             m_markers = FindAnyObjectByType<Markers>();
+        }
+
+        private void Start()
+        {
+            var flowEngine = FindAnyObjectByType<BasicFlowEngine>();
+            
             InitializeEngine();
             if (engine == null) return;
 
             ProcessNodes();
             CreateMarkers();
+            
+            foreach (var markerID in _initialMarkers)
+            {
+                var location = flowEngine.Variables.Find(variable => variable.Key == markerID);
+                ShowLocationMarker((LocationVariable)location);
+            }
         }
 
         private void InitializeEngine()

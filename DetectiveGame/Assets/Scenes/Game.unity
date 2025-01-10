@@ -3623,7 +3623,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 70.05267
     y: 264.83768
-    width: 204.79459
+    width: 203.12506
     height: 40
   nodeName: North Atlantic Ocean Marker
   nodeDescription: Basic building block of a narrative engine
@@ -3781,7 +3781,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 539.4818
     y: 1594.4365
-    width: 86.98631
+    width: 84.375015
     height: 40
   nodeName: Ending
   nodeDescription: Basic building block of a narrative engine
@@ -4451,7 +4451,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -133.72847
     y: 376.1126
-    width: 93.83563
+    width: 93.750015
     height: 40
   nodeName: Barn XR
   nodeDescription: Basic building block of a narrative engine
@@ -4625,7 +4625,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -77.74601
     y: -189.24022
-    width: 152.73978
+    width: 151.56253
     height: 40
   nodeName: Southern Circle XR
   nodeDescription: Basic building block of a narrative engine
@@ -4745,7 +4745,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -126.317406
     y: 13.616972
-    width: 162.32881
+    width: 159.37505
     height: 40
   nodeName: Crime Scene Marker
   nodeDescription: Basic building block of a narrative engine
@@ -4912,7 +4912,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -76.3174
     y: -59.24019
-    width: 139.04114
+    width: 137.50003
     height: 40
   nodeName: Crime Scene XR
   nodeDescription: Basic building block of a narrative engine
@@ -5274,7 +5274,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -169.79868
     y: -546.35913
-    width: 144.52058
+    width: 139.06253
     height: 40
   nodeName: Load Saved Data
   nodeDescription: Basic building block of a narrative engine
@@ -5360,7 +5360,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -388.6223
     y: -665.18286
-    width: 206.16444
+    width: 200.00006
     height: 40
   nodeName: Begin With Magnifying Glass
   nodeDescription: Basic building block of a narrative engine
@@ -5460,7 +5460,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -388.6223
     y: -594.59467
-    width: 144.52058
+    width: 143.75003
     height: 40
   nodeName: Begin With Letter
   nodeDescription: Basic building block of a narrative engine
@@ -5636,7 +5636,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -407.4459
     y: -472.24182
-    width: 160.95895
+    width: 157.81255
     height: 40
   nodeName: Begin With Hammer
   nodeDescription: Basic building block of a narrative engine
@@ -5736,7 +5736,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -406.26944
     y: -528.7123
-    width: 151.3699
+    width: 146.87503
     height: 40
   nodeName: Begin With Rubble
   nodeDescription: Basic building block of a narrative engine
