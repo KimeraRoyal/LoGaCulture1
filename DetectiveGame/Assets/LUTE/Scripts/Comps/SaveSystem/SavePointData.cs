@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
+using KW.Flags;
+using Mapbox.Examples;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
@@ -12,8 +15,12 @@ public class SavePointData
     [SerializeField] protected string savePointDesc;
     [SerializeField] protected string sceneName;
     [SerializeField] protected List<SaveDataItem> saveDataItems = new List<SaveDataItem>();
+    
+    [SerializeField] protected List<uint> flagBits;
 
-    protected static SavePointData Create(string _savePointKey, string _savePointDesc, string _sceneName)
+    [SerializeField] protected List<string> activeMarkers;
+
+    protected static SavePointData Create(string _savePointKey, string _savePointDesc, string _sceneName, List<uint> _flagBits, List<string> _activeMarkers)
     {
         var savePointData = new SavePointData();
 
@@ -21,19 +28,34 @@ public class SavePointData
         savePointData.savePointDesc = _savePointDesc;
         savePointData.sceneName = _sceneName;
 
+        savePointData.flagBits = _flagBits;
+
+        savePointData.activeMarkers = _activeMarkers;
+
         return savePointData;
     }
 
     public string SavePointKey { get { return savePointKey; } set { savePointKey = value; } }
     public string SavePointDesc { get { return savePointDesc; } set { savePointDesc = value; } }
     public string SceneName { get { return sceneName; } set { sceneName = value; } }
+    
+    public List<uint> FlagBits
+    {
+        get => flagBits;
+        set => flagBits = value;
+    }
 
     public List<SaveDataItem> SaveDataItems { get { return saveDataItems; } }
 
     /// Encodes a new Save Point to data and converts it to JSON text format.
     public static string Encode(string _savePointKey, string _savePointDesc, string _sceneName)
     {
-        var savePointData = Create(_savePointKey, _savePointDesc, _sceneName);
+        var flags = Object.FindAnyObjectByType<Flags>();
+
+        var spawnOnMap = Object.FindAnyObjectByType<SpawnOnMap>();
+        var activeMarkers = (from marker in spawnOnMap.Markers.List where marker.gameObject.activeSelf select marker.ID).ToList();
+
+        var savePointData = Create(_savePointKey, _savePointDesc, _sceneName, flags.FlagBits, activeMarkers);
         var saveData = GameObject.FindObjectOfType<SaveData>();
         if(saveData != null)
         {
@@ -65,6 +87,18 @@ public class SavePointData
             if (saveData != null)
             {
                 saveData.Decode(savePointData.saveDataItems);
+            }
+            
+            var flags = Object.FindAnyObjectByType<Flags>();
+            flags.FlagBits = savePointData.flagBits;
+
+            var flowEngine = Object.FindAnyObjectByType<BasicFlowEngine>();
+            var spawnOnMap = Object.FindAnyObjectByType<SpawnOnMap>();
+
+            foreach (var markerID in savePointData.activeMarkers)
+            {
+                var locationVariable = flowEngine.Variables.Find(variable => variable.Key == markerID);
+                spawnOnMap.ShowLocationMarker((LocationVariable)locationVariable);
             }
 
             SaveManagerSignals.DoSavePointLoaded(savePointData.savePointKey);

@@ -123,92 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &126144756
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: RealisticTopMaterial
-  m_Shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _NORMALMAP
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: f99015b7b1a6f497bab611412ee65c90, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 581505b85254d4d29b170800875ef29a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 0bc8bd5e5fc49497fad146b25f52e005, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &826547581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -718,94 +632,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5820473d6f77f6c42aa49dd1ace4e868, type: 3}
---- !u!21 &828768161
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: RealisticSideMaterial
-  m_Shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _METALLICGLOSSMAP
-  - _NORMALMAP
-  - _SPECGLOSSMAP
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 639754785a99045debbad4593b7c92e9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0bcf5c7180b764937aa4cd980bd44e8b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: c3370fc9cdec647fcb05b4bcfb13aa37, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: feda69b01240b4568a23a5a754012e5a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: b4566aacde9a0463a89407bec92aa87c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
 --- !u!114 &1265598432 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4086195344475215711, guid: ba9b3434c907a5948a27e87a2fde18d9, type: 3}
@@ -1652,7 +1478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8642065374393819403, guid: ba9b3434c907a5948a27e87a2fde18d9, type: 3}
       propertyPath: selectedNodes.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8642065374393819403, guid: ba9b3434c907a5948a27e87a2fde18d9, type: 3}
       propertyPath: selectedOrders.Array.size
@@ -1913,7 +1739,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25216.475
     y: 24872.137
-    width: 77
+    width: 78.12501
     height: 40
   nodeName: Start
   nodeDescription: Basic building block of a narrative engine
@@ -1938,6 +1764,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735606
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1972,13 +1800,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1265598432}
-  characterPortrait: {fileID: 21300000, guid: abb6929402cbd364593c06873554fc82, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: We escape the evil troll - thank goodness!
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2055,6 +1884,9 @@ MonoBehaviour:
         stringData:
           stringRef: {fileID: 0}
           stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 0
   compareOperator: 0
   anyVariable:
     variable: {fileID: 0}
@@ -2091,6 +1923,9 @@ MonoBehaviour:
       stringData:
         stringRef: {fileID: 0}
         stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
   variable: {fileID: 0}
   integerData:
     integerRef: {fileID: 0}
@@ -2137,13 +1972,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1265598432}
-  characterPortrait: {fileID: 21300000, guid: abb6929402cbd364593c06873554fc82, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: Good thing I got a good night's sleep and feel ready to flee!
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2180,13 +2016,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1265598432}
-  characterPortrait: {fileID: 21300000, guid: abb6929402cbd364593c06873554fc82, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: Now where have I found myself?
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2230,7 +2067,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25328.475
     y: 24936.137
-    width: 99
+    width: 96.875015
     height: 40
   nodeName: Troll Lair
   nodeDescription: Basic building block of a narrative engine
@@ -2254,6 +2091,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735615
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2288,7 +2127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: -1
   characterName: 
   characterNameColour:
     serializedVersion: 2
@@ -2298,7 +2137,8 @@ MonoBehaviour:
 
 
     He swings his club at you!'
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2360,6 +2200,9 @@ MonoBehaviour:
         stringData:
           stringRef: {fileID: 0}
           stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 0
   compareOperator: 0
   anyVariable:
     variable: {fileID: 0}
@@ -2396,6 +2239,9 @@ MonoBehaviour:
       stringData:
         stringRef: {fileID: 0}
         stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
   variable: {fileID: 0}
   integerData:
     integerRef: {fileID: 0}
@@ -2497,7 +2343,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25467.475
     y: 24908.137
-    width: 87
+    width: 85.93751
     height: 40
   nodeName: Attack
   nodeDescription: Basic building block of a narrative engine
@@ -2520,6 +2366,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735622
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2533,14 +2381,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: Using your good night's rest, you lunge at the troll and climb his leathery
     exterior where you punch him so hard he falls to the ground in one blow.
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2586,14 +2435,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1265598432}
-  characterPortrait: {fileID: 21300000, guid: abb6929402cbd364593c06873554fc82, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: "You are no match for the Princess! I AM THE ONE AND ONLY PRINCESS...
     \n\n...PARROT!"
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2621,7 +2471,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25474.475
     y: 24985.137
-    width: 72
+    width: 70.3125
     height: 40
   nodeName: Run
   nodeDescription: Basic building block of a narrative engine
@@ -2642,6 +2492,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735626
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2689,6 +2541,9 @@ MonoBehaviour:
       stringData:
         stringRef: {fileID: 0}
         stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
   setOperator: 0
   var: {fileID: 0}
   integerData:
@@ -2753,14 +2608,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: -1
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: Running away, you stumble on a rock and the troll catches you! You become
     the troll's dinner that night...
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2804,7 +2660,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25624.475
     y: 24942.137
-    width: 84
+    width: 81.25001
     height: 40
   nodeName: Finale
   nodeDescription: Basic building block of a narrative engine
@@ -2829,6 +2685,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735632
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2842,14 +2700,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: -1
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: Now exhausted from the fight, Princess Parrot heads back home to rest
     up again.
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2911,6 +2770,9 @@ MonoBehaviour:
         stringData:
           stringRef: {fileID: 0}
           stringVal: 
+        weatherData:
+          weatherRef: {fileID: 0}
+          weatherVal: 0
   compareOperator: 0
   anyVariable:
     variable: {fileID: 0}
@@ -2947,6 +2809,9 @@ MonoBehaviour:
       stringData:
         stringRef: {fileID: 0}
         stringVal: 
+      weatherData:
+        weatherRef: {fileID: 0}
+        weatherVal: 0
   variable: {fileID: 0}
   integerData:
     integerRef: {fileID: 0}
@@ -3014,13 +2879,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1265598432}
-  characterPortrait: {fileID: 21300000, guid: abb6929402cbd364593c06873554fc82, type: 3}
+  characterPortraitIndex: 0
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: What a day!
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3057,14 +2923,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  characterPortrait: {fileID: 0}
+  characterPortraitIndex: -1
   characterName: 
   characterNameColour:
     serializedVersion: 2
     rgba: 0
   storyText: To excel in life one must rest well! Princess Parrot learned this the
     hard way...
-  typingSpeed: 0.04
+  letterDuration: 0.04
+  punctuationDuration: 0.04
   extendPrevious: 0
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -3104,7 +2971,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 24968.475
     y: 24919.137
-    width: 112
+    width: 109.375015
     height: 40
   nodeName: Start Menu
   nodeDescription: Basic building block of a narrative engine
@@ -3125,6 +2992,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735642
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3140,8 +3009,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 25204.475
-    y: 25027.137
-    width: 113
+    y: 25028.7
+    width: 109.375015
     height: 40
   nodeName: LoadLatest
   nodeDescription: Basic building block of a narrative engine
@@ -3160,6 +3029,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735643
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3216,7 +3087,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25129.475
     y: 25232.137
-    width: 105
+    width: 100.000015
     height: 40
   nodeName: EndMusic
   nodeDescription: Basic building block of a narrative engine
@@ -3235,6 +3106,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735646
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3251,7 +3124,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 25127.475
     y: 25161.137
-    width: 111
+    width: 109.375015
     height: 40
   nodeName: StartMusic
   nodeDescription: Basic building block of a narrative engine
@@ -3270,6 +3143,8 @@ MonoBehaviour:
   targetUnlockNode: {fileID: 0}
   targetKeyNode: {fileID: 0}
   showDesc: 0
+  saveable: 0
+  NodeComplete: 0
 --- !u!114 &1492735649
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3599,11 +3474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2809595327752509244, guid: 8c066a527a5039f478fd4b11b3b82540, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000030517578
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 2809595327752509244, guid: 8c066a527a5039f478fd4b11b3b82540, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 2865926220496672663, guid: 8c066a527a5039f478fd4b11b3b82540, type: 3}
       propertyPath: m_IsActive

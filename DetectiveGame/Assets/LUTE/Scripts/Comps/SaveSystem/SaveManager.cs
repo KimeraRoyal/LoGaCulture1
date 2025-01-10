@@ -225,6 +225,7 @@ public class SaveManager : MonoBehaviour
     public virtual void AddSavePoint(string savePointKey, string savePointDescription)
     {
         saveHistory.AddSavePoint(savePointKey, savePointDescription);
+        Debug.Log($"Saved: {savePointKey}");
         SaveManagerSignals.DoSavePointAdded(savePointKey, savePointDescription);
     }
 

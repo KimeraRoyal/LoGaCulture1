@@ -15,7 +15,6 @@ public class PopupIcons : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Initialized");
         Button[] optionButtons = GetComponentsInChildren<Button>();
         cachedButtons = optionButtons;
 

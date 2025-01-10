@@ -85,7 +85,7 @@ public class SavePoint : Order
     public override void OnEnter()
     {
         if(autoSave)
-        {        
+        {       
             var saveManager = LogaManager.Instance.SaveManager;
             
             saveManager.AddSavePoint(SavePointKey, SavePointDescription);

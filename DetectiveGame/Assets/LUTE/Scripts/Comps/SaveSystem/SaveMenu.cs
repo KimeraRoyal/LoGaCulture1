@@ -27,7 +27,7 @@ public class SaveMenu : MonoBehaviour
     protected static bool saveMenuActive = false;
     protected AudioSource menuAudioSource;
     protected LTDescr fadeTween; //Used for fading menu
-    protected SaveMenu instance; //Used for singleton
+    protected static SaveMenu instance; //Used for singleton
     protected static bool hasLoadedOnStart; //Used to prevent multiple loads on start
 
     protected virtual void Awake()

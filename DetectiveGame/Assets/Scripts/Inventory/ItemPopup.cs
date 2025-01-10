@@ -16,6 +16,14 @@ public class ItemPopup : MonoBehaviour
     
     [SerializeField] private string m_popupParameterName = "Popup";
     private int m_popupHash;
+
+    private bool m_enabled = true;
+
+    public bool Enabled
+    {
+        get => m_enabled;
+        set => m_enabled = value;
+    }
     
     private void Awake()
     {
@@ -28,6 +36,8 @@ public class ItemPopup : MonoBehaviour
 
     private void OnItemAdded(InventoryItem _item)
     {
+        if(!m_enabled) { return; }
+        
         m_title.text = _item.ItemName;
         m_subtitle.text = _item.ShortDescription;
 

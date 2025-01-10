@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// This component encodes and decodes a list of game objects to be saved for each Save Point.
@@ -8,8 +10,12 @@ public class SaveData : MonoBehaviour
     protected const string EngineDataKey = "EngineData";
     protected const string LogKey = "LogData";
 
-    [Tooltip("List of engine objects in which its variables will be encoded and saved - only integer is currently supported")]
-    [SerializeField] protected List<BasicFlowEngine> engines = new List<BasicFlowEngine>();
+    protected List<BasicFlowEngine> engines;
+
+    private void Awake()
+    {
+        engines = FindObjectsOfType<BasicFlowEngine>().ToList();
+    }
 
     public virtual void Encode(List<SaveDataItem> saveDataItems)
     {
