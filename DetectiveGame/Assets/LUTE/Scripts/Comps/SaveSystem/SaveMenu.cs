@@ -31,7 +31,7 @@ public class SaveMenu : MonoBehaviour
     protected static bool hasLoadedOnStart; //Used to prevent multiple loads on start
 
     protected virtual void Awake()
-    {
+    {/*
         if (instance != null)
         {
             Destroy(gameObject);
@@ -45,7 +45,7 @@ public class SaveMenu : MonoBehaviour
         else
         {
             Debug.LogError("SaveMenu should be a root object in the scene hierarchy otherwise it cannot be preserved across scenes.");
-        }
+        }*/
 
         menuAudioSource = GetComponent<AudioSource>();
     }
