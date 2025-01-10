@@ -1,4 +1,5 @@
-﻿using KR;
+﻿using System.Collections;
+using KR;
 using KR.Map.Marker;
 
 namespace Mapbox.Examples
@@ -64,14 +65,20 @@ namespace Mapbox.Examples
 
         private void Start()
         {
-            var flowEngine = FindAnyObjectByType<BasicFlowEngine>();
+            StartCoroutine(SpawnInitialMarkers());
             
             InitializeEngine();
             if (engine == null) return;
 
             ProcessNodes();
             CreateMarkers();
+        }
+
+        private IEnumerator SpawnInitialMarkers()
+        {
+            yield return new WaitForSeconds(0.01f);
             
+            var flowEngine = FindAnyObjectByType<BasicFlowEngine>();
             foreach (var markerID in _initialMarkers)
             {
                 var location = flowEngine.Variables.Find(variable => variable.Key == markerID);
