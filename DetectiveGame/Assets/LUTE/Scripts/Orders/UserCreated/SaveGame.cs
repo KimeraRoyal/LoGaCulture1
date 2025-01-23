@@ -16,6 +16,7 @@ public class SaveGame : Order
     public override void OnEnter()
     {
         m_savePrefs.Save();
+        Continue();
     }
     
     public override string GetSummary() 
