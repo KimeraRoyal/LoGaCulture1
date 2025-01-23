@@ -1,46 +1,36 @@
 using KW.Flags;
+using Save;
 using UnityEngine;
 
 [RequireComponent(typeof(Flags))]
-public class FlagSaver : MonoBehaviour
+public class FlagSaver : Saver
 {
-    private Flags m_flags;
-
-    private void Awake()
+    public override void Save()
     {
-        m_flags = GetComponent<Flags>();
-
-        var savePrefs = FindAnyObjectByType<SavePrefs>();
-        savePrefs.OnSave += OnSave;
+        var flags = GetComponent<Flags>();
         
-        var loadPrefs = FindAnyObjectByType<LoadPrefs>();
-        loadPrefs.OnLoad += OnLoad;
-    }
-
-    private void OnSave()
-    {
-        PlayerPrefs.SetInt("flagArraySize", m_flags.FlagBits.Count);
-        for (var i = 0; i < m_flags.FlagBits.Count; i++)
+        PlayerPrefs.SetInt("flagArraySize", flags.FlagBits.Count);
+        for (var i = 0; i < flags.FlagBits.Count; i++)
         {
-            var convertedFlag = unchecked((int)m_flags.FlagBits[i]);
-            Debug.Log($"Converting {m_flags.FlagBits[i]} to {convertedFlag}");
+            var convertedFlag = unchecked((int)flags.FlagBits[i]);
             PlayerPrefs.SetInt("flags" + i, convertedFlag);
         }
     }
 
-    private void OnLoad()
+    public override void Load()
     {
         if(!PlayerPrefs.HasKey("flagArraySize")) { return; }
         
+        var flags = GetComponent<Flags>();
+        
         var flagArraySize = PlayerPrefs.GetInt("flagArraySize");
         
-        m_flags.FlagBits.Clear();
+        flags.FlagBits.Clear();
         for (var i = 0; i < flagArraySize; i++)
         {
             var flag = PlayerPrefs.GetInt("flags" + i);
             var convertedFlag = unchecked((uint)flag);
-            Debug.Log($"Converting {flag} to {convertedFlag}");
-            m_flags.FlagBits.Add(convertedFlag);
+            flags.FlagBits.Add(convertedFlag);
         }
     }
 }

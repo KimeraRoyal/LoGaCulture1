@@ -1,4 +1,5 @@
 using System;
+using Save;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,11 +18,9 @@ public class LoadPrefs : MonoBehaviour
             return;
         }*/
 
-        void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+        void OnSceneLoaded(Scene _scene, LoadSceneMode _mode)
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
-            
-            Debug.Log($"Scene {sceneName} Loaded!");
             LoadInScene();
         }
 
@@ -31,8 +30,10 @@ public class LoadPrefs : MonoBehaviour
 
     private void LoadInScene()
     {
-        OnLoad?.Invoke();
-        
-        Debug.Log("Loaded!");
+        var savers = FindObjectsOfType<Saver>();
+        foreach (var saver in savers)
+        {
+            saver.Load();
+        }
     }
 }
