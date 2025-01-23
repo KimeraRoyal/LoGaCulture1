@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LoadPrefs : MonoBehaviour
 {
-    public Action OnLoad;
-    
     public void Load()
     {
         if(!PlayerPrefs.HasKey("scene")) { return; }

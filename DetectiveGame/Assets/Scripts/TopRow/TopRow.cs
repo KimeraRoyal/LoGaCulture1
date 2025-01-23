@@ -9,6 +9,7 @@ namespace KR.TopRow
         private Profile m_profile;
         private InventoryInputManager m_inventory;
         private XRHelper m_xrHelper;
+        private SaveMenu m_saveMenu;
 
         private Openable m_topRowOpenable;
         private Openable m_backOpenable;
@@ -20,6 +21,7 @@ namespace KR.TopRow
             m_profile = FindAnyObjectByType<Profile>();
             m_inventory = FindAnyObjectByType<InventoryInputManager>();
             m_xrHelper = FindAnyObjectByType<XRHelper>();
+            m_saveMenu = FindAnyObjectByType<SaveMenu>(FindObjectsInactive.Include);
 
             var openables = GetComponents<Openable>();
             m_topRowOpenable = openables[0];
@@ -33,6 +35,9 @@ namespace KR.TopRow
         
             m_xrHelper.OnEnabled += OnEnterSubmenu;
             m_xrHelper.OnDisabled += OnExitSubmenu;
+
+            m_topRowOpenable.OnOpened += () => { m_saveMenu.gameObject.SetActive(true); };
+            m_topRowOpenable.OnClosed += () => { m_saveMenu.gameObject.SetActive(false); };
         }
 
         private void Start()
