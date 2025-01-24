@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1845384481105354145}
   - component: {fileID: 1372378817839453116}
   - component: {fileID: 6406915204334724108}
+  - component: {fileID: 5672653655038621098}
   m_Layer: 0
   m_Name: Story Flags
   m_TagString: Untagged
@@ -89,4 +90,20 @@ MonoBehaviour:
   - landlord_trait3
   - found_hammer
   - found_rubble
+  - found_rubble
+  - found_rubble
+  - found_magnifying_glass
+  - found_letter
   m_invalidFlagBehaviour: 0
+--- !u!114 &5672653655038621098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490212987084922749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3c878bc2f0512429531f62e6a9ed4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

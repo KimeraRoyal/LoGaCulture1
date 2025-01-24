@@ -12,7 +12,7 @@ public class SaveMenuEditor : Editor
 
             if(saveMenu != null)
             {
-                SaveManager.DeleteSave(saveMenu.SaveKey);
+                //SaveManager.DeleteSave(saveMenu.SaveKey);
                 GraphWindow.ShowNotification("Save Data Deleted");
             }
         }

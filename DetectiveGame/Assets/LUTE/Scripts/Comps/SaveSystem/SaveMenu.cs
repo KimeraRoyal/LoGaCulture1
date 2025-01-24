@@ -31,7 +31,7 @@ public class SaveMenu : MonoBehaviour
     protected static bool hasLoadedOnStart; //Used to prevent multiple loads on start
 
     protected virtual void Awake()
-    {
+    {/*
         if (instance != null)
         {
             Destroy(gameObject);
@@ -45,7 +45,7 @@ public class SaveMenu : MonoBehaviour
         else
         {
             Debug.LogError("SaveMenu should be a root object in the scene hierarchy otherwise it cannot be preserved across scenes.");
-        }
+        }*/
 
         menuAudioSource = GetComponent<AudioSource>();
     }
@@ -73,85 +73,6 @@ public class SaveMenu : MonoBehaviour
                 saveManager.Load(saveKey);
             }
         }
-    }
-
-    protected virtual void Update()
-    {
-        var saveManager = LogaManager.Instance.SaveManager;
-
-        bool showSaveLoadButtons = showAllOptions;
-        if (saveButton.IsActive() != showSaveLoadButtons)
-        {
-            saveButton.gameObject.SetActive(showSaveLoadButtons);
-            loadButton.gameObject.SetActive(showSaveLoadButtons);
-        }
-
-        if (showSaveLoadButtons)
-        {
-            if (saveButton != null)
-            {
-                // Don't allow saving if the game is in a state where saving is not allowed 
-                // Don't allow saving unless there is one save point in the history - avoids loading a save with 0 points
-                saveButton.interactable = saveManager.TotalSavePoints > 0 && saveMenuActive;
-            }
-            if (loadButton != null)
-            {
-                loadButton.interactable = saveManager.HasSaveData(saveKey) && saveMenuActive;
-            }
-
-            if (restartButton != null)
-            {
-                restartButton.interactable = saveMenuActive;
-            }
-            if (rewindButton != null)
-            {
-                rewindButton.interactable = saveManager.TotalSavePoints > 0 && saveMenuActive;
-            }
-            if (forwardButton != null)
-            {
-                forwardButton.interactable = saveManager.TotalSavePoints > 0 && saveMenuActive;
-            }
-
-            if (debugView.enabled)
-            {
-                var debugText = debugView.GetComponentInChildren<TextMeshProUGUI>();
-                if (debugText != null)
-                {
-                    debugText.text = saveManager.GetDebugInfo();
-                }
-            }
-        }
-    }
-
-    protected void OnEnable()
-    {
-        SaveManagerSignals.OnSavePointAdded += OnSavePointAdded;
-    }
-    protected void OnDisable()
-    {
-        SaveManagerSignals.OnSavePointAdded -= OnSavePointAdded;
-    }
-
-    protected virtual void OnSavePointAdded(string savePointKey, string savePointDesc)
-    {
-        var saveManager = LogaManager.Instance.SaveManager;
-        if (autoSave && saveManager.TotalSavePoints > 0)
-        {
-            saveManager.SaveGame(saveKey);
-        }
-    }
-
-    protected void PlayClickSound()
-    {
-        if (menuAudioSource != null && menuAudioSource.clip != null)
-        {
-            menuAudioSource.Play();
-        }
-    }
-
-    public virtual string SaveKey
-    {
-        get { return saveKey; }
     }
 
     public void ToggleSaveMenu()
@@ -189,79 +110,5 @@ public class SaveMenu : MonoBehaviour
     });
         }
         saveMenuActive = !saveMenuActive;
-    }
-
-    public virtual void Save()
-    {
-        //used for pressing save button
-        PlayClickSound();
-
-        var saveManager = LogaManager.Instance.SaveManager;
-
-        if (saveManager.TotalSavePoints > 0)
-        {
-            saveManager.SaveGame(saveKey);
-        }
-    }
-
-    public virtual void Load()
-    {
-        //used for pressing load button
-        PlayClickSound();
-
-        var saveManager = LogaManager.Instance.SaveManager;
-
-        if (saveManager.HasSaveData(saveKey))
-        {
-            saveManager.Load(saveKey);
-        }
-    }
-
-    public virtual void Rewind()
-    {
-        //used for pressing rewind button
-        PlayClickSound();
-
-        var saveManager = LogaManager.Instance.SaveManager;
-
-        if (saveManager.TotalSavePoints > 0)
-        {
-            saveManager.RewindSavePoint();
-        }
-    }
-
-    public virtual void FastForward()
-    {
-        //used for pressing forward button
-        PlayClickSound();
-
-        var saveManager = LogaManager.Instance.SaveManager;
-
-        if (saveManager.TotalRewoundSavePoints > 0)
-        {
-            saveManager.FastForwardSavePoint();
-        }
-    }
-
-    public virtual void Restart()
-    {
-        //used for pressing restart button
-        PlayClickSound();
-
-        var saveManager = LogaManager.Instance.SaveManager;
-        if (string.IsNullOrEmpty(saveManager.StartScene))
-        {
-            Debug.LogError("Start scene is not set in SaveManager. Please set the start scene in the inspector.");
-            return;
-        }
-
-        saveManager.ClearHistory();
-
-        if (deleteOnRestart)
-        {
-            SaveManager.DeleteSave(saveKey);
-        }
-        SaveManagerSignals.DoSaveHistoryReset();
-        SceneManager.LoadScene(saveManager.StartScene);
     }
 }

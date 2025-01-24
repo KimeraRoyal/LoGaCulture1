@@ -15,6 +15,7 @@ namespace Mapbox.Examples
     public class SpawnOnMap : MonoBehaviour
     {
         private Markers m_markers;
+        private bool m_initialised;
         
         [SerializeField] public Transform tracker;
         [SerializeField]
@@ -49,6 +50,8 @@ namespace Mapbox.Examples
                 return m_markers;
             }
         }
+
+        public bool Initialised => m_initialised;
         
         private void Awake()
         {
@@ -62,6 +65,8 @@ namespace Mapbox.Examples
 
             ProcessNodes();
             CreateMarkers();
+
+            m_initialised = true;
         }
 
         private void InitializeEngine()
