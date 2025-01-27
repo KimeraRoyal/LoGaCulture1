@@ -7,6 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadPrefs : MonoBehaviour
 {
+    private void Awake()
+    {
+        var instances = FindObjectsOfType<LoadPrefs>();
+        if(instances.Length > 1) { Destroy(gameObject); }
+            
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void Load()
     {
         if(!PlayerPrefs.HasKey("scene")) { return; }

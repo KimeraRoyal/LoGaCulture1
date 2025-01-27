@@ -9,6 +9,15 @@ public class LoadGame : Order
 {
     private LoadPrefs m_loadPrefs;
 
+    private LoadPrefs LoadPrefs
+    {
+        get
+        {
+            if(m_loadPrefs == null) { m_loadPrefs = FindAnyObjectByType<LoadPrefs>(); }
+            return m_loadPrefs;
+        }
+    }
+
     private void Awake()
     {
         m_loadPrefs = FindAnyObjectByType<LoadPrefs>();
@@ -16,7 +25,7 @@ public class LoadGame : Order
 
     public override void OnEnter()
     {
-        m_loadPrefs.Load();
+        LoadPrefs.Load();
     }
     
     public override string GetSummary() 

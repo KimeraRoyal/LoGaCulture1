@@ -8,6 +8,15 @@ public class SaveGame : Order
 {
     private SavePrefs m_savePrefs;
 
+    private SavePrefs SavePrefs
+    {
+        get
+        {
+            if(m_savePrefs == null) { m_savePrefs = FindAnyObjectByType<SavePrefs>(); }
+            return m_savePrefs;
+        }
+    }
+
     private void Awake()
     {
         m_savePrefs = FindAnyObjectByType<SavePrefs>();
@@ -15,7 +24,7 @@ public class SaveGame : Order
 
     public override void OnEnter()
     {
-        m_savePrefs.Save();
+        SavePrefs.Save();
         Continue();
     }
     
