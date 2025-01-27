@@ -789,6 +789,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 526.26965
       objectReference: {fileID: 0}
+    - target: {fileID: 197758602723236990, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: conditions.Array.data[0].m_flagName
+      value: found_letter
+      objectReference: {fileID: 0}
+    - target: {fileID: 197758602723236990, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: conditions.Array.data[0].m_lastIndex
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 278081140695230687, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_BlockingMask.m_Bits
       value: 1073851455
@@ -1032,6 +1040,14 @@ PrefabInstance:
     - target: {fileID: 1619607488745893310, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
       value: 175.45459
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686062318771441676, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686062318771441676, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: conditions.Array.data[0].m_lastNamedFlagCount
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1759665327814684493, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
@@ -1308,6 +1324,14 @@ PrefabInstance:
     - target: {fileID: 2742843497752463020, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759221431187141314, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: conditions.Array.data[0].m_flagName
+      value: found_magnifying_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759221431187141314, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
+      propertyPath: conditions.Array.data[0].m_lastIndex
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2808406574421741787, guid: d7136e58b1b58db40b037469b602a0e1, type: 3}
       propertyPath: nodeRect.width
