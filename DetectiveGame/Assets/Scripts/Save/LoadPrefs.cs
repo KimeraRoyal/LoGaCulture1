@@ -1,5 +1,5 @@
-using System;
 using Save;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,9 +7,10 @@ public class LoadPrefs : MonoBehaviour
 {
     public void Load()
     {
-        if(!PlayerPrefs.HasKey("scene")) { return; }
+        if (!PlayerPrefs.HasKey("scene")) { return; }
 
         var sceneName = PlayerPrefs.GetString("scene");
+
         /*if (SceneManager.GetActiveScene().name == sceneName)
         {
             LoadInScene();
@@ -23,7 +24,15 @@ public class LoadPrefs : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene(sceneName);
+        try
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+        catch
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            throw;
+        }
     }
 
     private void LoadInScene()
@@ -31,7 +40,17 @@ public class LoadPrefs : MonoBehaviour
         var savers = FindObjectsOfType<Saver>();
         foreach (var saver in savers)
         {
-            saver.Load();
+            try
+            {
+                if (saver != null)
+                {
+                    saver.Load();
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Failed to load saver: {e.Message}");
+            }
         }
     }
 }
