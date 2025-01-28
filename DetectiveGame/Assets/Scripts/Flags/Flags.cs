@@ -19,8 +19,6 @@ namespace KW.Flags
     
         [SerializeField] protected List<uint> m_flagBits;
 
-        public List<uint> FlagBits => m_flagBits;
-
         public Action<int, bool> OnFlagUpdated;
         public Action OnFlagsCleared;
 
